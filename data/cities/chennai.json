@@ -1,0 +1,28 @@
+{
+  "slug": "chennai",
+  "name": "Chennai",
+  "state": "Tamil Nadu",
+  "emoji": "🏖",
+  "gradient": "from-mint-500 to-midnight-900",
+  "vendorCount": 1000,
+  "startingPrice": 4800,
+  "seo": {
+    "title": "Packers & Movers in Chennai — 1,000+ Verified Vendors | ShiftIndia",
+    "description": "Compare 1,000+ verified packers and movers in Chennai. Instant quotes starting ₹4,800. T. Nagar, Velachery, OMR, Anna Nagar covered. Live tracking & ₹5L damage protection.",
+    "keywords": ["packers and movers chennai", "movers chennai", "home shifting chennai", "omr movers", "velachery movers"],
+    "ogImage": "/og/cities/chennai.jpg"
+  },
+  "hero": {
+    "title": "Packers & Movers in Chennai",
+    "subtitle": "T. Nagar to OMR, Anna Nagar to Velachery — 1,000+ verified movers across Chennai."
+  },
+  "intro": "Chennai's coastal climate and dense neighborhoods mean movers need to know the city well. ShiftIndia gives you 1,000+ verified packers and movers across Chennai — T. Nagar, Velachery, Anna Nagar, Adyar, OMR, Porur, Tambaram and more.\n\nInstant quotes, transparent pricing, and vendors that handle everything from old chettinad homes to modern IT corridor apartments.",
+  "whyUs": "Chennai humidity is tough on packing — our vendors use moisture-resistant materials and plastic wrapping for electronics and fabrics. We also handle OMR traffic planning, coastal relocation routes, and coordinate carefully around monsoon months.",
+  "popularRoutes": ["Bangalore", "Hyderabad", "Coimbatore", "Madurai", "Pondicherry"],
+  "faqs": [
+    { "q": "What do packers and movers cost in Chennai?", "a": "Local 1 BHK moves from ₹4,800. 2 BHK moves typically ₹8,000 – ₹14,000 within the city." },
+    { "q": "Do you cover OMR and ECR?", "a": "Yes — all of Chennai Metropolitan Area including OMR, ECR, GST Road, Ambattur and Tambaram." },
+    { "q": "What about monsoon packing?", "a": "Our vendors use waterproof wrapping during monsoon months and offer free rescheduling for heavy-rain days." },
+    { "q": "Is damage protection included?", "a": "Yes — ₹5 lakh transit damage protection is included on every booking." }
+  ]
+}

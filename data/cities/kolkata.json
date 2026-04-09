@@ -1,0 +1,28 @@
+{
+  "slug": "kolkata",
+  "name": "Kolkata",
+  "state": "West Bengal",
+  "emoji": "🎭",
+  "gradient": "from-saffron-600 to-midnight-800",
+  "vendorCount": 850,
+  "startingPrice": 4200,
+  "seo": {
+    "title": "Packers & Movers in Kolkata — 850+ Verified Vendors | ShiftIndia",
+    "description": "Compare 850+ verified packers and movers in Kolkata. Instant quotes starting ₹4,200. Salt Lake, New Town, Behala, Howrah covered. Live tracking included.",
+    "keywords": ["packers and movers kolkata", "movers kolkata", "home shifting kolkata", "salt lake movers", "new town movers"],
+    "ogImage": "/og/cities/kolkata.jpg"
+  },
+  "hero": {
+    "title": "Packers & Movers in Kolkata",
+    "subtitle": "Salt Lake to New Town, Ballygunge to Howrah — 850+ verified movers across Kolkata."
+  },
+  "intro": "Kolkata's mix of colonial architecture and modern townships gives it a moving challenge all its own. ShiftIndia gives you 850+ verified packers and movers across Kolkata — Salt Lake, New Town, Ballygunge, Behala, Park Street, Howrah, Garia and more.\n\nInstant quotes, transparent pricing, and vendors that understand both heritage buildings and modern high-rises.",
+  "whyUs": "Kolkata's many narrow by-lanes and old buildings without lifts require experienced crews. Our vendors carry stair-handling gear, pack carefully for humid weather, and plan routes around metro and flyover construction zones.",
+  "popularRoutes": ["Delhi", "Mumbai", "Bangalore", "Guwahati", "Bhubaneswar"],
+  "faqs": [
+    { "q": "How much do packers and movers cost in Kolkata?", "a": "Local 1 BHK moves start from ₹4,200. 2 BHK moves within the city typically cost ₹7,000 – ₹12,500." },
+    { "q": "Do you cover Salt Lake and New Town?", "a": "Yes — all of KMC and surrounding areas including Salt Lake (Sector 1-5), New Town, Rajarhat, Howrah, Ballygunge and Garia." },
+    { "q": "Can you handle heritage buildings?", "a": "Yes. Our vendors have experience with old Kolkata buildings — narrow staircases, wooden floors and tight doorways." },
+    { "q": "Is pay-after-delivery available?", "a": "Yes. No advance required — pay only after delivery via UPI, card, netbanking or cash." }
+  ]
+}

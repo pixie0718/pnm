@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "initials": "PS",
+    "rating": 5,
+    "review": "Booked within 2 minutes. Arrived on time, packed everything with care, delivered next day. Honestly the smoothest move I've had.",
+    "move": "Bangalore → Pune · 2 BHK",
+    "rotate": "-rotate-2"
+  },
+  {
+    "id": 2,
+    "name": "Rohit Kumar",
+    "initials": "RK",
+    "rating": 5,
+    "review": "The transparent pricing was the best part. Knew every rupee upfront. Live tracking gave my family real peace of mind.",
+    "move": "Delhi → Mumbai · 3 BHK",
+    "rotate": "rotate-1"
+  },
+  {
+    "id": 3,
+    "name": "Ananya Mehta",
+    "initials": "AM",
+    "rating": 5,
+    "review": "Compared 12 vendors in one screen. Picked one with full insurance. Zero damage, zero stress, zero hidden fees.",
+    "move": "Ahmedabad → Hyderabad · 1 BHK",
+    "rotate": "-rotate-1"
+  },
+  {
+    "id": 4,
+    "name": "Vikram Khanna",
+    "initials": "VK",
+    "rating": 5,
+    "review": "Smooth end to end. The live tracking feature is a game-changer. Felt in control the entire time.",
+    "move": "Chennai → Bangalore · 2 BHK",
+    "rotate": "rotate-2"
+  }
+]

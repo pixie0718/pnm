@@ -1,0 +1,28 @@
+{
+  "slug": "bangalore",
+  "name": "Bangalore",
+  "state": "Karnataka",
+  "emoji": "🌳",
+  "gradient": "from-mint-500 to-mint-600",
+  "vendorCount": 1800,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Bangalore — 1,800+ Verified Vendors | ShiftIndia",
+    "description": "Compare 1,800+ verified packers and movers in Bangalore. Instant quotes starting ₹5,000. Koramangala, Whitefield, HSR, Indiranagar covered. Live tracking included.",
+    "keywords": ["packers and movers bangalore", "movers bengaluru", "home shifting bangalore", "whitefield movers", "koramangala movers"],
+    "ogImage": "/og/cities/bangalore.jpg"
+  },
+  "hero": {
+    "title": "Packers & Movers in Bangalore",
+    "subtitle": "Koramangala to Whitefield, HSR to Hebbal — 1,800+ verified movers across Bengaluru."
+  },
+  "intro": "Bangalore's tech hubs and traffic make moving uniquely challenging. ShiftIndia connects you with 1,800+ verified packers and movers across every locality — Koramangala, Indiranagar, Whitefield, HSR Layout, Hebbal, Marathahalli, Electronic City and more.\n\nWhether you're relocating for a new job or upgrading from a PG to your first 2 BHK, get instant quotes from vendors who know Bengaluru inside out.",
+  "whyUs": "Bangalore traffic can make a 15 km move take 3 hours. Our vendors plan around peak hours, know which buildings have strict lift rules, and carry equipment for outer Ring Road high-rises. ₹5 lakh damage protection, GPS tracking, pay after delivery.",
+  "popularRoutes": ["Chennai", "Hyderabad", "Pune", "Mumbai", "Mangalore"],
+  "faqs": [
+    { "q": "What do packers and movers cost in Bangalore?", "a": "Local 1 BHK moves from ₹5,000. 2 BHK typically ₹8,500 – ₹15,000 depending on distance and packing." },
+    { "q": "Do you handle moves to Whitefield and Electronic City?", "a": "Yes — we cover all of Bengaluru Urban and Rural districts, including peripheral tech hubs." },
+    { "q": "Can you work around peak-hour traffic?", "a": "Yes, our vendors plan moves for early morning or late evening to avoid peak traffic windows on ORR and major corridors." },
+    { "q": "Do you move plants and fragile items?", "a": "Yes. We offer specialised packing for plants, art, glass and electronics at transparent add-on rates." }
+  ]
+}

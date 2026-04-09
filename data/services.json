@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "home-shifting",
+    "title": "Home Shifting",
+    "description": "Full-service household relocation with packing, loading, transport, unloading and unpacking.",
+    "icon": "home",
+    "startingPrice": 5000
+  },
+  {
+    "slug": "office-relocation",
+    "title": "Office Relocation",
+    "description": "Minimal downtime office moves with safe handling of electronics, furniture, and documents.",
+    "icon": "briefcase",
+    "startingPrice": 12000
+  },
+  {
+    "slug": "vehicle-transport",
+    "title": "Vehicle Transport",
+    "description": "Door-to-door car and bike transportation with fully insured enclosed carriers.",
+    "icon": "car",
+    "startingPrice": 6500
+  },
+  {
+    "slug": "intercity-moving",
+    "title": "Intercity Moving",
+    "description": "Long-distance moves across India with GPS tracking and damage protection.",
+    "icon": "truck",
+    "startingPrice": 8000
+  },
+  {
+    "slug": "storage-warehousing",
+    "title": "Storage & Warehousing",
+    "description": "Secure climate-controlled storage for short or long-term needs.",
+    "icon": "box",
+    "startingPrice": 1500
+  },
+  {
+    "slug": "packing-only",
+    "title": "Packing Services",
+    "description": "Professional packing with quality materials — fragile items, art, and electronics.",
+    "icon": "package",
+    "startingPrice": 3000
+  }
+]

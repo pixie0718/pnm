@@ -1,0 +1,17 @@
+{
+  "headline": [
+    { "value": "2.4M+", "label": "Happy customers" },
+    { "value": "18,500+", "label": "Verified vendors" },
+    { "value": "120+", "label": "Cities covered" },
+    { "value": "4.9★", "label": "Average rating" }
+  ],
+  "raw": {
+    "customers": 2400000,
+    "vendors": 18500,
+    "cities": 120,
+    "averageRating": 4.9,
+    "happyMovesCount": 2400000,
+    "damageCoverRupees": 500000,
+    "livingNow": 1248
+  }
+}

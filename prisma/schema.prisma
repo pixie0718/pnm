@@ -1,0 +1,109 @@
+// ─────────────────────────────────────────────
+// ShiftIndia — Packers & Movers Marketplace
+// Prisma schema (MySQL)
+//
+// Only dynamic data lives here. Static content
+// (cities, reviews, stats, services, faqs, SEO)
+// lives in /data as JSON files.
+// ─────────────────────────────────────────────
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────
+// INQUIRIES — customer quote requests
+// ─────────────────────────────────────────────
+enum InquiryStatus {
+  new
+  contacted
+  quoted
+  booked
+  cancelled
+}
+
+model Inquiry {
+  id            Int       @id @default(autoincrement())
+  name          String?   @db.VarChar(120)
+  phone         String?   @db.VarChar(20)
+  email         String?   @db.VarChar(160)
+  pickupCity    String    @map("pickup_city") @db.VarChar(120)
+  pickupAddress String?   @map("pickup_address") @db.Text
+  dropCity      String    @map("drop_city") @db.VarChar(120)
+  dropAddress   String?   @map("drop_address") @db.Text
+  houseSize     String    @map("house_size") @db.VarChar(20)
+  movingDate    DateTime? @map("moving_date") @db.Date
+  notes         String?   @db.Text
+  source        String?   @default("website") @db.VarChar(60)
+  status        InquiryStatus @default(new)
+
+  customerId Int?      @map("customer_id")
+  customer   Customer? @relation(fields: [customerId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  quotes Quote[]
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([customerId])
+  @@map("inquiries")
+}
+
+// ─────────────────────────────────────────────
+// QUOTES — responses sent to inquiries
+// ─────────────────────────────────────────────
+enum QuoteStatus {
+  draft
+  sent
+  accepted
+  rejected
+}
+
+model Quote {
+  id         Int     @id @default(autoincrement())
+  inquiryId  Int     @map("inquiry_id")
+  vendorName String  @map("vendor_name") @db.VarChar(180)
+  priceLow   Int     @map("price_low")
+  priceHigh  Int     @map("price_high")
+  eta        String? @db.VarChar(60)
+  features   Json?
+  notes      String? @db.Text
+  status     QuoteStatus @default(draft)
+
+  sentAt    DateTime? @map("sent_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  inquiry Inquiry @relation(fields: [inquiryId], references: [id], onDelete: Cascade)
+
+  @@index([inquiryId])
+  @@index([status])
+  @@map("quotes")
+}
+
+// ─────────────────────────────────────────────
+// CUSTOMERS — people who booked or got quoted
+// ─────────────────────────────────────────────
+model Customer {
+  id           Int      @id @default(autoincrement())
+  name         String   @db.VarChar(120)
+  phone        String   @unique @db.VarChar(20)
+  email        String?  @unique @db.VarChar(160)
+  passwordHash String   @map("password_hash") @db.VarChar(255)
+  city         String?  @db.VarChar(120)
+  notes        String?  @db.Text
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  inquiries Inquiry[]
+
+  @@index([phone])
+  @@map("customers")
+}

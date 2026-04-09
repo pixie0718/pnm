@@ -1,0 +1,83 @@
+{
+  "name": "ShiftIndia",
+  "tagline": "Pack it. Ship it. Relax.",
+  "url": "https://shiftindia.in",
+  "phone": "18001234567",
+  "phoneDisplay": "1800-123-4567",
+  "email": "hello@shiftindia.in",
+  "social": {
+    "twitter": "https://twitter.com/shiftindia",
+    "instagram": "https://instagram.com/shiftindia",
+    "facebook": "https://facebook.com/shiftindia",
+    "linkedin": "https://linkedin.com/company/shiftindia"
+  },
+  "seo": {
+    "defaultTitle": "ShiftIndia — Move Anywhere in India, Fast, Safe & Transparent",
+    "titleTemplate": "%s | ShiftIndia",
+    "description": "India's most trusted packers & movers marketplace. Compare prices from 18,500+ verified vendors instantly. Live tracking, damage protection, lowest price guarantee.",
+    "keywords": [
+      "packers and movers",
+      "movers india",
+      "home relocation",
+      "household shifting",
+      "verified packers",
+      "intercity movers"
+    ],
+    "ogImage": "/og-image.jpg"
+  },
+  "home": {
+    "title": "ShiftIndia — India's #1 Packers & Movers Marketplace",
+    "description": "Compare quotes from 18,500+ verified packers and movers across 120+ cities in India. Transparent pricing, live tracking, damage protection.",
+    "keywords": ["packers and movers", "india movers", "home shifting"]
+  },
+  "hero": {
+    "eyebrow": "India's #1 moving marketplace",
+    "headingLines": ["Pack it.", "Ship it.", "Relax."],
+    "subheading": "Compare 18,500+ verified packers & movers across India. Transparent pricing, live tracking, and zero drama.",
+    "trustPills": [
+      { "icon": "shield", "label": "Verified Vendors" },
+      { "icon": "map", "label": "Live GPS Tracking" },
+      { "icon": "package", "label": "₹5L Damage Cover" },
+      { "icon": "rupee", "label": "Lowest Price Promise" }
+    ]
+  },
+  "marquee": [
+    "🚚 2.4M Happy Moves",
+    "⭐ 4.9 Average Rating",
+    "🛡 ₹5L Damage Protection",
+    "📍 120+ Cities",
+    "💰 Lowest Price Guarantee",
+    "⚡ Book in 30 seconds",
+    "🏆 18,500+ Verified Vendors",
+    "🔐 Escrow Protected"
+  ],
+  "howItWorks": {
+    "eyebrow": "The process",
+    "heading": "Moving home?",
+    "headingAccent": "Three steps. Done.",
+    "description": "No more phone calls, hidden charges, or sketchy agents. We built this so you can move without losing your weekend — or your sanity.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Tell us where",
+        "description": "Drop your pickup, destination, and house size. It takes about 20 seconds — we timed it.",
+        "chips": ["📍 Any city", "📅 Any date"]
+      },
+      {
+        "number": "02",
+        "title": "Compare quotes",
+        "description": "Instant quotes from 10+ vendors. See every rupee upfront."
+      },
+      {
+        "number": "03",
+        "title": "Book & chill",
+        "description": "Confirm in one tap. Track your move live. Pay after delivery."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Need help deciding?",
+    "heading": "Talk to a real moving expert.",
+    "description": "Free 10-minute consultation. 7 days a week. Real humans who actually know what they're talking about."
+  }
+}

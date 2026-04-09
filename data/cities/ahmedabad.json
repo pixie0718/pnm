@@ -1,0 +1,28 @@
+{
+  "slug": "ahmedabad",
+  "name": "Ahmedabad",
+  "state": "Gujarat",
+  "emoji": "🛕",
+  "gradient": "from-saffron-500 to-saffron-600",
+  "vendorCount": 1200,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Ahmedabad — 1,200+ Verified Vendors | ShiftIndia",
+    "description": "Compare 1,200+ verified packers and movers in Ahmedabad. Instant quotes starting ₹4,500. Live tracking, ₹5L damage protection, pay after delivery.",
+    "keywords": ["packers and movers ahmedabad", "movers ahmedabad", "home shifting ahmedabad", "gujarat relocation"],
+    "ogImage": "/og/cities/ahmedabad.jpg"
+  },
+  "hero": {
+    "title": "Packers & Movers in Ahmedabad",
+    "subtitle": "Compare verified packers and movers across Ahmedabad. Instant quotes, transparent pricing, safe moves."
+  },
+  "intro": "Moving in or out of Ahmedabad has never been simpler. ShiftIndia connects you with 1,200+ rigorously verified packers and movers across the city — from Satellite and Bodakdev to Maninagar and Gota. Whether you're shifting a 1 BHK flat or an entire villa, you'll get instant quotes, transparent itemised pricing, and full damage protection on every booking.\n\nWe've helped thousands of Ahmedabad families move without the usual drama of phone calls, sketchy agents, or hidden charges. Every vendor on our platform is KYC-verified, insured, and continuously monitored for quality.",
+  "whyUs": "Ahmedabad's traffic, narrow society gates, and high-rise lifts make moving tricky. Our vendors know every pin code, carry the right equipment, and plan routes to avoid peak-hour chaos. With GPS tracking on every truck and ₹5 lakh damage protection built in, your move is genuinely stress-free.",
+  "popularRoutes": ["Mumbai", "Delhi", "Bangalore", "Pune", "Hyderabad"],
+  "faqs": [
+    { "q": "How much do packers and movers charge in Ahmedabad?", "a": "Prices start from ₹4,500 for a 1 BHK local move within Ahmedabad. Intercity moves depend on distance and house size — a 2 BHK Ahmedabad to Mumbai typically ranges ₹18,000 – ₹28,000." },
+    { "q": "Which areas of Ahmedabad do you cover?", "a": "All 60+ localities including Satellite, Bodakdev, Vastrapur, Navrangpura, Maninagar, Gota, SG Highway, Sabarmati, Naranpura, Thaltej and more." },
+    { "q": "Do vendors handle high-rise apartments?", "a": "Yes. Our vendors are equipped for high-rise moves with proper lifting gear, floor protection and trained crew for lift and stairway handling." },
+    { "q": "Is damage protection included?", "a": "Yes — ₹5 lakh transit damage protection is automatically included on every booking in Ahmedabad at no extra cost." }
+  ]
+}

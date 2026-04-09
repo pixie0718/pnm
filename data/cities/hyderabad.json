@@ -1,0 +1,28 @@
+{
+  "slug": "hyderabad",
+  "name": "Hyderabad",
+  "state": "Telangana",
+  "emoji": "💎",
+  "gradient": "from-saffron-500 to-saffron-700",
+  "vendorCount": 1100,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Hyderabad — 1,100+ Verified Vendors | ShiftIndia",
+    "description": "Compare 1,100+ verified packers and movers in Hyderabad. Instant quotes starting ₹4,500. HITEC City, Gachibowli, Kukatpally covered. Live tracking included.",
+    "keywords": ["packers and movers hyderabad", "movers hyderabad", "home shifting hyderabad", "hitec city movers", "gachibowli movers"],
+    "ogImage": "/og/cities/hyderabad.jpg"
+  },
+  "hero": {
+    "title": "Packers & Movers in Hyderabad",
+    "subtitle": "HITEC City to Old City, Gachibowli to Kukatpally — 1,100+ verified movers."
+  },
+  "intro": "Hyderabad blends old charm with tech-city energy. ShiftIndia gives you access to 1,100+ verified packers and movers across the city — HITEC City, Gachibowli, Kondapur, Jubilee Hills, Banjara Hills, Kukatpally, Miyapur and more.\n\nInstant quotes, transparent pricing, and vendors that handle everything from heritage homes to modern high-rises.",
+  "whyUs": "From the Old City's narrow lanes to HITEC City's high-rises, Hyderabad demands versatile movers. Our vendors have the right vehicles, the right crew, and the right gear — with ₹5 lakh damage protection and live GPS tracking on every move.",
+  "popularRoutes": ["Bangalore", "Chennai", "Pune", "Mumbai", "Vijayawada"],
+  "faqs": [
+    { "q": "How much do packers charge in Hyderabad?", "a": "Local 1 BHK moves from ₹4,500. 2 BHK moves within the city typically ₹7,500 – ₹13,500." },
+    { "q": "Do you cover HITEC City and Gachibowli?", "a": "Yes, along with all of GHMC including Jubilee Hills, Banjara Hills, Kondapur, Madhapur, Kukatpally, Secunderabad and more." },
+    { "q": "Can you move large wardrobes and beds?", "a": "Yes. Our vendors dismantle, pack, transport and reassemble furniture at transparent rates." },
+    { "q": "Do you offer same-day moves?", "a": "Yes, subject to vendor availability. Booking 24 hours in advance is recommended." }
+  ]
+}
