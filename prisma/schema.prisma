@@ -88,6 +88,41 @@ model Quote {
 }
 
 // ─────────────────────────────────────────────
+// BLOG POSTS
+// ─────────────────────────────────────────────
+enum BlogStatus {
+  draft
+  published
+}
+
+model BlogPost {
+  id               Int        @id @default(autoincrement())
+  title            String     @db.VarChar(255)
+  slug             String     @unique @db.VarChar(255)
+  excerpt          String?    @db.Text
+  content          String     @db.LongText
+  coverImage       String?    @map("cover_image") @db.VarChar(500)
+  status           BlogStatus @default(draft)
+  author           String     @default("Admin") @db.VarChar(120)
+  publishedAt      DateTime?  @map("published_at")
+
+  // SEO
+  metaTitle        String?    @map("meta_title") @db.VarChar(60)
+  metaDescription  String?    @map("meta_description") @db.VarChar(160)
+  metaKeywords     String?    @map("meta_keywords") @db.VarChar(500)
+  focusKeyword     String?    @map("focus_keyword") @db.VarChar(100)
+  ogImage          String?    @map("og_image") @db.VarChar(500)
+  canonicalUrl     String?    @map("canonical_url") @db.VarChar(500)
+
+  createdAt        DateTime   @default(now()) @map("created_at")
+  updatedAt        DateTime   @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([slug])
+  @@map("blog_posts")
+}
+
+// ─────────────────────────────────────────────
 // CUSTOMERS — people who booked or got quoted
 // ─────────────────────────────────────────────
 model Customer {

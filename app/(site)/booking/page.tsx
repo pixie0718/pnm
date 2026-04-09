@@ -80,6 +80,7 @@ function BookingInner() {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+  const [confirming, setConfirming] = useState(false);
 
   const updateQty = (i: number, d: number) => {
     setItems(items.map((it, idx) => (idx === i ? { ...it, qty: Math.max(0, it.qty + d) } : it)));
@@ -613,6 +614,36 @@ function BookingInner() {
                 No upfront payment. Get quotes from verified vendors and pick the best one.
               </div>
 
+              {/* CONFIRM PANEL — shown only after clicking "Get Quote" */}
+              {confirming && (
+                <div className="mt-5 border-2 border-saffron-400 bg-saffron-50 rounded-2xl p-5">
+                  <div className="font-bold text-midnight-900 mb-1">Ready to submit your inquiry?</div>
+                  <p className="text-sm text-midnight-600 mb-4">
+                    Once submitted, our verified vendors will review your details and send you quotes within a few hours.
+                  </p>
+                  <div className="flex gap-3 flex-wrap">
+                    <button
+                      type="button"
+                      onClick={() => setConfirming(false)}
+                      className="btn btn-ghost text-sm"
+                    >
+                      ← Go Back & Edit
+                    </button>
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="btn btn-primary text-sm disabled:opacity-70"
+                    >
+                      {submitting ? (
+                        <><Loader2 size={15} className="animate-spin"/> Submitting...</>
+                      ) : (
+                        <><Check size={15}/> Yes, Submit Inquiry</>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {error && (
                 <div className="mt-4 text-sm text-red-600 font-medium bg-red-50 border border-red-200 rounded-xl p-3">
                   ⚠ {error}
@@ -625,7 +656,7 @@ function BookingInner() {
           <div className="mt-8 flex justify-between">
             <button
               type="button"
-              onClick={() => setStep(Math.max(1, step - 1))}
+              onClick={() => { setStep(Math.max(1, step - 1)); setConfirming(false); }}
               disabled={step === 1}
               className="btn btn-ghost disabled:opacity-40"
             >
@@ -639,19 +670,22 @@ function BookingInner() {
               >
                 Continue <ArrowRight size={16} />
               </button>
-            ) : (
-              <button type="submit" disabled={submitting} className="btn btn-primary disabled:opacity-70">
-                {submitting ? (
-                  <>
-                    <Loader2 size={16} className="animate-spin" /> Submitting...
-                  </>
-                ) : (
-                  <>
-                    <Truck size={16} /> Get Quote
-                  </>
-                )}
+            ) : !confirming ? (
+              <button
+                type="button"
+                onClick={() => {
+                  if (!contactName.trim() || !contactPhone.trim()) {
+                    setError("Please enter your name and phone number");
+                    return;
+                  }
+                  setError(null);
+                  setConfirming(true);
+                }}
+                className="btn btn-primary"
+              >
+                <Truck size={16} /> Get Quote
               </button>
-            )}
+            ) : null}
           </div>
         </form>
 

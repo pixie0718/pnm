@@ -6,11 +6,14 @@ export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const method = req.method;
 
-  // ── Customer account protection ──
-  if (pathname.startsWith("/account")) {
+  // ── Customer account & API protection ──
+  if (pathname.startsWith("/account") || pathname.startsWith("/api/customer")) {
     const token = req.cookies.get(CUSTOMER_SESSION_COOKIE)?.value;
     const session = token ? await verifyCustomerSession(token) : null;
     if (!session) {
+      if (pathname.startsWith("/api/")) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      }
       const url = req.nextUrl.clone();
       url.pathname = "/login";
       url.searchParams.set("from", pathname);
@@ -56,6 +59,7 @@ export const config = {
     "/api/inquiries/:path*",
     "/api/quotes",
     "/api/quotes/:path*",
+    "/api/customer/:path*",
     "/account/:path*",
   ],
 };

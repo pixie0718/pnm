@@ -309,47 +309,145 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── TOP CITIES ─────────────── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
-        <div className="flex items-end justify-between mb-14 flex-wrap gap-6">
-          <div>
-            <div className="eyebrow mb-4">
-              <span className="w-8 h-px bg-saffron-500"></span> {stats.raw.cities}+ cities
-            </div>
-            <h2 className="display text-4xl md:text-6xl font-bold text-midnight-900 leading-[0.95]">
-              We move the <br /> whole of <span className="grad-saffron">Bharat</span> 🇮🇳
-            </h2>
-          </div>
-          <Link href="/booking" className="btn btn-ghost">
-            See all cities <ArrowUpRight size={16} />
-          </Link>
-        </div>
+      <section className="py-24 bg-midnight-900 overflow-hidden relative">
+        <div className="absolute inset-0 dot-grid opacity-10 pointer-events-none" />
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {cities.map((city) => (
-            <Link
-              key={city.slug}
-              href={`/cities/${city.slug}`}
-              className="group relative h-56 rounded-3xl overflow-hidden cursor-pointer hover:-translate-y-2 transition-all"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${city.gradient}`}></div>
-              <div className="absolute inset-0 grain"></div>
-              <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
-                <div className="text-5xl">{city.emoji}</div>
-                <div>
-                  <div className="display text-2xl font-bold">{city.name}</div>
-                  <div className="text-xs opacity-80 flex items-center gap-1 mt-1">
-                    <CircleDot size={12} /> {city.vendorCount.toLocaleString()}+ vendors
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* HEADER */}
+          <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
+            <div>
+              <div className="eyebrow !text-saffron-400 mb-3">
+                <span className="w-8 h-px bg-saffron-500"></span> {stats.raw.cities}+ cities across India
+              </div>
+              <h2 className="display text-4xl md:text-6xl font-bold text-white leading-[0.95]">
+                We move the whole <br className="hidden md:block"/> of <span className="grad-saffron">Bharat</span> 🇮🇳
+              </h2>
+            </div>
+            <Link href="/booking" className="btn bg-white/10 text-white border border-white/20 hover:bg-white/20 transition shrink-0">
+              Get a quote <ArrowUpRight size={16} />
+            </Link>
+          </div>
+
+          {/* BENTO GRID — Mumbai hero left, Delhi tall right, 5 small bottom */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+
+            {/* Mumbai — big hero */}
+            {cities[0] && (
+              <Link href={`/cities/${cities[0].slug}`}
+                className="group relative col-span-2 md:col-span-2 row-span-2 rounded-3xl overflow-hidden min-h-[340px] md:min-h-[420px] hover:-translate-y-1 transition-all hover:shadow-2xl">
+                <div className={`absolute inset-0 bg-gradient-to-br ${cities[0].gradient}`} />
+                <div className="absolute inset-0 grain" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 p-7 flex flex-col justify-between text-white">
+                  <div className="flex justify-between items-start">
+                    <span className="text-7xl leading-none">{cities[0].emoji}</span>
+                    <span className="bg-saffron-500 text-white text-[11px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full">
+                      #1 City
+                    </span>
+                  </div>
+                  <div>
+                    <div className="text-4xl font-extrabold mb-1">{cities[0].name}</div>
+                    <div className="text-white/70 text-sm flex items-center gap-1.5 mb-4">
+                      <CircleDot size={12} /> {cities[0].vendorCount.toLocaleString()}+ verified vendors
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition">
+                      Explore <ArrowUpRight size={11} />
+                    </div>
                   </div>
                 </div>
-                <ArrowUpRight className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition" size={22} />
-              </div>
-            </Link>
-          ))}
+              </Link>
+            )}
+
+            {/* Delhi — tall card */}
+            {cities[1] && (
+              <Link href={`/cities/${cities[1].slug}`}
+                className="group relative col-span-2 md:col-span-1 row-span-2 rounded-3xl overflow-hidden min-h-[200px] md:min-h-[420px] hover:-translate-y-1 transition-all hover:shadow-2xl">
+                <div className={`absolute inset-0 bg-gradient-to-br ${cities[1].gradient}`} />
+                <div className="absolute inset-0 grain" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-between text-white">
+                  <span className="text-5xl">{cities[1].emoji}</span>
+                  <div>
+                    <div className="text-2xl font-extrabold mb-1">{cities[1].name}</div>
+                    <div className="text-white/70 text-xs flex items-center gap-1">
+                      <CircleDot size={10} /> {cities[1].vendorCount.toLocaleString()}+ vendors
+                    </div>
+                  </div>
+                </div>
+                <ArrowUpRight size={16} className="absolute top-5 right-5 text-white opacity-0 group-hover:opacity-100 transition" />
+              </Link>
+            )}
+
+            {/* Bangalore + Ahmedabad — top row small */}
+            {cities.slice(2, 4).map((city) => (
+              <Link key={city.slug} href={`/cities/${city.slug}`}
+                className="group relative col-span-1 rounded-3xl overflow-hidden min-h-[200px] hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div className={`absolute inset-0 bg-gradient-to-br ${city.gradient}`} />
+                <div className="absolute inset-0 grain" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute inset-0 p-5 flex flex-col justify-between text-white">
+                  <span className="text-4xl">{city.emoji}</span>
+                  <div>
+                    <div className="text-lg font-extrabold mb-0.5">{city.name}</div>
+                    <div className="text-white/60 text-xs flex items-center gap-1">
+                      <CircleDot size={9} /> {city.vendorCount.toLocaleString()}+ vendors
+                    </div>
+                  </div>
+                </div>
+                <ArrowUpRight size={14} className="absolute top-4 right-4 text-white opacity-0 group-hover:opacity-100 transition" />
+              </Link>
+            ))}
+
+            {/* Bottom row — Hyderabad, Chennai, Pune, Kolkata */}
+            {cities.slice(4, 8).map((city) => (
+              <Link key={city.slug} href={`/cities/${city.slug}`}
+                className="group relative col-span-1 rounded-3xl overflow-hidden min-h-[150px] md:min-h-[170px] hover:-translate-y-1 transition-all hover:shadow-xl">
+                <div className={`absolute inset-0 bg-gradient-to-br ${city.gradient}`} />
+                <div className="absolute inset-0 grain" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute inset-0 p-4 md:p-5 flex flex-col justify-between text-white">
+                  <span className="text-3xl">{city.emoji}</span>
+                  <div>
+                    <div className="text-base font-extrabold">{city.name}</div>
+                    <div className="text-white/60 text-[11px] flex items-center gap-1 mt-0.5">
+                      <CircleDot size={9} /> {city.vendorCount.toLocaleString()}+
+                    </div>
+                  </div>
+                </div>
+                <ArrowUpRight size={13} className="absolute top-4 right-4 text-white opacity-0 group-hover:opacity-100 transition" />
+              </Link>
+            ))}
+          </div>
+
+          {/* SECONDARY CITIES — scrolling marquee row */}
+          <div className="mt-6 relative">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-midnight-400 text-xs font-semibold uppercase tracking-widest">Also available in</span>
+              <div className="flex-1 h-px bg-midnight-700" />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {[
+                "Jaipur", "Lucknow", "Surat", "Nagpur", "Indore", "Bhopal",
+                "Coimbatore", "Kochi", "Chandigarh", "Vizag", "Patna", "Agra",
+                "Varanasi", "Rajkot", "Madurai", "Mysore", "Nashik", "Vadodara",
+              ].map((city) => (
+                <Link key={city} href="/booking"
+                  className="px-3.5 py-1.5 rounded-full bg-white/8 border border-white/10 text-midnight-200 text-sm font-medium hover:bg-saffron-500 hover:border-saffron-500 hover:text-white transition">
+                  {city}
+                </Link>
+              ))}
+              <Link href="/booking"
+                className="px-3.5 py-1.5 rounded-full bg-saffron-500 text-white text-sm font-bold hover:bg-saffron-400 transition flex items-center gap-1">
+                +80 more <ArrowUpRight size={12} />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ─────────────── CTA ─────────────── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
         <div className="relative rounded-[40px] overflow-hidden bg-saffron-500 grain">
           <div className="absolute inset-0 dot-grid opacity-20"></div>
           <Truck className="absolute -right-20 top-1/2 -translate-y-1/2 text-white/10" size={500} strokeWidth={1} />

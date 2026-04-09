@@ -42,9 +42,24 @@ export default function Footer() {
             </div>
           </div>
 
-          <FooterCol title="Company" links={["About", "Careers", "Press", "Blog"]} />
-          <FooterCol title="Services" links={["Home Shifting", "Office Shifting", "Vehicle Transport", "Storage"]} />
-          <FooterCol title="Support" links={["Help Center", "Contact", "Terms", "Privacy"]} />
+          <FooterCol title="Company" links={[
+            { label: "About Us", href: "/about" },
+            { label: "Careers", href: "#" },
+            { label: "Press", href: "#" },
+            { label: "Blog", href: "/blog" },
+          ]} />
+          <FooterCol title="Services" links={[
+            { label: "Home Shifting", href: "/booking" },
+            { label: "Office Shifting", href: "/booking" },
+            { label: "Vehicle Transport", href: "/booking" },
+            { label: "Storage", href: "/booking" },
+          ]} />
+          <FooterCol title="Support" links={[
+            { label: "FAQ", href: "/faq" },
+            { label: "Contact Us", href: "/about#contact" },
+            { label: "Terms & Conditions", href: "/terms" },
+            { label: "Privacy Policy", href: "#" },
+          ]} />
         </div>
 
         <div className="mt-16 pt-8 border-t border-midnight-700 flex flex-col md:flex-row items-center justify-between text-xs text-midnight-300 gap-4">
@@ -62,14 +77,14 @@ export default function Footer() {
   );
 }
 
-function FooterCol({ title, links }: { title: string; links: string[] }) {
+function FooterCol({ title, links }: { title: string; links: { label: string; href: string }[] }) {
   return (
     <div>
       <h4 className="text-white font-bold mb-5 text-sm uppercase tracking-wider">{title}</h4>
       <ul className="space-y-3 text-sm">
         {links.map((l) => (
-          <li key={l}>
-            <Link href="#" className="hover:text-saffron-500 transition">{l}</Link>
+          <li key={l.label}>
+            <Link href={l.href} className="hover:text-saffron-500 transition">{l.label}</Link>
           </li>
         ))}
       </ul>

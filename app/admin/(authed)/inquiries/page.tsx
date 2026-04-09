@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import {
-  Inbox, Phone, Mail, MapPin, Calendar, Home, Clock, ArrowUpRight, Filter,
+  Inbox, Phone, Mail, MapPin, Calendar, Home, Clock,
+  ArrowUpRight, TrendingUp, Users, CheckCircle, Star, XCircle,
 } from "lucide-react";
 import StatusBadge from "@/components/StatusBadge";
 
@@ -37,6 +38,37 @@ export default async function AdminInquiriesPage({
   const total = counts.reduce((sum, c) => sum + c._count._all, 0);
   const countMap = Object.fromEntries(counts.map((c) => [c.status, c._count._all]));
 
+  const stats = [
+    {
+      label: "Total Inquiries",
+      value: total,
+      icon: Users,
+      gradient: "from-brand-600 to-blue-500",
+      trend: "All time",
+    },
+    {
+      label: "New Leads",
+      value: countMap.new || 0,
+      icon: Star,
+      gradient: "from-amber-500 to-saffron-500",
+      trend: "Action needed",
+    },
+    {
+      label: "Quoted",
+      value: countMap.quoted || 0,
+      icon: TrendingUp,
+      gradient: "from-violet-600 to-fuchsia-500",
+      trend: "In progress",
+    },
+    {
+      label: "Booked",
+      value: countMap.booked || 0,
+      icon: CheckCircle,
+      gradient: "from-emerald-500 to-teal-500",
+      trend: "Converted",
+    },
+  ];
+
   const tabs = [
     { key: undefined, label: "All", count: total },
     { key: "new", label: "New", count: countMap.new || 0 },
@@ -48,43 +80,40 @@ export default async function AdminInquiriesPage({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      {/* HEADER */}
+
+      {/* PAGE HEADER */}
       <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <div className="text-xs text-midnight-500 uppercase tracking-wide font-bold">
-            Admin · Inquiries
-          </div>
-          <h1 className="display text-4xl font-bold text-midnight-900 mt-1">
-            Customer Inquiries
-          </h1>
-          <p className="text-midnight-500 mt-1">
-            All quote requests from the website. Live data from MySQL.
-          </p>
+          <div className="text-xs text-ink-500 uppercase tracking-wide font-semibold">Admin Panel</div>
+          <h1 className="text-3xl font-extrabold text-ink-900">Customer Inquiries</h1>
+          <p className="text-sm text-ink-500 mt-1">Live quote requests from the website</p>
         </div>
         <Link href="/admin" className="btn btn-ghost text-sm">
-          ← Admin Home
+          ← Dashboard
         </Link>
       </div>
 
-      {/* STATS */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-8">
-        {[
-          { label: "Total", value: total, color: "bg-midnight-900 text-white" },
-          { label: "New", value: countMap.new || 0, color: "bg-saffron-500 text-white" },
-          { label: "Contacted", value: countMap.contacted || 0, color: "bg-cream-200 text-midnight-900" },
-          { label: "Quoted", value: countMap.quoted || 0, color: "bg-mint-500 text-white" },
-          { label: "Booked", value: countMap.booked || 0, color: "bg-midnight-700 text-white" },
-        ].map((s) => (
-          <div key={s.label} className={`rounded-2xl p-5 ${s.color}`}>
-            <div className="text-xs font-bold uppercase tracking-wider opacity-80">{s.label}</div>
-            <div className="display text-3xl font-bold mt-1">{s.value}</div>
-          </div>
-        ))}
+      {/* STATS CARDS */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        {stats.map((s) => {
+          const Icon = s.icon;
+          return (
+            <div key={s.label} className="card p-6">
+              <div className="flex items-start justify-between">
+                <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${s.gradient} text-white grid place-items-center`}>
+                  <Icon size={20} />
+                </div>
+                <span className="text-xs font-semibold text-ink-400">{s.trend}</span>
+              </div>
+              <div className="text-2xl font-extrabold text-ink-900 mt-4">{s.value}</div>
+              <div className="text-sm text-ink-500">{s.label}</div>
+            </div>
+          );
+        })}
       </div>
 
       {/* FILTER TABS */}
-      <div className="card p-2 mb-6 flex items-center gap-1 overflow-x-auto">
-        <Filter size={16} className="text-midnight-500 ml-3 mr-1 shrink-0" />
+      <div className="card p-1.5 mb-6 flex items-center gap-1 overflow-x-auto">
         {tabs.map((t) => {
           const active = (status ?? undefined) === t.key;
           const href = t.key ? `/admin/inquiries?status=${t.key}` : "/admin/inquiries";
@@ -92,14 +121,16 @@ export default async function AdminInquiriesPage({
             <Link
               key={t.label}
               href={href}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition ${
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition ${
                 active
-                  ? "bg-midnight-900 text-white"
-                  : "text-midnight-700 hover:bg-cream-100"
+                  ? "bg-midnight-900 text-white shadow"
+                  : "text-ink-600 hover:bg-slate-100"
               }`}
             >
               {t.label}
-              <span className={`ml-2 text-xs ${active ? "text-saffron-300" : "text-midnight-500"}`}>
+              <span className={`text-xs px-1.5 py-0.5 rounded-full font-bold ${
+                active ? "bg-white/20 text-white" : "bg-slate-100 text-ink-500"
+              }`}>
                 {t.count}
               </span>
             </Link>
@@ -107,103 +138,145 @@ export default async function AdminInquiriesPage({
         })}
       </div>
 
-      {/* LIST */}
+      {/* TABLE / EMPTY STATE */}
       {inquiries.length === 0 ? (
         <div className="card p-16 text-center">
-          <Inbox size={48} className="mx-auto text-midnight-300 mb-4" />
-          <h3 className="display text-2xl font-bold text-midnight-900">No inquiries yet</h3>
-          <p className="text-midnight-500 mt-2">
-            When customers submit the homepage form, they'll show up here.
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-slate-200 to-slate-300 grid place-items-center mx-auto mb-4">
+            <Inbox size={28} className="text-slate-500" />
+          </div>
+          <h3 className="text-xl font-bold text-ink-900">No inquiries found</h3>
+          <p className="text-ink-500 mt-2 text-sm">
+            {status ? `No inquiries with status "${status}" yet.` : "When customers submit the homepage form, they'll appear here."}
           </p>
+          {status && (
+            <Link href="/admin/inquiries" className="btn btn-ghost text-sm mt-4 inline-flex">
+              Clear filter
+            </Link>
+          )}
         </div>
       ) : (
-        <div className="space-y-4">
-          {inquiries.map((inq) => (
-            <div
-              key={inq.id}
-              className="card p-6 hover:shadow-glow transition group"
-            >
-              <div className="flex items-start justify-between gap-4 flex-wrap">
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 flex-wrap mb-2">
-                    <span className="font-mono text-xs text-midnight-500">#{inq.id}</span>
-                    <StatusBadge status={inq.status} />
-                    <span className="chip">
-                      <Home size={12} /> {inq.houseSize}
-                    </span>
-                    {inq.quotes.length > 0 && (
-                      <span className="chip !bg-mint-500/10 !border-mint-500/30 !text-mint-600">
-                        {inq.quotes.length} {inq.quotes.length === 1 ? "quote" : "quotes"}
-                      </span>
-                    )}
-                  </div>
+        <div className="card p-6">
+          <div className="flex items-center justify-between mb-5">
+            <h2 className="text-lg font-bold text-ink-900">
+              {status ? `${status.charAt(0).toUpperCase() + status.slice(1)} Inquiries` : "All Inquiries"}
+            </h2>
+            <span className="chip">{inquiries.length} shown</span>
+          </div>
 
-                  <div className="display text-2xl font-bold text-midnight-900 flex items-center gap-3 flex-wrap">
-                    <span className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-saffron-500"></span>
-                      {inq.pickupCity}
-                    </span>
-                    <span className="text-midnight-300">→</span>
-                    <span className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-mint-500"></span>
-                      {inq.dropCity}
-                    </span>
-                  </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-ink-500 border-b border-slate-100">
+                  <th className="py-3 pr-4 font-semibold">ID</th>
+                  <th className="py-3 pr-4 font-semibold">Route</th>
+                  <th className="py-3 pr-4 font-semibold">Customer</th>
+                  <th className="py-3 pr-4 font-semibold">Contact</th>
+                  <th className="py-3 pr-4 font-semibold">Moving Date</th>
+                  <th className="py-3 pr-4 font-semibold">Status</th>
+                  <th className="py-3 font-semibold text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {inquiries.map((inq) => (
+                  <tr key={inq.id} className="border-b border-slate-50 hover:bg-slate-50/60 transition group">
+                    {/* ID */}
+                    <td className="py-4 pr-4">
+                      <div className="font-mono text-xs text-ink-400">#{inq.id}</div>
+                      <div className="text-[11px] text-ink-300 mt-0.5 flex items-center gap-1">
+                        <Clock size={10} /> {timeAgo(inq.createdAt)}
+                      </div>
+                    </td>
 
-                  {inq.name && (
-                    <div className="mt-3 text-sm font-semibold text-midnight-900">
-                      {inq.name}
-                    </div>
-                  )}
+                    {/* ROUTE */}
+                    <td className="py-4 pr-4">
+                      <div className="flex items-center gap-2 font-semibold text-ink-900">
+                        <span className="flex items-center gap-1">
+                          <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span>
+                          {inq.pickupCity}
+                        </span>
+                        <span className="text-ink-300 text-xs">→</span>
+                        <span className="flex items-center gap-1">
+                          <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+                          {inq.dropCity}
+                        </span>
+                      </div>
+                      <div className="text-xs text-ink-400 mt-0.5 flex items-center gap-1">
+                        <Home size={10} /> {inq.houseSize}
+                        {inq.quotes.length > 0 && (
+                          <span className="ml-2 px-1.5 py-0.5 bg-emerald-50 text-emerald-700 rounded font-semibold">
+                            {inq.quotes.length} quote{inq.quotes.length > 1 ? "s" : ""}
+                          </span>
+                        )}
+                      </div>
+                    </td>
 
-                  <div className="mt-2 flex items-center gap-4 flex-wrap text-sm text-midnight-500">
-                    {inq.phone && (
-                      <a
-                        href={`tel:${inq.phone}`}
-                        className="flex items-center gap-1.5 hover:text-saffron-600"
+                    {/* CUSTOMER */}
+                    <td className="py-4 pr-4">
+                      <div className="font-medium text-ink-900">{inq.name || <span className="text-ink-300">—</span>}</div>
+                      {inq.notes && (
+                        <div className="text-xs text-ink-400 mt-0.5 max-w-[180px] truncate" title={inq.notes}>
+                          💬 {inq.notes}
+                        </div>
+                      )}
+                    </td>
+
+                    {/* CONTACT */}
+                    <td className="py-4 pr-4">
+                      <div className="space-y-1">
+                        {inq.phone && (
+                          <a
+                            href={`tel:${inq.phone}`}
+                            className="flex items-center gap-1.5 text-ink-600 hover:text-amber-600 transition"
+                          >
+                            <Phone size={12} /> {inq.phone}
+                          </a>
+                        )}
+                        {inq.email && (
+                          <a
+                            href={`mailto:${inq.email}`}
+                            className="flex items-center gap-1.5 text-ink-400 hover:text-amber-600 transition text-xs"
+                          >
+                            <Mail size={11} /> {inq.email}
+                          </a>
+                        )}
+                      </div>
+                    </td>
+
+                    {/* MOVING DATE */}
+                    <td className="py-4 pr-4">
+                      {inq.movingDate ? (
+                        <div className="flex items-center gap-1.5 text-ink-600">
+                          <Calendar size={12} />
+                          {new Date(inq.movingDate).toLocaleDateString("en-IN", {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </div>
+                      ) : (
+                        <span className="text-ink-300">—</span>
+                      )}
+                    </td>
+
+                    {/* STATUS */}
+                    <td className="py-4 pr-4">
+                      <StatusBadge status={inq.status} />
+                    </td>
+
+                    {/* ACTION */}
+                    <td className="py-4 text-right">
+                      <Link
+                        href={`/admin/inquiries/${inq.id}`}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-midnight-900 text-white text-xs font-semibold hover:bg-midnight-700 transition"
                       >
-                        <Phone size={13} /> {inq.phone}
-                      </a>
-                    )}
-                    {inq.email && (
-                      <a
-                        href={`mailto:${inq.email}`}
-                        className="flex items-center gap-1.5 hover:text-saffron-600"
-                      >
-                        <Mail size={13} /> {inq.email}
-                      </a>
-                    )}
-                    {inq.movingDate && (
-                      <span className="flex items-center gap-1.5">
-                        <Calendar size={13} />{" "}
-                        {new Date(inq.movingDate).toLocaleDateString("en-IN", {
-                          day: "numeric",
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </span>
-                    )}
-                    <span className="flex items-center gap-1.5 text-midnight-300">
-                      <Clock size={13} /> {timeAgo(inq.createdAt)}
-                    </span>
-                  </div>
-
-                  {inq.notes && (
-                    <div className="mt-3 text-sm bg-cream-100 border border-cream-200 rounded-xl p-3 text-midnight-700">
-                      💬 {inq.notes}
-                    </div>
-                  )}
-                </div>
-
-                <Link
-                  href={`/admin/inquiries/${inq.id}`}
-                  className="btn btn-primary !py-2.5 !px-4 text-sm"
-                >
-                  Open <ArrowUpRight size={14} />
-                </Link>
-              </div>
-            </div>
-          ))}
+                        Open <ArrowUpRight size={12} />
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>

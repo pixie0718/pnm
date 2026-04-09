@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { Inbox, MapPin, Calendar, Home as HomeIcon, Phone, Mail, LogOut, Truck, ArrowRight } from "lucide-react";
+import { Inbox, MapPin, Calendar, Home as HomeIcon, Phone, Mail, LogOut, Truck, ArrowRight, Pencil } from "lucide-react";
 import { getCurrentCustomer } from "@/lib/customer-auth";
 import { prisma } from "@/lib/prisma";
 import StatusBadge from "@/components/StatusBadge";
@@ -60,7 +60,12 @@ export default async function AccountPage() {
                 </div>
               </div>
             </div>
-            <CustomerLogoutButton />
+            <div className="flex items-center gap-3">
+              <Link href="/account/profile" className="btn btn-ghost text-sm px-4 py-2 flex items-center gap-2">
+                <Pencil size={14} /> Edit Profile
+              </Link>
+              <CustomerLogoutButton />
+            </div>
           </div>
         </div>
 
@@ -109,55 +114,67 @@ export default async function AccountPage() {
             </div>
           ) : (
             <div className="space-y-3">
-              {inquiries.map((i) => (
-                <div key={i.id} className="border border-midnight-100 rounded-2xl p-5 hover:shadow-soft transition">
-                  <div className="flex items-start justify-between gap-4 flex-wrap">
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="font-mono text-xs text-midnight-500">#INQ-{i.id.toString().padStart(4, "0")}</span>
-                        <StatusBadge status={i.status} />
+              {inquiries.map((i) => {
+                const sentQuotes = i.quotes.filter((q) => q.status !== "draft");
+                return (
+                  <Link
+                    key={i.id}
+                    href={`/account/inquiries/${i.id}`}
+                    className="block border border-midnight-100 rounded-2xl p-5 hover:shadow-soft hover:border-saffron-200 transition group"
+                  >
+                    <div className="flex items-start justify-between gap-4 flex-wrap">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2 mb-2 flex-wrap">
+                          <span className="font-mono text-xs text-midnight-500">#INQ-{i.id.toString().padStart(4, "0")}</span>
+                          <StatusBadge status={i.status} />
+                          {sentQuotes.length > 0 && (
+                            <span className="text-xs font-semibold text-mint-600 bg-mint-500/10 border border-mint-500/30 px-2 py-0.5 rounded-full">
+                              {sentQuotes.length} quote{sentQuotes.length > 1 ? "s" : ""} received
+                            </span>
+                          )}
+                        </div>
+                        <div className="display text-lg font-bold text-midnight-900 flex items-center gap-2">
+                          <MapPin size={16} className="text-saffron-500" />
+                          {i.pickupCity} → {i.dropCity}
+                        </div>
+                        <div className="flex items-center gap-4 mt-2 text-sm text-midnight-500 flex-wrap">
+                          <span className="flex items-center gap-1.5"><HomeIcon size={13} /> {i.houseSize}</span>
+                          {i.movingDate && (
+                            <span className="flex items-center gap-1.5">
+                              <Calendar size={13} />
+                              {new Date(i.movingDate).toLocaleDateString("en-IN", {
+                                day: "numeric", month: "short", year: "numeric",
+                              })}
+                            </span>
+                          )}
+                        </div>
                       </div>
-                      <div className="display text-lg font-bold text-midnight-900 flex items-center gap-2">
-                        <MapPin size={16} className="text-saffron-500" />
-                        {i.pickupCity} → {i.dropCity}
-                      </div>
-                      <div className="flex items-center gap-4 mt-2 text-sm text-midnight-500 flex-wrap">
-                        <span className="flex items-center gap-1.5"><HomeIcon size={13} /> {i.houseSize}</span>
-                        {i.movingDate && (
-                          <span className="flex items-center gap-1.5">
-                            <Calendar size={13} />
-                            {new Date(i.movingDate).toLocaleDateString("en-IN", {
-                              day: "numeric", month: "short", year: "numeric",
-                            })}
-                          </span>
-                        )}
-                        <span className="text-xs">
-                          Created {new Date(i.createdAt).toLocaleDateString("en-IN")}
-                        </span>
-                      </div>
+                      <span className="text-sm font-semibold text-saffron-600 group-hover:underline flex items-center gap-1 shrink-0">
+                        View Details <ArrowRight size={14}/>
+                      </span>
                     </div>
-                  </div>
 
-                  {i.quotes.length > 0 && (
-                    <div className="mt-4 pt-4 border-t border-midnight-100">
-                      <div className="text-xs font-semibold text-midnight-500 uppercase tracking-wider mb-2">
-                        {i.quotes.length} Quote{i.quotes.length > 1 ? "s" : ""}
-                      </div>
-                      <div className="grid sm:grid-cols-2 gap-2">
-                        {i.quotes.map((q) => (
-                          <div key={q.id} className="bg-cream-100 rounded-xl p-3 text-sm">
-                            <div className="font-bold text-midnight-900">{q.vendorName}</div>
-                            <div className="text-saffron-600 font-bold">
-                              ₹{q.priceLow.toLocaleString()} – ₹{q.priceHigh.toLocaleString()}
+                    {sentQuotes.length > 0 && (
+                      <div className="mt-4 pt-4 border-t border-midnight-100">
+                        <div className="flex gap-2 flex-wrap">
+                          {sentQuotes.slice(0, 2).map((q) => (
+                            <div key={q.id} className="bg-cream-100 rounded-xl px-3 py-2 text-sm flex items-center gap-3">
+                              <span className="font-bold text-midnight-900">{q.vendorName}</span>
+                              <span className="text-saffron-600 font-bold">₹{q.priceLow.toLocaleString()}</span>
+                              {q.eta && <span className="text-xs text-midnight-400">{q.eta}</span>}
                             </div>
-                            {q.eta && <div className="text-xs text-midnight-500">ETA: {q.eta}</div>}
-                          </div>
-                        ))}
+                          ))}
+                          {sentQuotes.length > 2 && (
+                            <div className="bg-cream-100 rounded-xl px-3 py-2 text-xs text-midnight-500 grid place-items-center">
+                              +{sentQuotes.length - 2} more
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getServerSession } from "@/lib/auth";
 import LogoutButton from "@/components/admin/LogoutButton";
-import { LayoutDashboard, Inbox, ShieldCheck } from "lucide-react";
+import { LayoutDashboard, Inbox, ShieldCheck, BookOpen } from "lucide-react";
 
 export default async function AuthedAdminLayout({
   children,
@@ -25,6 +25,7 @@ export default async function AuthedAdminLayout({
             <nav className="hidden sm:flex items-center gap-1">
               <AdminLink href="/admin" label="Overview" icon={<LayoutDashboard size={14} />} />
               <AdminLink href="/admin/inquiries" label="Inquiries" icon={<Inbox size={14} />} />
+              <AdminLink href="/admin/blog" label="Blog" icon={<BookOpen size={14} />} />
             </nav>
           </div>
           <div className="flex items-center gap-3">
