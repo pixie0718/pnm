@@ -1,0 +1,45 @@
+{
+  "slug": "agra",
+  "name": "Agra",
+  "state": "Uttar Pradesh",
+  "emoji": "🕌",
+  "gradient": "from-pink-400 to-pink-600",
+  "vendorCount": 310,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Agra — 310+ Verified Vendors | ShiftIndia",
+    "description": "Compare 310+ verified packers and movers in Agra. Instant quotes starting ₹3,500. Civil Lines, Kamla Nagar, Taj Nagri covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers agra",
+      "movers agra",
+      "home shifting agra"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Agra",
+    "subtitle": "Civil Lines to Kamla Nagar, Bodla to Taj Nagri — 310+ verified movers in Agra."
+  },
+  "intro": "Agra's residential landscape stretches from heritage localities near the Taj Mahal to modern colonies like Bodla and Sikandra. ShiftIndia's 310+ verified packers and movers cover every neighbourhood with transparent pricing and live tracking.",
+  "whyUs": "Agra's monument-zone restrictions mean some roads have vehicle size limits. Our vendors know these restrictions and plan routes to avoid delays and fines.",
+  "popularRoutes": [
+    "Delhi",
+    "Lucknow",
+    "Jaipur",
+    "Mathura",
+    "Gwalior"
+  ],
+  "faqs": [
+    {
+      "q": "Are there vehicle restrictions near the Taj Mahal?",
+      "a": "Yes, certain roads have size restrictions. Our vendors plan around these automatically."
+    },
+    {
+      "q": "What does a 2 BHK move cost in Agra?",
+      "a": "₹6,000 – ₹11,000 locally. Quotes depend on distance, floor, and packing."
+    },
+    {
+      "q": "Do you move to Delhi and Jaipur?",
+      "a": "Yes, inter-city moves with insurance and GPS tracking are fully available."
+    }
+  ]
+}

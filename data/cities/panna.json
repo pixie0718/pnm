@@ -1,0 +1,45 @@
+{
+  "slug": "panna",
+  "name": "Panna",
+  "state": "Madhya Pradesh",
+  "emoji": "💎",
+  "gradient": "from-blue-400 to-blue-600",
+  "vendorCount": 315,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Panna — 315+ Verified Vendors | ShiftIndia",
+    "description": "Compare 315+ verified packers and movers in Panna. Instant quotes starting ₹3,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers panna",
+      "movers panna",
+      "home shifting panna",
+      "packers movers madhya pradesh"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Panna",
+    "subtitle": "Sagar, Jabalpur and beyond — 315+ verified packers and movers across Panna."
+  },
+  "intro": "Panna is one of Madhya Pradesh's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 315+ KYC-verified packers and movers covering every locality across Panna.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Panna's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Panna. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Sagar",
+    "Jabalpur",
+    "Chhatarpur",
+    "Satna"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Panna?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹11,500 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Panna?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Panna and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

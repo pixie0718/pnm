@@ -1,0 +1,45 @@
+{
+  "slug": "dwarka",
+  "name": "Dwarka",
+  "state": "Gujarat",
+  "emoji": "🛕",
+  "gradient": "from-fuchsia-400 to-pink-500",
+  "vendorCount": 309,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Dwarka — 309+ Verified Vendors | ShiftIndia",
+    "description": "Compare 309+ verified packers and movers in Dwarka. Instant quotes starting ₹4,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers dwarka",
+      "movers dwarka",
+      "home shifting dwarka",
+      "packers movers gujarat"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Dwarka",
+    "subtitle": "Jamnagar, Rajkot and beyond — 309+ verified packers and movers across Dwarka."
+  },
+  "intro": "Dwarka is one of Gujarat's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 309+ KYC-verified packers and movers covering every locality across Dwarka.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Dwarka's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Dwarka. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Jamnagar",
+    "Rajkot",
+    "Ahmedabad",
+    "Porbandar"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Dwarka?",
+      "a": "1 BHK from ₹4,500. 2 BHK typically ₹6,500 – ₹12,500 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Dwarka?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Dwarka and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

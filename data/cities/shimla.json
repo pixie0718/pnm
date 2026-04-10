@@ -1,0 +1,45 @@
+{
+  "slug": "shimla",
+  "name": "Shimla",
+  "state": "Himachal Pradesh",
+  "emoji": "❄️",
+  "gradient": "from-lime-400 to-green-500",
+  "vendorCount": 274,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Shimla — 274+ Verified Vendors | ShiftIndia",
+    "description": "Compare 274+ verified packers and movers in Shimla. Instant quotes starting ₹5,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers shimla",
+      "movers shimla",
+      "home shifting shimla",
+      "packers movers himachal pradesh"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Shimla",
+    "subtitle": "Chandigarh, Delhi and beyond — 274+ verified packers and movers across Shimla."
+  },
+  "intro": "Shimla is one of Himachal Pradesh's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 274+ KYC-verified packers and movers covering every locality across Shimla.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Shimla's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Shimla. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Chandigarh",
+    "Delhi",
+    "Dehradun",
+    "Kullu"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Shimla?",
+      "a": "1 BHK from ₹5,000. 2 BHK typically ₹7,000 – ₹13,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Shimla?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Shimla and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

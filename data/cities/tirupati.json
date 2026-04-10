@@ -1,0 +1,45 @@
+{
+  "slug": "tirupati",
+  "name": "Tirupati",
+  "state": "Andhra Pradesh",
+  "emoji": "🛕",
+  "gradient": "from-yellow-300 to-amber-500",
+  "vendorCount": 200,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Tirupati — 200+ Verified Vendors | ShiftIndia",
+    "description": "Compare 200+ verified packers and movers in Tirupati. Instant quotes starting ₹3,500. RC Road, Tiruchanur, Renigunta covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers tirupati",
+      "movers tirupati",
+      "home shifting tirupati"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Tirupati",
+    "subtitle": "RC Road to Tiruchanur, Renigunta to Alipiri — 200+ verified movers in Tirupati."
+  },
+  "intro": "Tirupati is Andhra Pradesh's holy city and a growing urban centre with expanding residential and educational zones. ShiftIndia's 200+ verified vendors cover all areas — from hilltop colonies to areas near the Airport and SV University.",
+  "whyUs": "Tirupati's religious calendar brings traffic surges at predictable times. Our vendors plan moves around the TTD pilgrimage seasons for smooth, delay-free relocations.",
+  "popularRoutes": [
+    "Chennai",
+    "Bangalore",
+    "Vijayawada",
+    "Hyderabad",
+    "Nellore"
+  ],
+  "faqs": [
+    {
+      "q": "Can you move during Brahmotsavam season?",
+      "a": "Yes — we plan extra buffer time and alternative routes during high-pilgrimage periods."
+    },
+    {
+      "q": "What does a local move cost in Tirupati?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹10,000."
+    },
+    {
+      "q": "Do you move to Chennai and Bangalore?",
+      "a": "Yes, inter-city moves with GPS tracking and insurance are available."
+    }
+  ]
+}

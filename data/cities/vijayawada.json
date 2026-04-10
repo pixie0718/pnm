@@ -1,0 +1,45 @@
+{
+  "slug": "vijayawada",
+  "name": "Vijayawada",
+  "state": "Andhra Pradesh",
+  "emoji": "🌉",
+  "gradient": "from-green-400 to-emerald-500",
+  "vendorCount": 350,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Vijayawada — 350+ Verified Vendors | ShiftIndia",
+    "description": "Compare 350+ verified packers and movers in Vijayawada. Instant quotes starting ₹3,500. Benz Circle, Governorpet, MG Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers vijayawada",
+      "movers vijayawada",
+      "home shifting vijayawada"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Vijayawada",
+    "subtitle": "Benz Circle to Governorpet, MG Road to Gunadala — 350+ verified movers in Vijayawada."
+  },
+  "intro": "Vijayawada is Andhra Pradesh's commercial capital and the gateway to the Krishna delta. As the administrative activities around Amaravati grow, ShiftIndia's 350+ verified vendors are well-positioned to serve the entire region.",
+  "whyUs": "Vijayawada's Krishna River bridges can create bottlenecks. Our vendors know optimal crossing times and alternative routes to keep your move on schedule.",
+  "popularRoutes": [
+    "Hyderabad",
+    "Visakhapatnam",
+    "Guntur",
+    "Chennai",
+    "Bangalore"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover the Amaravati capital region?",
+      "a": "Yes — Amaravati and surrounding areas are within our Vijayawada service zone."
+    },
+    {
+      "q": "What is the local move cost in Vijayawada?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you move to Hyderabad?",
+      "a": "Yes, inter-city moves with full GPS tracking and insurance are available."
+    }
+  ]
+}

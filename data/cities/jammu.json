@@ -1,0 +1,45 @@
+{
+  "slug": "jammu",
+  "name": "Jammu",
+  "state": "Jammu & Kashmir",
+  "emoji": "🏔️",
+  "gradient": "from-orange-300 to-red-400",
+  "vendorCount": 190,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Jammu — 190+ Verified Vendors | ShiftIndia",
+    "description": "Compare 190+ verified packers and movers in Jammu. Instant quotes starting ₹4,000. Gandhi Nagar, Bakshi Nagar, Trikuta Nagar covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers jammu",
+      "movers jammu",
+      "home shifting jammu"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Jammu",
+    "subtitle": "Gandhi Nagar to Trikuta Nagar, Bakshi Nagar to Sainik Colony — 190+ verified movers in Jammu."
+  },
+  "intro": "Jammu is the winter capital of J&K and a rapidly expanding city on the Tawi River. ShiftIndia's 190+ verified vendors cover all localities — from densely populated Gandhi Nagar to newer colonies in Trikuta Nagar and Sainik Colony.",
+  "whyUs": "Jammu's hilly outskirts and proximity to the national highway make inter-city moves efficient. Our vendors are experienced on the Jammu-Delhi and Jammu-Srinagar highway corridors.",
+  "popularRoutes": [
+    "Delhi",
+    "Chandigarh",
+    "Amritsar",
+    "Pathankot",
+    "Katra"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover the outskirts like Nagrota?",
+      "a": "Yes — Nagrota, Bari Brahmana, Bishnah and surrounding areas are covered."
+    },
+    {
+      "q": "What is the local move cost in Jammu?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹7,000 – ₹12,000."
+    },
+    {
+      "q": "Do you move to Delhi and Chandigarh?",
+      "a": "Yes, highway moves with GPS tracking and ₹5L insurance are available."
+    }
+  ]
+}

@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, Save, Search, Globe, Tag, Link2 } from "lucide-react";
+import { ArrowLeft, Save, Search, Globe, Tag, Link2, List } from "lucide-react";
 import Link from "next/link";
 import ImageUpload from "@/components/admin/ImageUpload";
+import { parseHeadings } from "@/lib/toc";
 
 type Post = {
   id?: number;
@@ -412,6 +413,49 @@ export default function BlogForm({ initial }: { initial?: Partial<Post> }) {
                 aspectHint="1280×720 recommended"
               />
             </div>
+
+            {/* TOC Preview */}
+            {(() => {
+              const toc = parseHeadings(form.content);
+              return (
+                <div className="card p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <List size={15} className="text-saffron-500" />
+                    <h3 className="font-bold text-midnight-900 text-sm">Table of Contents</h3>
+                    {toc.length > 0 && (
+                      <span className="ml-auto text-xs text-midnight-400">{toc.length} heading{toc.length > 1 ? "s" : ""}</span>
+                    )}
+                  </div>
+                  {toc.length === 0 ? (
+                    <p className="text-xs text-midnight-400 italic">
+                      Add &lt;h2&gt;, &lt;h3&gt;, or &lt;h4&gt; headings in your content to auto-generate a TOC.
+                    </p>
+                  ) : (
+                    <ol className="space-y-1.5">
+                      {toc.map((item) => (
+                        <li
+                          key={item.id}
+                          style={{ paddingLeft: item.level === 2 ? 0 : item.level === 3 ? "0.875rem" : "1.75rem" }}
+                          className="flex items-start gap-1.5"
+                        >
+                          <span className="text-xs text-midnight-300 font-mono mt-0.5 shrink-0">
+                            H{item.level}
+                          </span>
+                          <span className="text-xs text-midnight-700 leading-snug break-words">
+                            {item.text}
+                          </span>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                  {toc.length > 0 && (
+                    <p className="text-xs text-midnight-400 mt-3 pt-3 border-t border-midnight-100">
+                      Edit headings in your content to update the TOC.
+                    </p>
+                  )}
+                </div>
+              );
+            })()}
 
             {/* SEO score pill */}
             {form.focusKeyword && (

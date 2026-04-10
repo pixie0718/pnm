@@ -334,7 +334,7 @@ export default function HomePage() {
 
             {/* Mumbai — big hero */}
             {cities[0] && (
-              <Link href={`/cities/${cities[0].slug}`}
+              <Link href={`/packers-and-movers-in-${cities[0].slug}`}
                 className="group relative col-span-2 md:col-span-2 row-span-2 rounded-3xl overflow-hidden min-h-[340px] md:min-h-[420px] hover:-translate-y-1 transition-all hover:shadow-2xl">
                 <div className={`absolute inset-0 bg-gradient-to-br ${cities[0].gradient}`} />
                 <div className="absolute inset-0 grain" />
@@ -361,7 +361,7 @@ export default function HomePage() {
 
             {/* Delhi — tall card */}
             {cities[1] && (
-              <Link href={`/cities/${cities[1].slug}`}
+              <Link href={`/packers-and-movers-in-${cities[1].slug}`}
                 className="group relative col-span-2 md:col-span-1 row-span-2 rounded-3xl overflow-hidden min-h-[200px] md:min-h-[420px] hover:-translate-y-1 transition-all hover:shadow-2xl">
                 <div className={`absolute inset-0 bg-gradient-to-br ${cities[1].gradient}`} />
                 <div className="absolute inset-0 grain" />
@@ -381,7 +381,7 @@ export default function HomePage() {
 
             {/* Bangalore + Ahmedabad — top row small */}
             {cities.slice(2, 4).map((city) => (
-              <Link key={city.slug} href={`/cities/${city.slug}`}
+              <Link key={city.slug} href={`/packers-and-movers-in-${city.slug}`}
                 className="group relative col-span-1 rounded-3xl overflow-hidden min-h-[200px] hover:-translate-y-1 transition-all hover:shadow-xl">
                 <div className={`absolute inset-0 bg-gradient-to-br ${city.gradient}`} />
                 <div className="absolute inset-0 grain" />
@@ -401,7 +401,7 @@ export default function HomePage() {
 
             {/* Bottom row — Hyderabad, Chennai, Pune, Kolkata */}
             {cities.slice(4, 8).map((city) => (
-              <Link key={city.slug} href={`/cities/${city.slug}`}
+              <Link key={city.slug} href={`/packers-and-movers-in-${city.slug}`}
                 className="group relative col-span-1 rounded-3xl overflow-hidden min-h-[150px] md:min-h-[170px] hover:-translate-y-1 transition-all hover:shadow-xl">
                 <div className={`absolute inset-0 bg-gradient-to-br ${city.gradient}`} />
                 <div className="absolute inset-0 grain" />

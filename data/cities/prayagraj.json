@@ -1,0 +1,46 @@
+{
+  "slug": "prayagraj",
+  "name": "Prayagraj",
+  "state": "Uttar Pradesh",
+  "emoji": "🌊",
+  "gradient": "from-blue-400 to-blue-600",
+  "vendorCount": 320,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Prayagraj — 320+ Verified Vendors | ShiftIndia",
+    "description": "Compare 320+ verified packers and movers in Prayagraj (Allahabad). Instant quotes starting ₹3,500. Civil Lines, George Town, Naini covered. Live tracking.",
+    "keywords": [
+      "packers and movers prayagraj",
+      "movers allahabad",
+      "home shifting prayagraj",
+      "packers movers allahabad"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Prayagraj",
+    "subtitle": "Civil Lines to George Town, Naini to Jhusi — 320+ verified movers in Prayagraj."
+  },
+  "intro": "Prayagraj (formerly Allahabad) is a major administrative and educational hub on the Ganga-Yamuna confluence. ShiftIndia connects you with 320+ verified packers and movers covering Civil Lines, George Town, Naini, Jhusi, and surrounding areas.\n\nInstant quotes, transparent pricing, no surprises.",
+  "whyUs": "Prayagraj's mix of British-era bungalows, university campuses, and new Naini Industrial Area requires vendors with versatile fleets. Our network handles all types with equal care.",
+  "popularRoutes": [
+    "Lucknow",
+    "Varanasi",
+    "Kanpur",
+    "Delhi",
+    "Patna"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Naini and Jhusi?",
+      "a": "Yes — all areas including Naini Industrial Area, Jhusi, Phaphamau and Rambagh are covered."
+    },
+    {
+      "q": "What does a 2 BHK move cost here?",
+      "a": "₹6,000 – ₹11,000 locally. Exact quote depends on floors, distance, and packing needs."
+    },
+    {
+      "q": "Can you manage moves during Kumbh period?",
+      "a": "Yes, our vendors are experienced with the city's traffic conditions year-round."
+    }
+  ]
+}

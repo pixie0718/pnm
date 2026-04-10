@@ -1,0 +1,45 @@
+{
+  "slug": "darjeeling",
+  "name": "Darjeeling",
+  "state": "West Bengal",
+  "emoji": "🍵",
+  "gradient": "from-mint-500 to-mint-600",
+  "vendorCount": 374,
+  "startingPrice": 5500,
+  "seo": {
+    "title": "Packers & Movers in Darjeeling — 374+ Verified Vendors | ShiftIndia",
+    "description": "Compare 374+ verified packers and movers in Darjeeling. Instant quotes starting ₹5,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers darjeeling",
+      "movers darjeeling",
+      "home shifting darjeeling",
+      "packers movers west bengal"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Darjeeling",
+    "subtitle": "Siliguri, Kolkata and beyond — 374+ verified packers and movers across Darjeeling."
+  },
+  "intro": "Darjeeling is one of West Bengal's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 374+ KYC-verified packers and movers covering every locality across Darjeeling.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Darjeeling's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Darjeeling. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Siliguri",
+    "Kolkata",
+    "Gangtok",
+    "Kalimpong"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Darjeeling?",
+      "a": "1 BHK from ₹5,500. 2 BHK typically ₹7,500 – ₹13,500 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Darjeeling?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Darjeeling and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

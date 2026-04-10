@@ -6,6 +6,7 @@ import { Menu, X, Truck, ArrowUpRight, LogOut } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/cities", label: "Cities" },
   { href: "/booking", label: "Get Quote" },
   { href: "/tracking", label: "Track" },
   { href: "/account", label: "My Account" },

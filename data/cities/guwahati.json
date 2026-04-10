@@ -1,0 +1,45 @@
+{
+  "slug": "guwahati",
+  "name": "Guwahati",
+  "state": "Assam",
+  "emoji": "🦅",
+  "gradient": "from-teal-400 to-green-500",
+  "vendorCount": 240,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Guwahati — 240+ Verified Vendors | ShiftIndia",
+    "description": "Compare 240+ verified packers and movers in Guwahati. Instant quotes starting ₹4,000. Dispur, Paltan Bazaar, Chandmari, VIP Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers guwahati",
+      "movers guwahati",
+      "home shifting guwahati"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Guwahati",
+    "subtitle": "Dispur to VIP Road, Paltan Bazaar to Chandmari — 240+ verified movers in the Gateway of Northeast."
+  },
+  "intro": "Guwahati is the gateway to Northeast India. ShiftIndia's 240+ verified vendors cover the entire metropolitan area — from the old commercial Paltan Bazaar to the government hub of Dispur and growing VIP Road corridor.",
+  "whyUs": "Guwahati's Brahmaputra-side geography and Assam's monsoons require experience with flood-prone routes and waterproof packing. Our vendors are prepared for all weather conditions.",
+  "popularRoutes": [
+    "Kolkata",
+    "Shillong",
+    "Silchar",
+    "Dimapur",
+    "Agartala"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover areas beyond Guwahati within Assam?",
+      "a": "Yes — moves to Jorhat, Tezpur, Silchar, Dibrugarh and other Assam cities are available."
+    },
+    {
+      "q": "What is the local move cost in Guwahati?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹7,000 – ₹12,000."
+    },
+    {
+      "q": "Do you use waterproof packing during monsoons?",
+      "a": "Yes — all Northeast vendors use weather-resistant packing as standard."
+    }
+  ]
+}

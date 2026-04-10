@@ -1,0 +1,45 @@
+{
+  "slug": "muzaffarpur",
+  "name": "Muzaffarpur",
+  "state": "Bihar",
+  "emoji": "🍌",
+  "gradient": "from-orange-300 to-red-400",
+  "vendorCount": 212,
+  "startingPrice": 3000,
+  "seo": {
+    "title": "Packers & Movers in Muzaffarpur — 212+ Verified Vendors | ShiftIndia",
+    "description": "Compare 212+ verified packers and movers in Muzaffarpur. Instant quotes starting ₹3,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers muzaffarpur",
+      "movers muzaffarpur",
+      "home shifting muzaffarpur",
+      "packers movers bihar"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Muzaffarpur",
+    "subtitle": "Patna, Darbhanga and beyond — 212+ verified packers and movers across Muzaffarpur."
+  },
+  "intro": "Muzaffarpur is one of Bihar's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 212+ KYC-verified packers and movers covering every locality across Muzaffarpur.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Muzaffarpur's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Muzaffarpur. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Patna",
+    "Darbhanga",
+    "Hajipur",
+    "Sitamarhi"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Muzaffarpur?",
+      "a": "1 BHK from ₹3,000. 2 BHK typically ₹5,000 – ₹11,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Muzaffarpur?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Muzaffarpur and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

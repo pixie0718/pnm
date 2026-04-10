@@ -1,0 +1,46 @@
+{
+  "slug": "varanasi",
+  "name": "Varanasi",
+  "state": "Uttar Pradesh",
+  "emoji": "🪔",
+  "gradient": "from-orange-500 to-red-500",
+  "vendorCount": 290,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Varanasi — 290+ Verified Vendors | ShiftIndia",
+    "description": "Compare 290+ verified packers and movers in Varanasi. Instant quotes starting ₹3,500. Sigra, BHU, Lanka, Sarnath covered. Live GPS tracking included.",
+    "keywords": [
+      "packers and movers varanasi",
+      "movers varanasi",
+      "home shifting varanasi",
+      "movers banaras"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Varanasi",
+    "subtitle": "Lanka to Sigra, BHU campus to Sarnath — 290+ verified movers in the City of Light."
+  },
+  "intro": "Varanasi's unique geography — ghats, narrow old-city lanes, and modern colonies on the NH-19 corridor — makes moving a specialist task. ShiftIndia's 290+ verified vendors are experienced with both the old city's constraints and the newer areas around BHU, Sigra, and Sarnath.",
+  "whyUs": "The Ghats area requires hand-trolleys and manpower for narrow lanes where trucks can't reach. Our vendors carry the right equipment and know exactly which streets are accessible for vehicles.",
+  "popularRoutes": [
+    "Lucknow",
+    "Prayagraj",
+    "Patna",
+    "Delhi",
+    "Gorakhpur"
+  ],
+  "faqs": [
+    {
+      "q": "Can you move from narrow lanes near the Ghats?",
+      "a": "Yes. We use hand trolleys and manpower for areas inaccessible to vehicles."
+    },
+    {
+      "q": "What is the cost for a local move in Varanasi?",
+      "a": "Starting from ₹3,500 for 1 BHK. 2 BHK typically ₹6,000 – ₹10,000."
+    },
+    {
+      "q": "Do you handle BHU campus relocations?",
+      "a": "Yes, we regularly handle residential moves within and around the BHU campus."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "coimbatore",
+  "name": "Coimbatore",
+  "state": "Tamil Nadu",
+  "emoji": "🏭",
+  "gradient": "from-red-400 to-rose-500",
+  "vendorCount": 440,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Coimbatore — 440+ Verified Vendors | ShiftIndia",
+    "description": "Compare 440+ verified packers and movers in Coimbatore. Instant quotes starting ₹4,000. RS Puram, Saibaba Colony, Peelamedu covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers coimbatore",
+      "movers coimbatore",
+      "home shifting coimbatore"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Coimbatore",
+    "subtitle": "RS Puram to Peelamedu, Saibaba Colony to Ganapathy — 440+ verified movers in Manchester of South India."
+  },
+  "intro": "Coimbatore is Tamil Nadu's industrial powerhouse and a rapidly growing tech hub. ShiftIndia's 440+ verified vendors cover the entire city — from busy RS Puram to the growing Peelamedu and Saravanampatti tech corridors.",
+  "whyUs": "Coimbatore's textile and IT industries drive constant relocation demand. Our vendors are highly experienced with both residential and corporate moves across the city.",
+  "popularRoutes": [
+    "Chennai",
+    "Bangalore",
+    "Madurai",
+    "Kochi",
+    "Ooty"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Saravanampatti and Peelamedu?",
+      "a": "Yes — all tech and residential corridors including Saravanampatti, Peelamedu, Kalapatti and Vilankurichi are covered."
+    },
+    {
+      "q": "What does a local move cost in Coimbatore?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹7,000 – ₹13,000."
+    },
+    {
+      "q": "Do you move to Chennai and Bangalore?",
+      "a": "Yes, inter-city moves with full GPS tracking and ₹5L insurance are available."
+    }
+  ]
+}

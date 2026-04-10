@@ -1,0 +1,45 @@
+{
+  "slug": "ludhiana",
+  "name": "Ludhiana",
+  "state": "Punjab",
+  "emoji": "🏭",
+  "gradient": "from-yellow-400 to-yellow-600",
+  "vendorCount": 420,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Ludhiana — 420+ Verified Vendors | ShiftIndia",
+    "description": "Compare 420+ verified packers and movers in Ludhiana. Instant quotes starting ₹3,500. BRS Nagar, Model Town, Sarabha Nagar covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers ludhiana",
+      "movers ludhiana",
+      "home shifting ludhiana"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Ludhiana",
+    "subtitle": "Model Town to BRS Nagar, Sarabha Nagar to Dugri — 420+ verified movers in Punjab's largest city."
+  },
+  "intro": "Ludhiana is Punjab's industrial and commercial capital, with a huge population on the move. ShiftIndia connects you with 420+ verified vendors covering every corner — from dense Purani Abadi to modern colonies on the Ferozepur Road corridor.",
+  "whyUs": "Ludhiana's industrial calendar means vendors are experienced with factory equipment as well as household moves. Our network handles both with the same verified standards and price transparency.",
+  "popularRoutes": [
+    "Chandigarh",
+    "Amritsar",
+    "Delhi",
+    "Jalandhar",
+    "Patiala"
+  ],
+  "faqs": [
+    {
+      "q": "How much does a local move cost in Ludhiana?",
+      "a": "1 BHK from ₹3,500. 2 BHK ₹6,000 – ₹11,000 typically."
+    },
+    {
+      "q": "Do you handle commercial and factory moves?",
+      "a": "Yes — our vendors are experienced with office and light industrial relocations."
+    },
+    {
+      "q": "Is same-day booking available?",
+      "a": "Yes, for moves within Ludhiana we can typically arrange same-day or next-day slots."
+    }
+  ]
+}

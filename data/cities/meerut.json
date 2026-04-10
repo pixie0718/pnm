@@ -1,0 +1,45 @@
+{
+  "slug": "meerut",
+  "name": "Meerut",
+  "state": "Uttar Pradesh",
+  "emoji": "⚔️",
+  "gradient": "from-red-400 to-red-600",
+  "vendorCount": 280,
+  "startingPrice": 3000,
+  "seo": {
+    "title": "Packers & Movers in Meerut — 280+ Verified Vendors | ShiftIndia",
+    "description": "Compare 280+ verified packers and movers in Meerut. Instant quotes starting ₹3,000. Shastri Nagar, Pallavpuram, Ganga Nagar covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers meerut",
+      "movers meerut",
+      "home shifting meerut"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Meerut",
+    "subtitle": "Shastri Nagar to Pallavpuram, Ganga Nagar to Modipuram — 280+ verified movers in Meerut."
+  },
+  "intro": "Meerut is rapidly expanding as a suburb of the Delhi NCR. New residential townships and the Delhi-Meerut Expressway have made it a popular destination for families relocating from Delhi. ShiftIndia's 280+ verified vendors cover the full Meerut urban area.",
+  "whyUs": "Meerut's proximity to Delhi makes it a common inter-city move destination. Our vendors are experienced on the Delhi-Meerut Expressway and can complete the move efficiently.",
+  "popularRoutes": [
+    "Delhi",
+    "Noida",
+    "Ghaziabad",
+    "Lucknow",
+    "Agra"
+  ],
+  "faqs": [
+    {
+      "q": "How much does a local move cost in Meerut?",
+      "a": "Starting from ₹3,000 for 1 BHK. 2 BHK typically ₹5,500 – ₹10,000."
+    },
+    {
+      "q": "Do you cover moves to and from Delhi?",
+      "a": "Yes, Delhi-Meerut Expressway moves are a specialty of our network vendors."
+    },
+    {
+      "q": "Is insurance included?",
+      "a": "Yes, ₹5 lakh damage protection on every booking."
+    }
+  ]
+}

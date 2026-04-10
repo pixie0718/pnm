@@ -1,0 +1,45 @@
+{
+  "slug": "raipur",
+  "name": "Raipur",
+  "state": "Chhattisgarh",
+  "emoji": "⛏️",
+  "gradient": "from-red-300 to-orange-400",
+  "vendorCount": 270,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Raipur — 270+ Verified Vendors | ShiftIndia",
+    "description": "Compare 270+ verified packers and movers in Raipur. Instant quotes starting ₹3,500. Shankar Nagar, Tatibandh, VIP Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers raipur",
+      "movers raipur",
+      "home shifting raipur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Raipur",
+    "subtitle": "Shankar Nagar to Tatibandh, VIP Road to Avanti Vihar — 270+ verified movers in Chhattisgarh's capital."
+  },
+  "intro": "Raipur is one of India's fastest-growing state capitals, driven by steel, mining, and a booming services sector. ShiftIndia's 270+ verified vendors cover all residential and commercial areas.",
+  "whyUs": "Raipur's steel industry brings frequent executive relocations. Our vendors are experienced with high-value household moves and sensitive equipment transport.",
+  "popularRoutes": [
+    "Nagpur",
+    "Bhopal",
+    "Hyderabad",
+    "Bilaspur",
+    "Kolkata"
+  ],
+  "faqs": [
+    {
+      "q": "What is the local move cost in Raipur?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you cover Naya Raipur smart city area?",
+      "a": "Yes — Naya Raipur and all new development zones are within our service area."
+    },
+    {
+      "q": "Do you move to Nagpur and Bhopal?",
+      "a": "Yes, inter-city moves are available with GPS tracking and insurance."
+    }
+  ]
+}

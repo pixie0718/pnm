@@ -1,0 +1,45 @@
+{
+  "slug": "jabalpur",
+  "name": "Jabalpur",
+  "state": "Madhya Pradesh",
+  "emoji": "🪨",
+  "gradient": "from-slate-400 to-gray-600",
+  "vendorCount": 230,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Jabalpur — 230+ Verified Vendors | ShiftIndia",
+    "description": "Compare 230+ verified packers and movers in Jabalpur. Instant quotes starting ₹3,500. Civil Lines, Napier Town, Wright Town covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers jabalpur",
+      "movers jabalpur",
+      "home shifting jabalpur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Jabalpur",
+    "subtitle": "Civil Lines to Wright Town, Napier Town to Gorakhpur — 230+ verified movers in Jabalpur."
+  },
+  "intro": "Jabalpur is one of Madhya Pradesh's major cities and a key military cantonment. ShiftIndia's 230+ verified vendors cover civilian and cantonment areas alike, from old Civil Lines bungalows to new residential colonies on the outskirts.",
+  "whyUs": "Jabalpur's Defence establishment means our vendors are experienced with cantonment access procedures and the specific documentation requirements for moves in restricted zones.",
+  "popularRoutes": [
+    "Bhopal",
+    "Nagpur",
+    "Raipur",
+    "Varanasi",
+    "Prayagraj"
+  ],
+  "faqs": [
+    {
+      "q": "Do you handle moves in cantonment areas?",
+      "a": "Yes — our vendors are familiar with cantonment entry procedures and documentation."
+    },
+    {
+      "q": "What is the local move cost in Jabalpur?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹10,000."
+    },
+    {
+      "q": "Do you move to Bhopal and Nagpur?",
+      "a": "Yes, inter-city moves are available with GPS tracking and insurance."
+    }
+  ]
+}

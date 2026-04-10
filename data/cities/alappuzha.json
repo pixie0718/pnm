@@ -1,0 +1,45 @@
+{
+  "slug": "alappuzha",
+  "name": "Alappuzha",
+  "state": "Kerala",
+  "emoji": "🚤",
+  "gradient": "from-orange-300 to-red-400",
+  "vendorCount": 167,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Alappuzha — 167+ Verified Vendors | ShiftIndia",
+    "description": "Compare 167+ verified packers and movers in Alappuzha. Instant quotes starting ₹5,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers alappuzha",
+      "movers alappuzha",
+      "home shifting alappuzha",
+      "packers movers kerala"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Alappuzha",
+    "subtitle": "Kochi, Kollam and beyond — 167+ verified packers and movers across Alappuzha."
+  },
+  "intro": "Alappuzha is one of Kerala's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 167+ KYC-verified packers and movers covering every locality across Alappuzha.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Alappuzha's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Alappuzha. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Kochi",
+    "Kollam",
+    "Thiruvananthapuram",
+    "Kottayam"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Alappuzha?",
+      "a": "1 BHK from ₹5,000. 2 BHK typically ₹7,000 – ₹13,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Alappuzha?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Alappuzha and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

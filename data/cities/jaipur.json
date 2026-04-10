@@ -1,0 +1,46 @@
+{
+  "slug": "jaipur",
+  "name": "Jaipur",
+  "state": "Rajasthan",
+  "emoji": "🏰",
+  "gradient": "from-rose-400 to-rose-600",
+  "vendorCount": 820,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Jaipur — 820+ Verified Vendors | ShiftIndia",
+    "description": "Compare 820+ verified packers and movers in Jaipur. Instant quotes starting ₹4,000. Malviya Nagar, Vaishali Nagar, Mansarovar covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers jaipur",
+      "movers jaipur",
+      "home shifting jaipur",
+      "malviya nagar movers"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Jaipur",
+    "subtitle": "Malviya Nagar to Mansarovar, C-Scheme to Vaishali Nagar — 820+ verified movers across the Pink City."
+  },
+  "intro": "Jaipur is growing fast, with new residential colonies sprouting across Ajmer Road, Tonk Road, and beyond. ShiftIndia connects you with 820+ KYC-verified packers and movers who know every mohalla — from old city havelis to Pratap Nagar high-rises.\n\nGet instant quotes, compare vendors side-by-side, and book in minutes.",
+  "whyUs": "Jaipur's old walled-city lanes and newer colony bylanes require vehicles of all sizes. Our vendors carry everything from mini-trucks to large containers, and they're experienced with the summer heat that makes careful packing essential.",
+  "popularRoutes": [
+    "Delhi",
+    "Ahmedabad",
+    "Udaipur",
+    "Jodhpur",
+    "Mumbai"
+  ],
+  "faqs": [
+    {
+      "q": "What does a 2 BHK local shift cost in Jaipur?",
+      "a": "Typically ₹6,000 – ₹12,000 depending on locality, floor, and packing needs."
+    },
+    {
+      "q": "Do you cover Ajmer Road and Tonk Road areas?",
+      "a": "Yes, all major corridors including Ajmer Road, Tonk Road, Sikar Road and Agra Road are covered."
+    },
+    {
+      "q": "Is insurance included?",
+      "a": "Yes, ₹5 lakh damage protection is included with every ShiftIndia booking."
+    }
+  ]
+}

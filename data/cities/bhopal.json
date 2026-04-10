@@ -1,0 +1,45 @@
+{
+  "slug": "bhopal",
+  "name": "Bhopal",
+  "state": "Madhya Pradesh",
+  "emoji": "🏙️",
+  "gradient": "from-green-400 to-teal-500",
+  "vendorCount": 430,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Bhopal — 430+ Verified Vendors | ShiftIndia",
+    "description": "Compare 430+ verified packers and movers in Bhopal. Instant quotes starting ₹3,500. Arera Colony, Kolar Road, Hoshangabad Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers bhopal",
+      "movers bhopal",
+      "home shifting bhopal"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Bhopal",
+    "subtitle": "Arera Colony to Kolar Road, BHEL to Hoshangabad Road — 430+ verified movers in the City of Lakes."
+  },
+  "intro": "Bhopal's unique geography around its lakes and the growing IT and government sectors make it a dynamic city to move in. ShiftIndia's 430+ verified vendors cover all localities — from old Bhopal near the Taj-ul-Masajid to modern colonies along Kolar Road and BHEL.",
+  "whyUs": "Bhopal's hilly terrain and lakes mean route planning is critical. Our vendors know which roads connect neighbourhoods efficiently and plan moves to minimise travel time and cost.",
+  "popularRoutes": [
+    "Indore",
+    "Jabalpur",
+    "Nagpur",
+    "Delhi",
+    "Mumbai"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Bhopal?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you cover BHEL Township?",
+      "a": "Yes — BHEL Township, Arera Colony, Kolar Road, Hoshangabad Road and all zones covered."
+    },
+    {
+      "q": "Can you move to Indore and Jabalpur?",
+      "a": "Yes, inter-city moves with GPS tracking and insurance are available."
+    }
+  ]
+}

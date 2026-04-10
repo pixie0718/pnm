@@ -1,0 +1,45 @@
+{
+  "slug": "kozhikode",
+  "name": "Kozhikode",
+  "state": "Kerala",
+  "emoji": "🌶️",
+  "gradient": "from-green-300 to-emerald-500",
+  "vendorCount": 230,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Kozhikode — 230+ Verified Vendors | ShiftIndia",
+    "description": "Compare 230+ verified packers and movers in Kozhikode (Calicut). Instant quotes starting ₹4,500. Mavoor Road, Nadakkavu, Chevayur covered.",
+    "keywords": [
+      "packers and movers kozhikode",
+      "movers calicut",
+      "home shifting kozhikode"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Kozhikode",
+    "subtitle": "Mavoor Road to Nadakkavu, Chevayur to Feroke — 230+ verified movers in Calicut."
+  },
+  "intro": "Kozhikode (Calicut) is one of Kerala's most historic cities, with a booming IT sector along Mavoor Road and the Cyberpark corridor. ShiftIndia's 230+ verified vendors cover all localities from old Calicut beach-side to new tech hub areas.",
+  "whyUs": "Kerala's monsoons are intense, and Kozhikode's coastal location amplifies this. Our vendors use heavy-duty weatherproof packing as standard during June-September.",
+  "popularRoutes": [
+    "Kochi",
+    "Bangalore",
+    "Chennai",
+    "Thrissur",
+    "Manjeri"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Cyberpark and Mavoor Road tech areas?",
+      "a": "Yes — Cyberpark, Mavoor Road, and all IT corridors are within our service area."
+    },
+    {
+      "q": "What is the local move cost in Kozhikode?",
+      "a": "1 BHK from ₹4,500. 2 BHK typically ₹7,500 – ₹13,000."
+    },
+    {
+      "q": "Do you use waterproof packing in monsoon season?",
+      "a": "Yes — weather-resistant packing is standard for all Kerala bookings."
+    }
+  ]
+}

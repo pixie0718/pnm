@@ -1,0 +1,45 @@
+{
+  "slug": "mysuru",
+  "name": "Mysuru",
+  "state": "Karnataka",
+  "emoji": "🏰",
+  "gradient": "from-fuchsia-400 to-pink-500",
+  "vendorCount": 290,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Mysuru — 290+ Verified Vendors | ShiftIndia",
+    "description": "Compare 290+ verified packers and movers in Mysuru (Mysore). Instant quotes starting ₹4,000. Vijayanagar, Saraswathipuram, Kuvempunagar covered.",
+    "keywords": [
+      "packers and movers mysuru",
+      "movers mysore",
+      "home shifting mysore"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Mysuru",
+    "subtitle": "Vijayanagar to Kuvempunagar, Saraswathipuram to Hebbal — 290+ verified movers in the City of Palaces."
+  },
+  "intro": "Mysuru is a heritage city rapidly evolving with IT parks and educational institutions. ShiftIndia's 290+ verified vendors cover the entire city — from palace-precinct bungalows to modern residential areas near the BEML and IT corridors.",
+  "whyUs": "Mysuru's heritage zones have vehicle size and timing restrictions near the Palace. Our vendors are familiar with these rules and plan moves accordingly.",
+  "popularRoutes": [
+    "Bangalore",
+    "Coimbatore",
+    "Mangaluru",
+    "Ooty",
+    "Hassan"
+  ],
+  "faqs": [
+    {
+      "q": "Are there restrictions near the Mysore Palace area?",
+      "a": "Yes — certain roads have time-based vehicle restrictions. Our vendors plan around these."
+    },
+    {
+      "q": "What is the local move cost in Mysuru?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹7,000 – ₹12,000."
+    },
+    {
+      "q": "Do you move to Bangalore and Coimbatore?",
+      "a": "Yes, inter-city moves are available with GPS tracking and ₹5L insurance."
+    }
+  ]
+}

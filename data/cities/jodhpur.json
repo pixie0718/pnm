@@ -1,0 +1,45 @@
+{
+  "slug": "jodhpur",
+  "name": "Jodhpur",
+  "state": "Rajasthan",
+  "emoji": "🏯",
+  "gradient": "from-blue-500 to-indigo-600",
+  "vendorCount": 240,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Jodhpur — 240+ Verified Vendors | ShiftIndia",
+    "description": "Compare 240+ verified packers and movers in Jodhpur. Instant quotes starting ₹3,500. Ratanada, Paota, Shastri Nagar covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers jodhpur",
+      "movers jodhpur",
+      "home shifting jodhpur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Jodhpur",
+    "subtitle": "Ratanada to Paota, Shastri Nagar to Sardarpura — 240+ verified movers in the Blue City."
+  },
+  "intro": "Jodhpur's Blue City old town and its expanding modern suburbs like Ratanada, Paota, and Shastri Nagar present unique moving challenges. ShiftIndia's 240+ verified vendors handle both contexts — including antique furniture from heritage havelis — with care.",
+  "whyUs": "Old Jodhpur's sandstone lanes and winding streets need experienced manpower teams. Our vendors carry the right equipment and are familiar with heritage property regulations.",
+  "popularRoutes": [
+    "Jaipur",
+    "Udaipur",
+    "Ahmedabad",
+    "Delhi",
+    "Mumbai"
+  ],
+  "faqs": [
+    {
+      "q": "Can you move antique or heavy stone furniture?",
+      "a": "Yes, our vendors have experience with heritage and antique furniture requiring specialist packing."
+    },
+    {
+      "q": "What does a 2 BHK move cost in Jodhpur?",
+      "a": "₹6,000 – ₹11,000 locally. Quotes depend on locality, floor, and packing needs."
+    },
+    {
+      "q": "Do you cover moves to Jaipur and Udaipur?",
+      "a": "Yes, inter-city moves within Rajasthan and beyond are fully covered."
+    }
+  ]
+}

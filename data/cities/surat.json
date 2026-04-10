@@ -1,0 +1,46 @@
+{
+  "slug": "surat",
+  "name": "Surat",
+  "state": "Gujarat",
+  "emoji": "💎",
+  "gradient": "from-violet-400 to-violet-600",
+  "vendorCount": 680,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Surat — 680+ Verified Vendors | ShiftIndia",
+    "description": "Compare 680+ verified packers and movers in Surat. Instant quotes starting ₹4,000. Adajan, Vesu, Katargam, Pal covered. Live GPS tracking, ₹5L protection.",
+    "keywords": [
+      "packers and movers surat",
+      "movers surat",
+      "home shifting surat",
+      "adajan movers"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Surat",
+    "subtitle": "Adajan to Vesu, Katargam to Pal — 680+ verified movers across the Diamond City."
+  },
+  "intro": "Surat is one of India's fastest-growing cities, with constant movement between its diamond-trade hubs, textile markets, and expanding residential zones like Vesu, Adajan, and Pal. ShiftIndia's 680+ verified vendors handle it all.\n\nInstant quotes, no hidden charges, same-day availability.",
+  "whyUs": "Surat's rapid growth means new society buildings are opening constantly. Our vendor network stays updated on new residential towers, access rules, and the city's BRTS-influenced traffic patterns.",
+  "popularRoutes": [
+    "Ahmedabad",
+    "Mumbai",
+    "Vadodara",
+    "Rajkot",
+    "Pune"
+  ],
+  "faqs": [
+    {
+      "q": "What does a 2 BHK move cost in Surat?",
+      "a": "₹6,500 – ₹12,000 depending on locality, floor, and packing scope."
+    },
+    {
+      "q": "Do you cover Vesu and Pal areas?",
+      "a": "Yes — all zones including Vesu, Pal, Adajan, Katargam, Varachha and Bhestan are covered."
+    },
+    {
+      "q": "Is insurance mandatory?",
+      "a": "₹5 lakh damage protection is included automatically with every ShiftIndia booking."
+    }
+  ]
+}

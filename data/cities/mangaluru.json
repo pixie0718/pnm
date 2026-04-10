@@ -1,0 +1,45 @@
+{
+  "slug": "mangaluru",
+  "name": "Mangaluru",
+  "state": "Karnataka",
+  "emoji": "🌊",
+  "gradient": "from-sky-500 to-blue-600",
+  "vendorCount": 240,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Mangaluru — 240+ Verified Vendors | ShiftIndia",
+    "description": "Compare 240+ verified packers and movers in Mangaluru (Mangalore). Instant quotes starting ₹4,000. Kadri, Bejai, Kankanady, Surathkal covered.",
+    "keywords": [
+      "packers and movers mangaluru",
+      "movers mangalore",
+      "home shifting mangalore"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Mangaluru",
+    "subtitle": "Kadri to Surathkal, Bejai to Kankanady — 240+ verified movers in Mangaluru."
+  },
+  "intro": "Mangaluru is the gateway to the Tulu Nadu coast, combining a major port, banking industry, and education hub. ShiftIndia's 240+ verified vendors cover all localities, from dense Bunder port areas to residential hills of Kadri and Bejai.",
+  "whyUs": "Mangaluru's hilly coastal terrain requires experienced drivers. Our vendors are trained on the city's gradient roads and coastal salt-air packing requirements.",
+  "popularRoutes": [
+    "Bangalore",
+    "Mysuru",
+    "Kochi",
+    "Udupi",
+    "Goa"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Surathkal and Mukka?",
+      "a": "Yes — NITK Surathkal, Mukka, Deralakatte and all suburban areas are covered."
+    },
+    {
+      "q": "What does a local move cost in Mangaluru?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹7,000 – ₹12,000."
+    },
+    {
+      "q": "Do you handle coastal humidity-sensitive packing?",
+      "a": "Yes, our vendors use humidity-resistant packing materials suitable for coastal conditions."
+    }
+  ]
+}

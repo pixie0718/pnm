@@ -1,0 +1,45 @@
+{
+  "slug": "ranchi",
+  "name": "Ranchi",
+  "state": "Jharkhand",
+  "emoji": "🌿",
+  "gradient": "from-green-400 to-lime-500",
+  "vendorCount": 260,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Ranchi — 260+ Verified Vendors | ShiftIndia",
+    "description": "Compare 260+ verified packers and movers in Ranchi. Instant quotes starting ₹3,500. Harmu, Doranda, Kanke Road covered. Live GPS tracking, ₹5L protection.",
+    "keywords": [
+      "packers and movers ranchi",
+      "movers ranchi",
+      "home shifting ranchi"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Ranchi",
+    "subtitle": "Harmu to Kanke Road, Doranda to Ratu Road — 260+ verified movers in Jharkhand's capital."
+  },
+  "intro": "Ranchi is Jharkhand's capital and a growing urban centre. ShiftIndia's 260+ verified vendors cover all of Ranchi's localities — from government quarters in Doranda to private colonies on Kanke Road and Ratu Road.",
+  "whyUs": "Ranchi's varying terrain and expanding suburbs require flexible fleet management. Our vendors carry vehicles from mini-trucks to large containers for every type of move.",
+  "popularRoutes": [
+    "Patna",
+    "Kolkata",
+    "Dhanbad",
+    "Jamshedpur",
+    "Varanasi"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover areas around Kanke Road and Ratu Road?",
+      "a": "Yes — all major corridors including Kanke, Ratu Road, Harmu, Doranda and Lalpur are covered."
+    },
+    {
+      "q": "What does a local move cost in Ranchi?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹10,000."
+    },
+    {
+      "q": "Do you move to Kolkata and Patna?",
+      "a": "Yes, inter-city moves are available with GPS tracking and insurance."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "kanpur",
+  "name": "Kanpur",
+  "state": "Uttar Pradesh",
+  "emoji": "🏗️",
+  "gradient": "from-stone-400 to-stone-600",
+  "vendorCount": 510,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Kanpur — 510+ Verified Vendors | ShiftIndia",
+    "description": "Compare 510+ verified packers and movers in Kanpur. Instant quotes starting ₹3,500. Kidwai Nagar, Swaroop Nagar, Kakadeo covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers kanpur",
+      "movers kanpur",
+      "home shifting kanpur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Kanpur",
+    "subtitle": "Kidwai Nagar to Kakadeo, Civil Lines to Swaroop Nagar — 510+ verified movers in Kanpur."
+  },
+  "intro": "Kanpur is UP's largest city and a major industrial centre. ShiftIndia's 510+ verified vendors cover the full city — from dense localities in the old industrial belt to modern residential areas like Kakadeo, Kidwai Nagar, and Kalyanpur.",
+  "whyUs": "Kanpur's industrial heritage means our vendors are experienced with heavy item moves, machine relocation, and office shifts alongside standard household moves.",
+  "popularRoutes": [
+    "Lucknow",
+    "Prayagraj",
+    "Agra",
+    "Delhi",
+    "Jhansi"
+  ],
+  "faqs": [
+    {
+      "q": "How much does a local move cost in Kanpur?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you handle industrial equipment moves?",
+      "a": "Yes, our verified vendors are equipped for light industrial and commercial relocations."
+    },
+    {
+      "q": "Do you cover Kalyanpur and Kidwai Nagar?",
+      "a": "Yes, all major localities in Kanpur Urban are covered."
+    }
+  ]
+}

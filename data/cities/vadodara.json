@@ -1,0 +1,45 @@
+{
+  "slug": "vadodara",
+  "name": "Vadodara",
+  "state": "Gujarat",
+  "emoji": "🏛️",
+  "gradient": "from-lime-400 to-green-500",
+  "vendorCount": 480,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Vadodara — 480+ Verified Vendors | ShiftIndia",
+    "description": "Compare 480+ verified packers and movers in Vadodara (Baroda). Instant quotes starting ₹3,500. Alkapuri, Gotri, Karelibaug covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers vadodara",
+      "movers baroda",
+      "home shifting vadodara"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Vadodara",
+    "subtitle": "Alkapuri to Gotri, Karelibaug to Gorwa — 480+ verified movers in the Cultural Capital of Gujarat."
+  },
+  "intro": "Vadodara (Baroda) is Gujarat's third-largest city and a growing industrial and educational hub. ShiftIndia's 480+ verified vendors cover all localities — from heritage bungalows near Sayajibaug to modern townships in Gorwa and Waghodia Road.",
+  "whyUs": "Vadodara's Petrochemical belt and industrial estates make it common for executives to relocate. Our vendors are experienced with both residential and corporate moves of all scales.",
+  "popularRoutes": [
+    "Ahmedabad",
+    "Surat",
+    "Mumbai",
+    "Rajkot",
+    "Indore"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover moves along Waghodia Road and Gotri?",
+      "a": "Yes — all major residential corridors including Gotri, Waghodia Road, Sama and Vasna Bhayli are covered."
+    },
+    {
+      "q": "What is the local move cost in Vadodara?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you move to Ahmedabad and Mumbai?",
+      "a": "Yes, inter-city moves with full tracking and insurance are available."
+    }
+  ]
+}

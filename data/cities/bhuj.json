@@ -1,0 +1,45 @@
+{
+  "slug": "bhuj",
+  "name": "Bhuj",
+  "state": "Gujarat",
+  "emoji": "🏜️",
+  "gradient": "from-yellow-400 to-orange-500",
+  "vendorCount": 158,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Bhuj — 158+ Verified Vendors | ShiftIndia",
+    "description": "Compare 158+ verified packers and movers in Bhuj. Instant quotes starting ₹4,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers bhuj",
+      "movers bhuj",
+      "home shifting bhuj",
+      "packers movers gujarat"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Bhuj",
+    "subtitle": "Ahmedabad, Rajkot and beyond — 158+ verified packers and movers across Bhuj."
+  },
+  "intro": "Bhuj is one of Gujarat's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 158+ KYC-verified packers and movers covering every locality across Bhuj.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Bhuj's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Bhuj. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Ahmedabad",
+    "Rajkot",
+    "Jamnagar",
+    "Mumbai"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Bhuj?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹6,000 – ₹12,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Bhuj?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Bhuj and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

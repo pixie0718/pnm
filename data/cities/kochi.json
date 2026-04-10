@@ -1,0 +1,46 @@
+{
+  "slug": "kochi",
+  "name": "Kochi",
+  "state": "Kerala",
+  "emoji": "⛵",
+  "gradient": "from-emerald-400 to-green-600",
+  "vendorCount": 470,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Kochi — 470+ Verified Vendors | ShiftIndia",
+    "description": "Compare 470+ verified packers and movers in Kochi. Instant quotes starting ₹5,000. Edapally, Kakkanad, Aluva, Marine Drive covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers kochi",
+      "movers kochi",
+      "home shifting kochi",
+      "movers ernakulam"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Kochi",
+    "subtitle": "Kakkanad to Edapally, Aluva to Marine Drive — 470+ verified movers in Kerala's commercial capital."
+  },
+  "intro": "Kochi is Kerala's commercial and IT hub, with a unique island-and-mainland geography spanning Fort Kochi, Mattancherry, Ernakulam Mainland, and Kakkanad. ShiftIndia's 470+ verified vendors navigate all of this with ease.",
+  "whyUs": "Kochi's backwater geography means some localities require waterway logistics. Our specialist vendors cover both road and water access routes for full-city coverage.",
+  "popularRoutes": [
+    "Thiruvananthapuram",
+    "Bangalore",
+    "Coimbatore",
+    "Thrissur",
+    "Kozhikode"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Fort Kochi and Mattancherry?",
+      "a": "Yes — including island localities accessed by road bridges and ferry routes."
+    },
+    {
+      "q": "What does a 2 BHK move cost in Kochi?",
+      "a": "₹8,000 – ₹15,000 depending on locality, floor, and packing requirements."
+    },
+    {
+      "q": "Do you move to Bangalore and Coimbatore?",
+      "a": "Yes, inter-city moves from Kochi are available with GPS tracking and ₹5L protection."
+    }
+  ]
+}

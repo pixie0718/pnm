@@ -1,0 +1,45 @@
+{
+  "slug": "nagpur",
+  "name": "Nagpur",
+  "state": "Maharashtra",
+  "emoji": "🍊",
+  "gradient": "from-orange-400 to-amber-500",
+  "vendorCount": 520,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Nagpur — 520+ Verified Vendors | ShiftIndia",
+    "description": "Compare 520+ verified packers and movers in Nagpur. Instant quotes starting ₹4,000. Dharampeth, Ramdaspeth, Wardha Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers nagpur",
+      "movers nagpur",
+      "home shifting nagpur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Nagpur",
+    "subtitle": "Dharampeth to Wardha Road, Sadar to Kalamna — 520+ verified movers in Orange City."
+  },
+  "intro": "Nagpur, at the geographic centre of India, is a growing hub for logistics, IT, and government. ShiftIndia's 520+ verified vendors cover the entire city — from Civil Lines bungalows to new high-rises along Wardha Road and the MIHAN corridor.",
+  "whyUs": "Nagpur's MIHAN SEZ and Butibori industrial zone attract executive relocations. Our vendors are experienced with both household and corporate moves for clients in these areas.",
+  "popularRoutes": [
+    "Mumbai",
+    "Pune",
+    "Hyderabad",
+    "Indore",
+    "Raipur"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover the MIHAN corridor?",
+      "a": "Yes — MIHAN SEZ, Wardha Road, and Butibori are all within our service area."
+    },
+    {
+      "q": "What does a 2 BHK local move cost?",
+      "a": "₹7,000 – ₹13,000 in Nagpur. Exact quote depends on locality and packing."
+    },
+    {
+      "q": "Do you move to Mumbai and Hyderabad?",
+      "a": "Yes, inter-city moves are available with full GPS tracking and ₹5L insurance."
+    }
+  ]
+}

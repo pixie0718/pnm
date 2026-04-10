@@ -113,6 +113,21 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }: { addUtilities: (u: Record<string, Record<string, string>>) => void }) {
+      addUtilities({
+        ".scrollbar-thin": {
+          "scrollbar-width": "thin",
+          "scrollbar-color": "#c4c9de transparent",
+        },
+        ".scrollbar-thin::-webkit-scrollbar": { width: "4px" },
+        ".scrollbar-thin::-webkit-scrollbar-track": { background: "transparent" },
+        ".scrollbar-thin::-webkit-scrollbar-thumb": {
+          background: "#c4c9de",
+          "border-radius": "99px",
+        },
+      });
+    },
+  ],
 };
 export default config;

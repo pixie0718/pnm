@@ -1,0 +1,46 @@
+{
+  "slug": "goa",
+  "name": "Panaji",
+  "state": "Goa",
+  "emoji": "🏖️",
+  "gradient": "from-cyan-300 to-sky-500",
+  "vendorCount": 210,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Goa — 210+ Verified Vendors | ShiftIndia",
+    "description": "Compare 210+ verified packers and movers in Goa. Instant quotes starting ₹5,000. Panaji, Margao, Mapusa, Vasco covered. Live GPS tracking, ₹5L protection.",
+    "keywords": [
+      "packers and movers goa",
+      "movers goa",
+      "home shifting goa",
+      "movers panaji"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Goa",
+    "subtitle": "Panaji to Margao, Mapusa to Vasco — 210+ verified movers covering all of Goa."
+  },
+  "intro": "Goa is India's most popular coastal destination with a unique mix of Portuguese heritage homes, beach villas, and urban apartments. ShiftIndia's 210+ verified vendors cover all talukas — North Goa and South Goa alike.",
+  "whyUs": "Goa's heritage properties often need special handling for Portuguese tiles, wooden furniture, and antique fixtures. Our vendors are trained in heritage property moves.",
+  "popularRoutes": [
+    "Mumbai",
+    "Pune",
+    "Mangaluru",
+    "Bangalore",
+    "Hyderabad"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover South Goa (Margao, Vasco)?",
+      "a": "Yes — both North and South Goa are fully covered."
+    },
+    {
+      "q": "Can you handle Portuguese heritage furniture?",
+      "a": "Yes, our vendors are experienced with antique wood furniture and fragile tile work."
+    },
+    {
+      "q": "What does a local move cost in Goa?",
+      "a": "Starting from ₹5,000. 2 BHK typically ₹8,500 – ₹15,000."
+    }
+  ]
+}

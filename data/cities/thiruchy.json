@@ -1,0 +1,45 @@
+{
+  "slug": "thiruchy",
+  "name": "Tiruchirappalli",
+  "state": "Tamil Nadu",
+  "emoji": "🏯",
+  "gradient": "from-red-300 to-rose-500",
+  "vendorCount": 250,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Tiruchirappalli — 250+ Verified Vendors | ShiftIndia",
+    "description": "Compare 250+ verified packers and movers in Tiruchirappalli (Trichy). Instant quotes starting ₹3,500. Thillai Nagar, Woraiyur, Ariyamangalam covered.",
+    "keywords": [
+      "packers and movers trichy",
+      "movers tiruchirappalli",
+      "home shifting trichy"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Tiruchirappalli",
+    "subtitle": "Thillai Nagar to Ariyamangalam, Woraiyur to Srirangam — 250+ verified movers in Trichy."
+  },
+  "intro": "Tiruchirappalli (Trichy) is Tamil Nadu's fourth-largest city, home to Bharat Heavy Electricals and major educational institutions. ShiftIndia's 250+ verified vendors cover all localities including the Rockfort area and new housing developments on the Ariyamangalam bypass.",
+  "whyUs": "Trichy's BHEL Township and temple towns like Srirangam require specific vehicle types. Our vendors carry the right fleet and know access rules for each zone.",
+  "popularRoutes": [
+    "Chennai",
+    "Madurai",
+    "Coimbatore",
+    "Pondicherry",
+    "Bangalore"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover BHEL Township?",
+      "a": "Yes — BHEL Township, Ariyamangalam, Thillai Nagar and all major areas are covered."
+    },
+    {
+      "q": "What is the local move cost in Trichy?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you move to Chennai and Madurai?",
+      "a": "Yes, inter-city moves are available with tracking and insurance."
+    }
+  ]
+}

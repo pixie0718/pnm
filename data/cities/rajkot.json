@@ -1,0 +1,45 @@
+{
+  "slug": "rajkot",
+  "name": "Rajkot",
+  "state": "Gujarat",
+  "emoji": "🔧",
+  "gradient": "from-teal-400 to-teal-600",
+  "vendorCount": 370,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Rajkot — 370+ Verified Vendors | ShiftIndia",
+    "description": "Compare 370+ verified packers and movers in Rajkot. Instant quotes starting ₹3,500. Kalawad Road, Bhaktinagar, Raiya Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers rajkot",
+      "movers rajkot",
+      "home shifting rajkot"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Rajkot",
+    "subtitle": "Kalawad Road to Raiya Road, Bhaktinagar to Metoda — 370+ verified movers in Rajkot."
+  },
+  "intro": "Rajkot is Saurashtra's largest city and an important commercial hub. ShiftIndia's 370+ verified vendors cover all residential localities — from the busy University Road corridor to new developments on Kalawad Road and Bhaktinagar.",
+  "whyUs": "Rajkot's mix of old chawl-style housing and new high-rises requires vendors with both manpower teams and modern equipment. Our network has both.",
+  "popularRoutes": [
+    "Ahmedabad",
+    "Surat",
+    "Vadodara",
+    "Bhavnagar",
+    "Jamnagar"
+  ],
+  "faqs": [
+    {
+      "q": "What is the local move cost in Rajkot?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹10,000."
+    },
+    {
+      "q": "Do you cover Metoda GIDC industrial area?",
+      "a": "Yes, commercial and industrial moves are handled by our verified vendors."
+    },
+    {
+      "q": "Is GPS tracking available?",
+      "a": "Yes — live GPS tracking is included on all bookings."
+    }
+  ]
+}

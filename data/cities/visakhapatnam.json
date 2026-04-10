@@ -1,0 +1,45 @@
+{
+  "slug": "visakhapatnam",
+  "name": "Visakhapatnam",
+  "state": "Andhra Pradesh",
+  "emoji": "⚓",
+  "gradient": "from-blue-400 to-cyan-500",
+  "vendorCount": 430,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Visakhapatnam — 430+ Verified Vendors | ShiftIndia",
+    "description": "Compare 430+ verified packers and movers in Visakhapatnam (Vizag). Instant quotes starting ₹4,000. MVP Colony, Gajuwaka, Madhurawada covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers visakhapatnam",
+      "movers vizag",
+      "home shifting vizag"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Visakhapatnam",
+    "subtitle": "MVP Colony to Madhurawada, Gajuwaka to Rushikonda — 430+ verified movers in Vizag."
+  },
+  "intro": "Visakhapatnam (Vizag) is Andhra Pradesh's largest city, combining a major port, steel plant, naval base, and growing IT sector. ShiftIndia's 430+ verified vendors cover all localities — from Steel Plant township to beachside Rushikonda and IT corridors in Madhurawada.",
+  "whyUs": "Vizag's hilly terrain in Rushikonda and Bheemunipatnam requires careful driving. Our vendors know the coastal roads, steep gradients, and best access routes.",
+  "popularRoutes": [
+    "Hyderabad",
+    "Vijayawada",
+    "Bhubaneswar",
+    "Chennai",
+    "Bangalore"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Madhurawada IT corridor?",
+      "a": "Yes — Madhurawada, Rushikonda, Bheemunipatnam and all IT corridors are fully covered."
+    },
+    {
+      "q": "What does a local move cost in Vizag?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹7,000 – ₹13,000."
+    },
+    {
+      "q": "Can you handle moves in hilly areas like Rushikonda?",
+      "a": "Yes, our vendors are experienced with hilly terrain and coastal roads."
+    }
+  ]
+}

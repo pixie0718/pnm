@@ -1,0 +1,45 @@
+{
+  "slug": "madurai",
+  "name": "Madurai",
+  "state": "Tamil Nadu",
+  "emoji": "🛕",
+  "gradient": "from-yellow-400 to-orange-500",
+  "vendorCount": 310,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Madurai — 310+ Verified Vendors | ShiftIndia",
+    "description": "Compare 310+ verified packers and movers in Madurai. Instant quotes starting ₹3,500. Anna Nagar, KK Nagar, Bypass Road covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers madurai",
+      "movers madurai",
+      "home shifting madurai"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Madurai",
+    "subtitle": "Anna Nagar to KK Nagar, Bypass Road to Mattuthavani — 310+ verified movers in the Temple City."
+  },
+  "intro": "Madurai is Tamil Nadu's second city and a major cultural centre. ShiftIndia's 310+ verified vendors cover all localities — from densely packed areas near the Meenakshi Temple to growing residential zones along the Bypass Road and Anna Nagar.",
+  "whyUs": "Madurai's old-city areas near the temple require small-vehicle access and experienced manpower. Our vendors are prepared for both this and modern high-rise moves.",
+  "popularRoutes": [
+    "Chennai",
+    "Coimbatore",
+    "Bangalore",
+    "Trichy",
+    "Kochi"
+  ],
+  "faqs": [
+    {
+      "q": "Can you access areas near Meenakshi Amman Temple?",
+      "a": "Yes, we use smaller vehicles for temple-zone areas with restricted access."
+    },
+    {
+      "q": "What does a 2 BHK move cost in Madurai?",
+      "a": "₹6,000 – ₹11,000 locally. Depends on distance, floor, and packing."
+    },
+    {
+      "q": "Do you move to Chennai and Coimbatore?",
+      "a": "Yes, inter-city moves are available with GPS tracking and insurance."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "aurangabad",
+  "name": "Aurangabad",
+  "state": "Maharashtra",
+  "emoji": "🏛️",
+  "gradient": "from-yellow-500 to-amber-600",
+  "vendorCount": 280,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Aurangabad — 280+ Verified Vendors | ShiftIndia",
+    "description": "Compare 280+ verified packers and movers in Aurangabad. Instant quotes starting ₹3,500. CIDCO, Garkheda, Beed Bypass covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers aurangabad",
+      "movers aurangabad",
+      "home shifting aurangabad"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Aurangabad",
+    "subtitle": "CIDCO to Garkheda, Beed Bypass to Cantonment — 280+ verified movers in Aurangabad."
+  },
+  "intro": "Aurangabad (Chhatrapati Sambhajinagar) is Maharashtra's tourism and manufacturing hub, home to the Ajanta-Ellora corridor and a major auto industry belt. ShiftIndia's 280+ verified vendors cover the full city area.",
+  "whyUs": "Aurangabad's auto-industry workers and executives frequently relocate. Our vendors handle both household and corporate moves professionally.",
+  "popularRoutes": [
+    "Nashik",
+    "Pune",
+    "Mumbai",
+    "Nagpur",
+    "Hyderabad"
+  ],
+  "faqs": [
+    {
+      "q": "What is the local move cost in Aurangabad?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you cover CIDCO and Garkheda?",
+      "a": "Yes — all major zones including CIDCO, Garkheda, Beed Bypass and Waluj MIDC are covered."
+    },
+    {
+      "q": "Do you move to Pune and Mumbai?",
+      "a": "Yes, inter-city moves are fully available with tracking and insurance."
+    }
+  ]
+}

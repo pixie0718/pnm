@@ -1,0 +1,45 @@
+{
+  "slug": "thrissur",
+  "name": "Thrissur",
+  "state": "Kerala",
+  "emoji": "🐘",
+  "gradient": "from-yellow-400 to-lime-500",
+  "vendorCount": 210,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Thrissur — 210+ Verified Vendors | ShiftIndia",
+    "description": "Compare 210+ verified packers and movers in Thrissur. Instant quotes starting ₹4,500. Punkunnam, Ollur, Round South covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers thrissur",
+      "movers thrissur",
+      "home shifting thrissur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Thrissur",
+    "subtitle": "Punkunnam to Ollur, Round South to Thriprayar Road — 210+ verified movers in Kerala's Cultural Capital."
+  },
+  "intro": "Thrissur is Kerala's cultural capital and a major banking and finance hub. ShiftIndia's 210+ verified vendors cover all areas — from heritage homes near the Vadakkunnathan Temple to modern apartments on the Palakkad Road corridor.",
+  "whyUs": "Thrissur's famous Pooram festival creates massive traffic disruptions in April. Our vendors plan moves well clear of festival windows to avoid delays.",
+  "popularRoutes": [
+    "Kochi",
+    "Kozhikode",
+    "Palakkad",
+    "Coimbatore",
+    "Bangalore"
+  ],
+  "faqs": [
+    {
+      "q": "Do you avoid festival periods like Thrissur Pooram?",
+      "a": "Yes — we flag festival dates during booking and plan accordingly."
+    },
+    {
+      "q": "What is the local move cost in Thrissur?",
+      "a": "1 BHK from ₹4,500. 2 BHK typically ₹7,500 – ₹12,000."
+    },
+    {
+      "q": "Do you move to Kochi and Bangalore?",
+      "a": "Yes, inter-city moves are available with full tracking and insurance."
+    }
+  ]
+}

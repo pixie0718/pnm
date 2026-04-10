@@ -1,0 +1,45 @@
+{
+  "slug": "indore",
+  "name": "Indore",
+  "state": "Madhya Pradesh",
+  "emoji": "🍛",
+  "gradient": "from-amber-500 to-orange-500",
+  "vendorCount": 590,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Indore — 590+ Verified Vendors | ShiftIndia",
+    "description": "Compare 590+ verified packers and movers in Indore. Instant quotes starting ₹4,000. Vijay Nagar, Scheme 54, Palasia covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers indore",
+      "movers indore",
+      "home shifting indore"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Indore",
+    "subtitle": "Vijay Nagar to Palasia, Scheme 54 to Super Corridor — 590+ verified movers in MP's commercial capital."
+  },
+  "intro": "Indore is Madhya Pradesh's commercial and financial hub, consistently ranked India's cleanest city. With a booming IT sector and rapid expansion along the Super Corridor and Bypass Road, ShiftIndia's 590+ verified vendors are in high demand here.\n\nInstant quotes, transparent pricing, zero hidden charges.",
+  "whyUs": "Indore's Super Corridor tech corridor is booming with new residential projects. Our vendors are up-to-date with the latest society developments and access rules across the city.",
+  "popularRoutes": [
+    "Bhopal",
+    "Ahmedabad",
+    "Mumbai",
+    "Nagpur",
+    "Pune"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Super Corridor and Bypass Road areas?",
+      "a": "Yes — including all new developments along Super Corridor, Bypass Road, and AB Road."
+    },
+    {
+      "q": "What does a 2 BHK shift cost in Indore?",
+      "a": "₹7,000 – ₹13,000 depending on distance, floor, and packing requirements."
+    },
+    {
+      "q": "Are weekend slots available?",
+      "a": "Yes, weekend moves are available at no extra charge."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "slug": "chandigarh",
+  "name": "Chandigarh",
+  "state": "Punjab & Haryana",
+  "emoji": "🌷",
+  "gradient": "from-sky-400 to-sky-600",
+  "vendorCount": 480,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Chandigarh — 480+ Verified Vendors | ShiftIndia",
+    "description": "Compare 480+ verified packers and movers in Chandigarh, Mohali & Panchkula. Instant quotes starting ₹4,500. All sectors covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers chandigarh",
+      "movers chandigarh",
+      "home shifting chandigarh",
+      "mohali movers",
+      "panchkula movers"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Chandigarh",
+    "subtitle": "Sector 17 to Mohali, Panchkula to Zirakpur — 480+ verified movers across the Tricity."
+  },
+  "intro": "The Chandigarh Tricity — Chandigarh, Mohali, and Panchkula — is one of India's most planned urban zones. ShiftIndia covers all sectors and the rapidly expanding satellite areas of Zirakpur, Aerocity, and New Chandigarh.\n\nOur 480+ verified vendors know the sector grid and society access rules intimately.",
+  "whyUs": "Chandigarh's grid layout and wide roads make logistics straightforward, but high-rise societies in Mohali and Panchkula have strict lift and parking rules. Our vendors are experienced with these and plan accordingly.",
+  "popularRoutes": [
+    "Delhi",
+    "Amritsar",
+    "Ludhiana",
+    "Shimla",
+    "Dehradun"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Mohali and Panchkula?",
+      "a": "Yes — the entire Tricity including Zirakpur, Aerocity, and New Chandigarh is covered."
+    },
+    {
+      "q": "What is the cost for a 2 BHK move within Chandigarh?",
+      "a": "₹7,000 – ₹13,000 depending on sector distance, floor, and packing requirements."
+    },
+    {
+      "q": "Do you move between Chandigarh and Delhi?",
+      "a": "Yes. Inter-city moves to Delhi, Ludhiana, Amritsar and beyond are available with full GPS tracking."
+    }
+  ]
+}

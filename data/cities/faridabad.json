@@ -1,0 +1,45 @@
+{
+  "slug": "faridabad",
+  "name": "Faridabad",
+  "state": "Haryana",
+  "emoji": "🏭",
+  "gradient": "from-purple-400 to-purple-600",
+  "vendorCount": 294,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Faridabad — 294+ Verified Vendors | ShiftIndia",
+    "description": "Compare 294+ verified packers and movers in Faridabad. Instant quotes starting ₹3,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers faridabad",
+      "movers faridabad",
+      "home shifting faridabad",
+      "packers movers haryana"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Faridabad",
+    "subtitle": "Delhi, Gurugram and beyond — 294+ verified packers and movers across Faridabad."
+  },
+  "intro": "Faridabad is one of Haryana's key cities, with a growing residential and commercial real estate market. ShiftIndia connects you with 294+ KYC-verified packers and movers covering every locality across Faridabad.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Faridabad's road network and traffic conditions require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Faridabad. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Delhi",
+    "Gurugram",
+    "Noida",
+    "Agra"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Faridabad?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹11,500 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Faridabad?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Faridabad and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every ShiftIndia booking at no extra charge."
+    }
+  ]
+}

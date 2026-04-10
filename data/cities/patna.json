@@ -1,0 +1,45 @@
+{
+  "slug": "patna",
+  "name": "Patna",
+  "state": "Bihar",
+  "emoji": "🏺",
+  "gradient": "from-amber-400 to-yellow-500",
+  "vendorCount": 390,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Patna — 390+ Verified Vendors | ShiftIndia",
+    "description": "Compare 390+ verified packers and movers in Patna. Instant quotes starting ₹3,500. Boring Road, Bailey Road, Patliputra covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers patna",
+      "movers patna",
+      "home shifting patna"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Patna",
+    "subtitle": "Boring Road to Bailey Road, Patliputra to Danapur — 390+ verified movers in Bihar's capital."
+  },
+  "intro": "Patna is Bihar's fast-growing capital on the Ganga's south bank. ShiftIndia's 390+ verified vendors cover the entire city — from old Patna City near Patna Sahib to new colonies along Boring Road, Bailey Road, and Danapur Cantonment.",
+  "whyUs": "Patna's Ganga bridges and Bypass Road are the main logistics arteries. Our vendors plan routes efficiently around these to avoid delays during peak hours.",
+  "popularRoutes": [
+    "Varanasi",
+    "Lucknow",
+    "Ranchi",
+    "Kolkata",
+    "Delhi"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover Danapur and Phulwari Sharif?",
+      "a": "Yes — all areas in Patna Metropolitan including Danapur, Phulwari Sharif, Fatuha and Khagaul."
+    },
+    {
+      "q": "What does a local move cost in Patna?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Do you move to Ranchi and Varanasi?",
+      "a": "Yes, inter-city moves are available with GPS tracking and ₹5L damage protection."
+    }
+  ]
+}

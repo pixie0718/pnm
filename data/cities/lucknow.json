@@ -1,0 +1,46 @@
+{
+  "slug": "lucknow",
+  "name": "Lucknow",
+  "state": "Uttar Pradesh",
+  "emoji": "🕌",
+  "gradient": "from-amber-400 to-amber-600",
+  "vendorCount": 740,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Lucknow — 740+ Verified Vendors | ShiftIndia",
+    "description": "Compare 740+ verified packers and movers in Lucknow. Instant quotes starting ₹4,000. Gomti Nagar, Hazratganj, Aliganj covered. Live tracking, ₹5L protection.",
+    "keywords": [
+      "packers and movers lucknow",
+      "movers lucknow",
+      "home shifting lucknow",
+      "gomti nagar movers"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Lucknow",
+    "subtitle": "Gomti Nagar to Aliganj, Hazratganj to Indira Nagar — 740+ verified movers across the City of Nawabs."
+  },
+  "intro": "Lucknow is witnessing rapid residential growth along the Gomti Nagar Extension, Shaheed Path, and Sushant Golf City corridors. ShiftIndia's network of 740+ verified packers and movers covers every pocket — from heritage homes in Hazratganj to new apartments in Eldeco estates.\n\nTransparent pricing, no hidden charges, and same-day quotes.",
+  "whyUs": "Lucknow's expanding metro and new expressways have changed traffic patterns. Our vendors plan routes to avoid Hazratganj bottlenecks and account for building access restrictions in newer societies.",
+  "popularRoutes": [
+    "Delhi",
+    "Kanpur",
+    "Agra",
+    "Varanasi",
+    "Prayagraj"
+  ],
+  "faqs": [
+    {
+      "q": "How much does a local move cost in Lucknow?",
+      "a": "1 BHK from ₹4,500. 2 BHK typically ₹7,000 – ₹13,000 depending on floors and distance."
+    },
+    {
+      "q": "Do you cover Gomti Nagar Extension?",
+      "a": "Yes — all areas including Gomti Nagar Extension, Sushant Golf City, Eldeco, and Shaheed Path colonies."
+    },
+    {
+      "q": "Can you help with office relocations?",
+      "a": "Yes. We handle residential and commercial moves of all sizes."
+    }
+  ]
+}

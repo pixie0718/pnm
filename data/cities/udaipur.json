@@ -1,0 +1,45 @@
+{
+  "slug": "udaipur",
+  "name": "Udaipur",
+  "state": "Rajasthan",
+  "emoji": "🏞️",
+  "gradient": "from-cyan-400 to-cyan-600",
+  "vendorCount": 200,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Udaipur — 200+ Verified Vendors | ShiftIndia",
+    "description": "Compare 200+ verified packers and movers in Udaipur. Instant quotes starting ₹3,500. Hiran Magri, Pratap Nagar, Sukhadia Circle covered. Live GPS tracking.",
+    "keywords": [
+      "packers and movers udaipur",
+      "movers udaipur",
+      "home shifting udaipur"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Udaipur",
+    "subtitle": "Hiran Magri to Pratap Nagar, Sukhadia Circle to Sector 11 — 200+ verified movers in the Lake City."
+  },
+  "intro": "Udaipur is one of Rajasthan's most scenic cities with a mix of lakeside heritage properties and modern residential sectors. ShiftIndia's 200+ verified vendors handle everything from palace-precinct moves to sector-to-sector residential shifts.",
+  "whyUs": "Udaipur's hilly terrain and lakeside roads require careful vehicle selection. Our vendors know the city's road network thoroughly and ensure smooth, damage-free moves.",
+  "popularRoutes": [
+    "Jaipur",
+    "Jodhpur",
+    "Ahmedabad",
+    "Mumbai",
+    "Delhi"
+  ],
+  "faqs": [
+    {
+      "q": "Do you cover lakeside areas and heritage zones?",
+      "a": "Yes, including areas around Lake Pichola and Fateh Sagar with appropriate vehicle sizes."
+    },
+    {
+      "q": "What is a typical move cost in Udaipur?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹6,000 – ₹11,000."
+    },
+    {
+      "q": "Can you move to Ahmedabad and Jaipur?",
+      "a": "Yes, inter-city moves are available with full insurance and live tracking."
+    }
+  ]
+}
