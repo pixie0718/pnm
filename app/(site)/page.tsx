@@ -58,7 +58,7 @@ export default function HomePage() {
       <section className="hero-mesh grain relative overflow-hidden">
         <div className="absolute top-20 right-0 w-[400px] h-[400px] dot-grid opacity-60 pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-28 lg:pt-20 lg:pb-36 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 lg:pt-20 lg:pb-36 relative">
           <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 items-center">
             {/* LEFT */}
             <div>
@@ -206,13 +206,13 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── HOW IT WORKS ─────────────── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-28">
         <div className="grid md:grid-cols-2 gap-6 items-end mb-14">
           <div>
             <div className="eyebrow mb-4">
               <span className="w-8 h-px bg-saffron-500"></span> {site.howItWorks.eyebrow}
             </div>
-            <h2 className="display text-4xl md:text-6xl font-bold text-midnight-900 leading-[0.95]">
+            <h2 className="display text-3xl md:text-6xl font-bold text-midnight-900 leading-[0.95]">
               {site.howItWorks.heading} <br />
               <span className="grad-saffron">{site.howItWorks.headingAccent}</span>
             </h2>
@@ -222,9 +222,9 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-6 gap-5 auto-rows-[220px]">
+        <div className="grid md:grid-cols-6 gap-5 md:auto-rows-[220px]">
           {/* Step 1 */}
-          <div className="md:col-span-3 md:row-span-2 card p-8 relative overflow-hidden group hover:shadow-glow transition-all">
+          <div className="md:col-span-3 md:row-span-2 card p-6 md:p-8 relative overflow-hidden group hover:shadow-glow transition-all min-h-[220px]">
             <div className="absolute top-0 right-0 w-40 h-40 bg-saffron-500/10 rounded-full blur-3xl"></div>
             <div className="flex items-start justify-between mb-6">
               <div className="display text-7xl font-bold text-saffron-500">{site.howItWorks.steps[0].number}</div>
@@ -274,7 +274,7 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── REVIEWS ─────────────── */}
-      <section className="bg-midnight-900 text-white py-28 relative overflow-hidden grain">
+      <section className="bg-midnight-900 text-white py-16 md:py-28 relative overflow-hidden grain">
         <div className="absolute inset-0 dark-mesh opacity-80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
@@ -290,7 +290,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {reviews.map((r) => (
-              <div key={r.id} className={`bg-white text-midnight-900 rounded-3xl p-7 shadow-soft ${r.rotate} hover:rotate-0 hover:-translate-y-2 transition-all`}>
+              <div key={r.id} className={`bg-white text-midnight-900 rounded-3xl p-6 md:p-7 shadow-soft md:${r.rotate} hover:rotate-0 hover:-translate-y-2 transition-all`}>
                 <div className="flex items-center gap-1 text-saffron-500 mb-4">
                   {Array.from({ length: r.rating }).map((_, j) => <Star key={j} size={16} fill="currentColor" />)}
                 </div>
@@ -309,7 +309,7 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── TOP CITIES ─────────────── */}
-      <section className="py-24 bg-midnight-900 overflow-hidden relative">
+      <section className="py-16 md:py-24 bg-midnight-900 overflow-hidden relative">
         <div className="absolute inset-0 dot-grid opacity-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,7 +320,7 @@ export default function HomePage() {
               <div className="eyebrow !text-saffron-400 mb-3">
                 <span className="w-8 h-px bg-saffron-500"></span> {stats.raw.cities}+ cities across India
               </div>
-              <h2 className="display text-4xl md:text-6xl font-bold text-white leading-[0.95]">
+              <h2 className="display text-3xl md:text-6xl font-bold text-white leading-[0.95]">
                 We move the whole <br className="hidden md:block"/> of <span className="grad-saffron">Bharat</span> 🇮🇳
               </h2>
             </div>
@@ -447,17 +447,17 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────── CTA ─────────────── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-12 md:pt-20 md:pb-20">
         <div className="relative rounded-[40px] overflow-hidden bg-saffron-500 grain">
           <div className="absolute inset-0 dot-grid opacity-20"></div>
           <Truck className="absolute -right-20 top-1/2 -translate-y-1/2 text-white/10" size={500} strokeWidth={1} />
 
-          <div className="relative p-12 md:p-20 max-w-2xl text-white">
+          <div className="relative p-8 md:p-20 max-w-2xl text-white">
             <div className="eyebrow !text-white/80 mb-5">
               <span className="w-8 h-px bg-white/60"></span>
               {site.cta.eyebrow}
             </div>
-            <h2 className="display text-4xl md:text-6xl font-bold leading-[0.95]">
+            <h2 className="display text-3xl md:text-6xl font-bold leading-[0.95]">
               {site.cta.heading}
             </h2>
             <p className="mt-5 text-lg text-white/90 max-w-md">

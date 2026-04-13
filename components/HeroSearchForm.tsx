@@ -1,13 +1,27 @@
 "use client";
-import { useState, useRef, useEffect, FormEvent } from "react";
+import { useState, useRef, useEffect, FormEvent, CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import { Truck, ArrowRight, MapPin, Search, ChevronDown, X, Home, CalendarDays, ChevronLeft, ChevronRight } from "lucide-react";
+import { Truck, ArrowRight, ChevronDown, Home, CalendarDays, Search } from "lucide-react";
 
 type Props = { cities: string[] };
 
-/* ── Searchable city combobox ── */
-function CitySelect({
+/* ─────────────────────────────────────────────
+   Portal — renders children into document.body,
+   completely outside the hero section DOM tree.
+   This bypasses every z-index / overflow issue.
+───────────────────────────────────────────── */
+function Portal({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+  if (!mounted) return null;
+  return createPortal(children, document.body);
+}
+
+/* ─────────────────────────────────────────────
+   City Dropdown
+───────────────────────────────────────────── */
+function CityDropdown({
   label,
   accent,
   value,
@@ -20,214 +34,269 @@ function CitySelect({
   onChange: (v: string) => void;
   cities: string[];
 }) {
-  const [open, setOpen] = useState(false);
-  const [dropPos, setDropPos] = useState<{ top: number; left: number } | null>(null);
-  const [query, setQuery] = useState("");
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const dropRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
+  const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
-  const filtered = query.trim()
-    ? cities.filter((c) => c.toLowerCase().includes(query.toLowerCase()))
-    : cities;
+  const dot = accent === "saffron" ? "bg-saffron-500" : "bg-mint-500";
+  const filtered = cities
+    .filter((c) => c.toLowerCase().includes(search.toLowerCase()))
+    .slice(0, 10);
 
   function openDropdown() {
-    if (!triggerRef.current) return;
-    const r = triggerRef.current.getBoundingClientRect();
-    setDropPos({ top: r.bottom + window.scrollY + 8, left: r.left + window.scrollX });
-    setOpen(true);
+    if (btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      const panelWidth = Math.max(r.width, 200);
+      const panelHeight = 320; // approximate height
+      
+      // Calculate position to keep panel within viewport
+      let left = r.left;
+      let top = r.bottom + 6;
+      
+      // Ensure panel doesn't go off right edge
+      if (left + panelWidth > window.innerWidth) {
+        left = window.innerWidth - panelWidth - 16;
+      }
+      
+      // Ensure panel doesn't go off left edge
+      if (left < 8) {
+        left = 8;
+      }
+      
+      // If not enough space below, show above
+      if (top + panelHeight > window.innerHeight) {
+        top = r.top - panelHeight - 6;
+      }
+      
+      setPanelStyle({
+        position: "fixed",
+        top,
+        left,
+        width: panelWidth,
+        maxHeight: panelHeight,
+        zIndex: 99999,
+      });
+    }
+    setIsOpen(true);
+    setSearch("");
   }
 
   function closeDropdown() {
-    setOpen(false);
-    setQuery("");
-    setDropPos(null);
+    setIsOpen(false);
+    setSearch("");
   }
 
-  /* close on outside click */
+  // Close on outside click
   useEffect(() => {
-    function handler(e: MouseEvent) {
+    if (!isOpen) return;
+    function onDown(e: MouseEvent) {
       const t = e.target as Node;
-      if (triggerRef.current?.contains(t) || dropRef.current?.contains(t)) return;
+      if (panelRef.current && panelRef.current.contains(t)) {
+        return; // Click inside panel - don't close
+      }
+      if (btnRef.current && btnRef.current.contains(t)) {
+        return; // Click on button - handled by onClick
+      }
       closeDropdown();
     }
-    if (open) document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [open]);
-
-  /* close on PAGE scroll / resize — but not on scroll inside the dropdown itself */
-  useEffect(() => {
-    if (!open) return;
-    const handler = (e: Event) => {
-      if (dropRef.current?.contains(e.target as Node)) return;
-      closeDropdown();
-    };
-    window.addEventListener("scroll", handler, true);
-    window.addEventListener("resize", handler);
+    // Use setTimeout to avoid immediate trigger from the click that opened the dropdown
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", onDown);
+    }, 0);
     return () => {
-      window.removeEventListener("scroll", handler, true);
-      window.removeEventListener("resize", handler);
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", onDown);
     };
-  }, [open]);
+  }, [isOpen]);
 
+  // Close on scroll / resize
   useEffect(() => {
-    if (open) setTimeout(() => inputRef.current?.focus(), 50);
-  }, [open]);
-
-  const dot = accent === "saffron" ? "bg-saffron-500" : "bg-mint-500";
+    if (!isOpen) return;
+    const close = () => closeDropdown();
+    window.addEventListener("scroll", close, { passive: true });
+    window.addEventListener("resize", close);
+    return () => {
+      window.removeEventListener("scroll", close);
+      window.removeEventListener("resize", close);
+    };
+  }, [isOpen]);
 
   return (
-    <>
-      {/* Trigger */}
+    <div className="relative w-full">
       <button
-        ref={triggerRef}
+        ref={btnRef}
         type="button"
-        onClick={open ? closeDropdown : openDropdown}
-        className="w-full rounded-2xl px-4 py-2.5 hover:bg-cream-100 transition text-left flex items-center justify-between"
+        onClick={() => (isOpen ? closeDropdown() : openDropdown())}
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-cream-100 transition rounded-2xl text-left cursor-pointer"
       >
         <div className="min-w-0">
           <div className="label !mb-0 flex items-center gap-1.5">
             <span className={`w-1.5 h-1.5 rounded-full ${dot}`} />
             {label}
           </div>
-          <div className="text-sm font-bold text-midnight-900 truncate max-w-[130px]">
+          <div className="text-sm font-bold text-midnight-900 truncate max-w-[150px]">
             {value || "Select city"}
           </div>
         </div>
         <ChevronDown
           size={14}
-          className={`text-midnight-400 shrink-0 ml-1 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`text-midnight-400 shrink-0 ml-1 transition-transform ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
-      {/* Portal — renders at <body> to escape any overflow:hidden ancestor */}
-      {open && dropPos && typeof document !== "undefined" &&
-        createPortal(
+      {isOpen && (
+        <Portal>
           <div
-            ref={dropRef}
-            style={{
-              position: "absolute",
-              top: dropPos.top,
-              left: dropPos.left,
-              width: 288,
-              zIndex: 9999,
-              boxShadow: "0 24px 64px -12px rgba(10,14,39,0.22)",
-              borderRadius: "1rem",
-              background: "#fff",
-              border: "1px solid #e8eaf3",
-            }}
-            onMouseDown={(e) => e.stopPropagation()}
+            ref={panelRef}
+            style={panelStyle}
+            className="bg-white border border-midnight-100 rounded-2xl shadow-xl overflow-hidden"
           >
-            {/* Search bar */}
-            <div className="flex items-center gap-2 px-3 py-2.5 border-b border-midnight-100 rounded-t-2xl overflow-hidden">
-              <Search size={13} className="text-midnight-400 shrink-0" />
+            <div className="px-4 py-3 border-b border-midnight-50 flex items-center gap-2">
+              <Search size={14} className="text-midnight-400 shrink-0" />
               <input
-                ref={inputRef}
-                type="text"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
+                className="w-full text-sm outline-none bg-transparent"
                 placeholder="Search city..."
-                className="flex-1 text-sm text-midnight-900 placeholder-midnight-400 outline-none bg-transparent"
+                value={search}
+                autoFocus
+                onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") e.preventDefault();
+                  if (e.key === "Escape") closeDropdown();
+                }}
               />
-              {query && (
-                <button type="button" onClick={() => setQuery("")} className="text-midnight-400 hover:text-midnight-700 transition">
-                  <X size={13} />
-                </button>
-              )}
             </div>
-
-            {/* List */}
-            <ul
-              style={{
-                maxHeight: 224,
-                overflowY: "auto",
-                scrollbarWidth: "thin",
-                scrollbarColor: "#c4c9de transparent",
-              }}
-              className="py-1.5"
-            >
-              {filtered.length === 0 ? (
-                <li className="px-4 py-3 text-sm text-midnight-400 text-center">No cities found</li>
-              ) : (
-                filtered.map((city) => (
-                  <li key={city}>
-                    <button
-                      type="button"
-                      onClick={() => { onChange(city); closeDropdown(); }}
-                      className={`w-full flex items-center gap-2.5 px-4 py-2 text-sm text-left transition ${
-                        city === value
-                          ? "bg-saffron-50 text-saffron-600 font-bold"
-                          : "text-midnight-800 hover:bg-cream-100 font-medium"
-                      }`}
-                    >
-                      <MapPin size={12} className="shrink-0 text-midnight-400" />
-                      <span className="flex-1 truncate">{city}</span>
-                      {city === value && <span className="text-xs text-saffron-500 shrink-0">✓</span>}
-                    </button>
-                  </li>
+            <div className="max-h-[240px] overflow-y-auto py-2">
+              {filtered.length > 0 ? (
+                filtered.map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={() => {
+                      onChange(c);
+                      closeDropdown();
+                    }}
+                    className={`w-full text-left px-5 py-2.5 text-sm hover:bg-cream-50 transition flex items-center justify-between ${
+                      value === c
+                        ? "text-saffron-600 font-bold bg-saffron-50/50"
+                        : "text-midnight-600"
+                    }`}
+                  >
+                    {c}
+                    {value === c && (
+                      <div className="w-1 h-1 rounded-full bg-saffron-500" />
+                    )}
+                  </button>
                 ))
+              ) : (
+                <div className="px-5 py-4 text-xs text-midnight-400 italic">
+                  No cities found
+                </div>
               )}
-            </ul>
-
-            {/* Footer */}
-            <div className="px-4 py-2 border-t border-midnight-100 text-xs text-midnight-400 bg-midnight-50 rounded-b-2xl overflow-hidden">
-              {filtered.length} of {cities.length} cities
             </div>
-          </div>,
-          document.body
-        )}
-    </>
+          </div>
+        </Portal>
+      )}
+    </div>
   );
 }
 
+/* ─────────────────────────────────────────────
+   Size Dropdown
+───────────────────────────────────────────── */
 const SIZES = ["1 RK", "1 BHK", "2 BHK", "3 BHK", "4 BHK+", "Office"];
 
-/* ── Size dropdown — same portal pattern as CitySelect ── */
-function SizeSelect({ value, onChange }: { value: string; onChange: (v: string) => void }) {
-  const [open, setOpen] = useState(false);
-  const [dropPos, setDropPos] = useState<{ top: number; left: number } | null>(null);
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const dropRef = useRef<HTMLDivElement>(null);
+function SizeDropdown({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   function openDropdown() {
-    if (!triggerRef.current) return;
-    const r = triggerRef.current.getBoundingClientRect();
-    setDropPos({ top: r.bottom + window.scrollY + 8, left: r.left + window.scrollX });
-    setOpen(true);
+    if (btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      const panelWidth = Math.max(r.width, 130);
+      const panelHeight = 280;
+      
+      let left = r.left;
+      let top = r.bottom + 6;
+      
+      if (left + panelWidth > window.innerWidth) {
+        left = window.innerWidth - panelWidth - 16;
+      }
+      
+      if (left < 8) {
+        left = 8;
+      }
+      
+      if (top + panelHeight > window.innerHeight) {
+        top = r.top - panelHeight - 6;
+      }
+      
+      setPanelStyle({
+        position: "fixed",
+        top,
+        left,
+        width: panelWidth,
+        maxHeight: panelHeight,
+        zIndex: 99999,
+      });
+    }
+    setIsOpen(true);
   }
-  function closeDropdown() { setOpen(false); setDropPos(null); }
+
+  function closeDropdown() {
+    setIsOpen(false);
+  }
 
   useEffect(() => {
-    function handler(e: MouseEvent) {
+    if (!isOpen) return;
+    function onDown(e: MouseEvent) {
       const t = e.target as Node;
-      if (triggerRef.current?.contains(t) || dropRef.current?.contains(t)) return;
+      if (panelRef.current && panelRef.current.contains(t)) {
+        return; // Click inside panel - don't close
+      }
+      if (btnRef.current && btnRef.current.contains(t)) {
+        return; // Click on button - handled by onClick
+      }
       closeDropdown();
     }
-    if (open) document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [open]);
+    // Use setTimeout to avoid immediate trigger from the click that opened the dropdown
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", onDown);
+    }, 0);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", onDown);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
-    if (!open) return;
-    const handler = (e: Event) => {
-      if (dropRef.current?.contains(e.target as Node)) return;
-      closeDropdown();
-    };
-    window.addEventListener("scroll", handler, true);
-    window.addEventListener("resize", handler);
+    if (!isOpen) return;
+    const close = () => closeDropdown();
+    window.addEventListener("scroll", close, { passive: true });
+    window.addEventListener("resize", close);
     return () => {
-      window.removeEventListener("scroll", handler, true);
-      window.removeEventListener("resize", handler);
+      window.removeEventListener("scroll", close);
+      window.removeEventListener("resize", close);
     };
-  }, [open]);
+  }, [isOpen]);
 
   return (
-    <>
+    <div className="relative w-full">
       <button
-        ref={triggerRef}
+        ref={btnRef}
         type="button"
-        onClick={open ? closeDropdown : openDropdown}
-        className="w-full rounded-2xl px-4 py-2.5 hover:bg-cream-100 transition text-left flex items-center justify-between"
+        onClick={() => (isOpen ? closeDropdown() : openDropdown())}
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-cream-100 transition rounded-2xl text-left"
       >
         <div className="min-w-0">
           <div className="label !mb-0 flex items-center gap-1.5">
@@ -238,296 +307,386 @@ function SizeSelect({ value, onChange }: { value: string; onChange: (v: string) 
         </div>
         <ChevronDown
           size={14}
-          className={`text-midnight-400 shrink-0 ml-1 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`text-midnight-400 shrink-0 ml-1 transition-transform ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
-      {open && dropPos && typeof document !== "undefined" &&
-        createPortal(
+      {isOpen && (
+        <Portal>
           <div
-            ref={dropRef}
-            style={{
-              position: "absolute",
-              top: dropPos.top,
-              left: dropPos.left,
-              width: 200,
-              zIndex: 9999,
-              boxShadow: "0 24px 64px -12px rgba(10,14,39,0.22)",
-              borderRadius: "1rem",
-              background: "#fff",
-              border: "1px solid #e8eaf3",
-            }}
-            onMouseDown={(e) => e.stopPropagation()}
+            ref={panelRef}
+            style={panelStyle}
+            className="bg-white border border-midnight-100 rounded-2xl shadow-xl py-2"
           >
-            <ul className="py-1.5">
-              {SIZES.map((size) => (
-                <li key={size}>
-                  <button
-                    type="button"
-                    onClick={() => { onChange(size); closeDropdown(); }}
-                    className={`w-full flex items-center justify-between px-4 py-2.5 text-sm text-left transition ${
-                      size === value
-                        ? "bg-saffron-50 text-saffron-600 font-bold"
-                        : "text-midnight-800 hover:bg-cream-100 font-medium"
-                    }`}
-                  >
-                    <span>{size}</span>
-                    {size === value && <span className="text-xs text-saffron-500">✓</span>}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>,
-          document.body
-        )}
-    </>
+            {SIZES.map((s) => (
+              <button
+                key={s}
+                type="button"
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  onChange(s);
+                  closeDropdown();
+                }}
+                className={`w-full text-left px-5 py-2.5 text-sm hover:bg-cream-50 transition ${
+                  value === s
+                    ? "text-saffron-600 font-bold bg-saffron-50"
+                    : "text-midnight-600"
+                }`}
+              >
+                {s}
+              </button>
+            ))}
+          </div>
+        </Portal>
+      )}
+    </div>
   );
 }
 
-const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const DAYS   = ["Su","Mo","Tu","We","Th","Fr","Sa"];
+/* ─────────────────────────────────────────────
+   Calendar Date Selector
+───────────────────────────────────────────── */
+const SHORT_MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const DAY_NAMES = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
-/* ── Custom calendar date picker ── */
-function DateSelect({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+function DateSelector({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (v: string) => void;
+}) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const parsed   = value ? new Date(value + "T00:00:00") : today;
-  const [open, setOpen]       = useState(false);
-  const [dropPos, setDropPos] = useState<{ top: number; left: number } | null>(null);
-  const [cursor, setCursor]   = useState({ year: parsed.getFullYear(), month: parsed.getMonth() });
+  const selectedDate = value ? new Date(value + "T00:00:00") : null;
 
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const dropRef    = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const [viewYear, setViewYear] = useState(
+    () => selectedDate?.getFullYear() ?? today.getFullYear()
+  );
+  const [viewMonth, setViewMonth] = useState(
+    () => selectedDate?.getMonth() ?? today.getMonth()
+  );
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   function openDropdown() {
-    if (!triggerRef.current) return;
-    const r = triggerRef.current.getBoundingClientRect();
-    setDropPos({ top: r.bottom + window.scrollY + 8, left: r.left + window.scrollX });
-    setOpen(true);
+    if (btnRef.current) {
+      const r = btnRef.current.getBoundingClientRect();
+      const panelWidth = 268;
+      const panelHeight = 380;
+      
+      let left = r.left;
+      let top = r.bottom + 6;
+      
+      // Ensure panel doesn't go off right edge
+      if (left + panelWidth > window.innerWidth) {
+        left = window.innerWidth - panelWidth - 16;
+      }
+      
+      // Ensure panel doesn't go off left edge
+      if (left < 8) {
+        left = 8;
+      }
+      
+      // If not enough space below, show above
+      if (top + panelHeight > window.innerHeight) {
+        top = r.top - panelHeight - 6;
+      }
+      
+      setPanelStyle({
+        position: "fixed",
+        top,
+        left,
+        width: panelWidth,
+        maxHeight: panelHeight,
+        zIndex: 99999,
+      });
+    }
+    setIsOpen(true);
   }
-  function closeDropdown() { setOpen(false); setDropPos(null); }
+
+  function closeDropdown() {
+    setIsOpen(false);
+  }
 
   useEffect(() => {
-    function handler(e: MouseEvent) {
+    if (!isOpen) return;
+    function onDown(e: MouseEvent) {
       const t = e.target as Node;
-      if (triggerRef.current?.contains(t) || dropRef.current?.contains(t)) return;
+      if (panelRef.current && panelRef.current.contains(t)) {
+        return; // Click inside panel - don't close
+      }
+      if (btnRef.current && btnRef.current.contains(t)) {
+        return; // Click on button - handled by onClick
+      }
       closeDropdown();
     }
-    if (open) document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, [open]);
+    // Use setTimeout to avoid immediate trigger from the click that opened the dropdown
+    const timer = setTimeout(() => {
+      document.addEventListener("mousedown", onDown);
+    }, 0);
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener("mousedown", onDown);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
-    if (!open) return;
-    const handler = (e: Event) => {
-      if (dropRef.current?.contains(e.target as Node)) return;
-      closeDropdown();
-    };
-    window.addEventListener("scroll", handler, true);
-    window.addEventListener("resize", handler);
+    if (!isOpen) return;
+    const close = () => closeDropdown();
+    window.addEventListener("scroll", close, { passive: true });
+    window.addEventListener("resize", close);
     return () => {
-      window.removeEventListener("scroll", handler, true);
-      window.removeEventListener("resize", handler);
+      window.removeEventListener("scroll", close);
+      window.removeEventListener("resize", close);
     };
-  }, [open]);
+  }, [isOpen]);
 
-  /* build calendar grid */
-  const firstDay = new Date(cursor.year, cursor.month, 1).getDay();
-  const daysInMonth = new Date(cursor.year, cursor.month + 1, 0).getDate();
-  const cells: (number | null)[] = [
-    ...Array(firstDay).fill(null),
-    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
-  ];
-  while (cells.length % 7 !== 0) cells.push(null);
+  const displayLabel = selectedDate
+    ? selectedDate.toLocaleDateString("en-IN", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      })
+    : "Pick a date";
+
+  const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+  const firstDay = new Date(viewYear, viewMonth, 1).getDay();
+  const cells: (number | null)[] = [];
+  for (let i = 0; i < firstDay; i++) cells.push(null);
+  for (let d = 1; d <= daysInMonth; d++) cells.push(d);
 
   function selectDay(day: number) {
-    const m = String(cursor.month + 1).padStart(2, "0");
+    const clicked = new Date(viewYear, viewMonth, day);
+    if (clicked < today) return;
+    const y = viewYear;
+    const m = String(viewMonth + 1).padStart(2, "0");
     const d = String(day).padStart(2, "0");
-    onChange(`${cursor.year}-${m}-${d}`);
+    onChange(`${y}-${m}-${d}`);
     closeDropdown();
   }
 
   function prevMonth() {
-    setCursor(c => c.month === 0 ? { year: c.year - 1, month: 11 } : { ...c, month: c.month - 1 });
+    if (viewMonth === 0) { setViewMonth(11); setViewYear((y) => y - 1); }
+    else setViewMonth((m) => m - 1);
   }
+
   function nextMonth() {
-    setCursor(c => c.month === 11 ? { year: c.year + 1, month: 0 } : { ...c, month: c.month + 1 });
+    if (viewMonth === 11) { setViewMonth(0); setViewYear((y) => y + 1); }
+    else setViewMonth((m) => m + 1);
   }
-
-  const selectedDate = value ? new Date(value + "T00:00:00") : null;
-  const isSelected = (day: number) =>
-    selectedDate?.getFullYear() === cursor.year &&
-    selectedDate?.getMonth()    === cursor.month &&
-    selectedDate?.getDate()     === day;
-  const isToday = (day: number) =>
-    today.getFullYear() === cursor.year &&
-    today.getMonth()    === cursor.month &&
-    today.getDate()     === day;
-  const isPast = (day: number) =>
-    new Date(cursor.year, cursor.month, day) < today;
-
-  const displayLabel = selectedDate
-    ? selectedDate.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })
-    : "Pick a date";
 
   return (
-    <>
+    <div className="relative w-full">
       <button
-        ref={triggerRef}
+        ref={btnRef}
         type="button"
-        onClick={open ? closeDropdown : openDropdown}
-        className="w-full rounded-2xl px-4 py-2.5 hover:bg-cream-100 transition text-left flex items-center justify-between"
+        onClick={() => (isOpen ? closeDropdown() : openDropdown())}
+        className="w-full flex items-center justify-between px-4 py-3 hover:bg-cream-100 transition rounded-2xl text-left"
       >
         <div className="min-w-0">
           <div className="label !mb-0 flex items-center gap-1.5">
             <CalendarDays size={11} className="text-saffron-500" />
             Move Date
           </div>
-          <div className="text-sm font-bold text-midnight-900 whitespace-nowrap">{displayLabel}</div>
+          <div className="text-sm font-bold text-midnight-900 whitespace-nowrap">
+            {displayLabel}
+          </div>
         </div>
         <ChevronDown
           size={14}
-          className={`text-midnight-400 shrink-0 ml-1 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`text-midnight-400 shrink-0 ml-1 transition-transform ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
-      {open && dropPos && typeof document !== "undefined" &&
-        createPortal(
+      {isOpen && (
+        <Portal>
           <div
-            ref={dropRef}
-            style={{
-              position: "absolute",
-              top: dropPos.top,
-              left: dropPos.left,
-              width: 288,
-              zIndex: 9999,
-              boxShadow: "0 24px 64px -12px rgba(10,14,39,0.22)",
-              borderRadius: "1rem",
-              background: "#fff",
-              border: "1px solid #e8eaf3",
-            }}
-            onMouseDown={(e) => e.stopPropagation()}
+            ref={panelRef}
+            style={panelStyle}
+            className="bg-white border border-midnight-100 rounded-2xl shadow-xl p-3"
           >
             {/* Month nav */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-midnight-100">
+            <div className="flex items-center justify-between mb-2">
               <button
                 type="button"
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={prevMonth}
-                className="w-7 h-7 rounded-full flex items-center justify-center text-midnight-500 hover:bg-cream-100 hover:text-midnight-900 transition"
+                className="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-cream-100 transition text-midnight-500"
               >
-                <ChevronLeft size={15} />
+                <ChevronDown size={14} className="rotate-90" />
               </button>
               <span className="text-sm font-bold text-midnight-900">
-                {MONTHS[cursor.month]} {cursor.year}
+                {SHORT_MONTHS[viewMonth]} {viewYear}
               </span>
               <button
                 type="button"
+                onMouseDown={(e) => e.preventDefault()}
                 onClick={nextMonth}
-                className="w-7 h-7 rounded-full flex items-center justify-center text-midnight-500 hover:bg-cream-100 hover:text-midnight-900 transition"
+                className="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-cream-100 transition text-midnight-500"
               >
-                <ChevronRight size={15} />
+                <ChevronDown size={14} className="-rotate-90" />
               </button>
             </div>
 
-            <div className="px-3 pt-3 pb-3">
-              {/* Day headers */}
-              <div className="grid grid-cols-7 mb-1">
-                {DAYS.map((d) => (
-                  <div key={d} className="text-center text-[10px] font-bold text-midnight-400 py-1">
-                    {d}
-                  </div>
-                ))}
-              </div>
-
-              {/* Day cells */}
-              <div className="grid grid-cols-7 gap-y-0.5">
-                {cells.map((day, i) => {
-                  if (!day) return <div key={i} />;
-                  const sel  = isSelected(day);
-                  const tod  = isToday(day);
-                  const past = isPast(day);
-                  return (
-                    <button
-                      key={i}
-                      type="button"
-                      disabled={past}
-                      onClick={() => selectDay(day)}
-                      className={`
-                        relative w-full aspect-square flex items-center justify-center text-xs font-semibold rounded-full transition
-                        ${sel  ? "bg-saffron-500 text-white shadow-[0_4px_12px_-2px_rgba(255,107,53,0.5)]" : ""}
-                        ${!sel && tod  ? "text-saffron-500 ring-1 ring-saffron-300" : ""}
-                        ${!sel && !past ? "hover:bg-saffron-50 hover:text-saffron-600 text-midnight-800" : ""}
-                        ${past ? "text-midnight-200 cursor-not-allowed" : "cursor-pointer"}
-                      `}
-                    >
-                      {day}
-                    </button>
-                  );
-                })}
-              </div>
+            {/* Day headers */}
+            <div className="grid grid-cols-7 mb-1">
+              {DAY_NAMES.map((d) => (
+                <div
+                  key={d}
+                  className="text-center text-[10px] font-bold text-midnight-400 py-1"
+                >
+                  {d}
+                </div>
+              ))}
             </div>
 
-            {/* Quick shortcuts */}
-            <div className="px-3 pb-3 flex gap-2">
-              {[
-                { label: "Today",    days: 0 },
-                { label: "Tomorrow", days: 1 },
-                { label: "+1 Week",  days: 7 },
-              ].map(({ label, days }) => {
-                const d = new Date(today);
-                d.setDate(d.getDate() + days);
-                const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+            {/* Day grid */}
+            <div className="grid grid-cols-7 gap-0.5">
+              {cells.map((day, i) => {
+                if (!day) return <div key={`e-${i}`} />;
+                const cellDate = new Date(viewYear, viewMonth, day);
+                const isPast = cellDate < today;
+                const isSelected =
+                  selectedDate?.getDate() === day &&
+                  selectedDate?.getMonth() === viewMonth &&
+                  selectedDate?.getFullYear() === viewYear;
+                const isTodayCell =
+                  today.getDate() === day &&
+                  today.getMonth() === viewMonth &&
+                  today.getFullYear() === viewYear;
+
                 return (
                   <button
-                    key={label}
+                    key={day}
                     type="button"
-                    onClick={() => { onChange(iso); setCursor({ year: d.getFullYear(), month: d.getMonth() }); closeDropdown(); }}
-                    className="flex-1 text-xs font-semibold py-1.5 rounded-xl bg-midnight-50 text-midnight-600 hover:bg-saffron-50 hover:text-saffron-600 transition"
+                    disabled={isPast}
+                    onMouseDown={(e) => e.preventDefault()}
+                    onClick={() => selectDay(day)}
+                    className={[
+                      "text-center text-xs py-1.5 rounded-lg transition font-medium",
+                      isPast ? "text-midnight-200 cursor-not-allowed" : "cursor-pointer",
+                      isSelected
+                        ? "bg-saffron-500 text-white"
+                        : isTodayCell
+                        ? "bg-cream-200 text-midnight-900 font-bold"
+                        : !isPast
+                        ? "text-midnight-700 hover:bg-cream-100"
+                        : "",
+                    ].join(" ")}
                   >
-                    {label}
+                    {day}
                   </button>
                 );
               })}
             </div>
-          </div>,
-          document.body
-        )}
-    </>
+
+            {/* Today shortcut */}
+            <div className="mt-2 pt-2 border-t border-midnight-50">
+              <button
+                type="button"
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => {
+                  const y = today.getFullYear();
+                  const m = String(today.getMonth() + 1).padStart(2, "0");
+                  const d = String(today.getDate()).padStart(2, "0");
+                  onChange(`${y}-${m}-${d}`);
+                  closeDropdown();
+                }}
+                className="w-full text-center text-xs text-saffron-600 font-semibold hover:bg-saffron-50 rounded-lg py-1.5 transition"
+              >
+                Today
+              </button>
+            </div>
+          </div>
+        </Portal>
+      )}
+    </div>
   );
 }
 
-/* ── Main form ── */
+/* ─────────────────────────────────────────────
+   Main Form
+───────────────────────────────────────────── */
 export default function HeroSearchForm({ cities }: Props) {
   const router = useRouter();
   const [form, setForm] = useState({
     pickupCity: cities[0] ?? "",
     dropCity: cities[1] ?? cities[0] ?? "",
     houseSize: "2 BHK",
-    movingDate: "2026-04-15",
+    movingDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)
+      .toISOString()
+      .split("T")[0],
   });
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
+    if (!form.pickupCity || !form.dropCity) return;
     const params = new URLSearchParams(form).toString();
     router.push(`/booking?${params}`);
   }
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="mt-10 bg-white rounded-[28px] p-3 border border-midnight-100 shadow-[0_30px_60px_-30px_rgba(10,14,39,0.25)] grid grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-2 max-w-3xl"
-    >
-      <CitySelect label="From" accent="saffron" value={form.pickupCity} onChange={(v) => setForm({ ...form, pickupCity: v })} cities={cities} />
-      <CitySelect label="To"   accent="mint"    value={form.dropCity}   onChange={(v) => setForm({ ...form, dropCity: v })}   cities={cities} />
+    <div className="max-w-4xl">
+      <form
+        onSubmit={onSubmit}
+        className="mt-10 bg-white rounded-[32px] p-2 sm:p-3 border border-midnight-100 shadow-[0_30px_60px_-30px_rgba(10,14,39,0.25)] relative"
+      >
+        <div className="grid grid-cols-2 lg:grid-cols-[1.2fr_1.2fr_0.8fr_1.1fr_auto] gap-1 items-center">
+          <CityDropdown
+            label="From"
+            accent="saffron"
+            value={form.pickupCity}
+            onChange={(v) => setForm((f) => ({ ...f, pickupCity: v }))}
+            cities={cities}
+          />
 
-      <SizeSelect value={form.houseSize} onChange={(v) => setForm({ ...form, houseSize: v })} />
+          <CityDropdown
+            label="To"
+            accent="mint"
+            value={form.dropCity}
+            onChange={(v) => setForm((f) => ({ ...f, dropCity: v }))}
+            cities={cities}
+          />
 
-      <DateSelect value={form.movingDate} onChange={(v) => setForm({ ...form, movingDate: v })} />
+          <SizeDropdown
+            value={form.houseSize}
+            onChange={(v) => setForm((f) => ({ ...f, houseSize: v }))}
+          />
 
-      <button type="submit" className="btn btn-primary !rounded-2xl !py-4 !px-5 col-span-2 lg:col-span-1">
-        <Truck size={16} /> Get Quote <ArrowRight size={14} />
-      </button>
-    </form>
+          <DateSelector
+            value={form.movingDate}
+            onChange={(v) => setForm((f) => ({ ...f, movingDate: v }))}
+          />
+
+          <button
+            type="submit"
+            className="btn btn-primary !rounded-2xl !py-4 !px-6 col-span-2 lg:col-span-1 group hover:scale-[1.02] active:scale-[0.98] transition flex items-center justify-center gap-2"
+          >
+            <Truck size={18} className="group-hover:translate-x-1 transition-transform" />
+            <span className="lg:hidden xl:inline font-bold">Get Quote</span>
+            <ArrowRight size={14} className="opacity-70 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </form>
+
+      <div className="mt-5 flex items-center justify-center lg:justify-start gap-4 sm:gap-8 text-[11px] font-bold text-midnight-400 uppercase tracking-[0.2em] px-2 sm:px-6">
+        <div className="flex items-center gap-2.5">
+          <div className="w-1.5 h-1.5 rounded-full bg-mint-500 shadow-[0_0_10px_rgba(0,217,163,0.5)]" />
+          Secure Move
+        </div>
+        <div className="flex items-center gap-2.5">
+          <div className="w-1.5 h-1.5 rounded-full bg-saffron-500 shadow-[0_0_10px_rgba(255,107,53,0.5)]" />
+          Verified Vendors
+        </div>
+        <div className="flex items-center gap-2.5">
+          <div className="w-1.5 h-1.5 rounded-full bg-midnight-300" />
+          Lowest Price
+        </div>
+      </div>
+    </div>
   );
 }

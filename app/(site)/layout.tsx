@@ -10,7 +10,8 @@ export default function SiteLayout({
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      {/* pb-20 gives clearance above the mobile bottom tab bar */}
+      <main className="pb-20 md:pb-0">{children}</main>
       <Footer />
       <FloatingActions />
     </>

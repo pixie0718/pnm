@@ -11,7 +11,7 @@ const timeline = [
 export default function TrackingPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-6 gap-3 flex-wrap">
         <div>
           <div className="text-xs text-ink-500 uppercase tracking-wide font-semibold">Order #SHM-2026-4821</div>
           <h1 className="text-2xl font-extrabold text-ink-900">Your move is on the way 🚚</h1>
@@ -41,7 +41,7 @@ export default function TrackingPage() {
             </div>
 
             {/* Truck (current position) */}
-            <div className="absolute left-[440px] top-[230px]">
+            <div className="absolute left-[60%] top-[46%]">
               <div className="relative">
                 <div className="w-12 h-12 rounded-full bg-brand-600 text-white grid place-items-center shadow-glow pulse-dot relative">
                   <Truck size={22}/>

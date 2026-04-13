@@ -3,13 +3,13 @@ import { Truck, Instagram, Twitter, Youtube, Linkedin, ArrowUpRight } from "luci
 
 export default function Footer() {
   return (
-    <footer className="bg-midnight-950 text-midnight-200 relative overflow-hidden mt-28">
+    <footer className="bg-midnight-950 text-midnight-200 relative overflow-hidden mt-16 md:mt-28">
       <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(600px 300px at 80% 0%, rgba(255,107,53,0.3), transparent)" }}></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         {/* Big display CTA line */}
         <div className="border-b border-midnight-700 pb-16 mb-16">
-          <h2 className="display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95]">
+          <h2 className="display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95]">
             Ready to <span className="grad-saffron">move?</span>
           </h2>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -22,8 +22,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10">
-          <div className="col-span-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-10">
+          <div className="col-span-2 sm:col-span-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-bold">
               <span className="w-9 h-9 rounded-full bg-saffron-500 text-white grid place-items-center">
                 <Truck size={18} />

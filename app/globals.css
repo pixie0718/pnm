@@ -16,6 +16,17 @@ html, body {
   color: #0a0e27;
   background: #fef7ed;
   -webkit-font-smoothing: antialiased;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* iOS tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {

@@ -156,13 +156,14 @@ export default function FloatingActions() {
   ];
 
   return (
-    <div
-      className={`fixed bottom-6 left-0 right-0 px-4 sm:px-6 z-50 flex items-end justify-between pointer-events-none transition-all duration-500 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
-    >
-      {/* LEFT — contact FAB */}
-      <div ref={fabRef} className="pointer-events-auto flex flex-col items-start gap-2">
+    <>
+      {!visible ? null : (
+        <div
+          className="fixed bottom-20 md:bottom-6 left-0 right-0 px-4 sm:px-6 z-50 flex items-end justify-between transition-all duration-500 opacity-100 translate-y-0"
+          style={{ pointerEvents: 'none' }}
+        >
+          {/* LEFT — contact FAB */}
+          <div ref={fabRef} className="flex flex-col items-start gap-2" style={{ pointerEvents: 'auto' }}>
 
         {/* Query panel */}
         <div className={`transition-all duration-300 origin-bottom-left ${showQuery ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}>
@@ -210,10 +211,10 @@ export default function FloatingActions() {
         </button>
       </div>
 
-      {/* RIGHT — Get Quote CTA */}
+      {/* RIGHT — Get Quote CTA (hidden on mobile: bottom tab bar already has it) */}
       <Link
         href="/booking"
-        className="pointer-events-auto group flex items-center gap-2.5 bg-saffron-500 hover:bg-saffron-400 text-white font-bold text-sm pl-4 pr-5 py-3 rounded-full transition-all duration-300 shadow-xl"
+        className="hidden sm:flex pointer-events-auto group items-center gap-2.5 bg-saffron-500 hover:bg-saffron-400 text-white font-bold text-sm pl-4 pr-5 py-3 rounded-full transition-all duration-300 shadow-xl"
         style={{ boxShadow: "0 8px 30px -6px rgba(255,107,53,0.5)" }}
       >
         <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center shrink-0">
@@ -223,6 +224,8 @@ export default function FloatingActions() {
         <span className="sm:hidden">Quote</span>
         <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
       </Link>
-    </div>
+      </div>
+      )}
+    </>
   );
 }

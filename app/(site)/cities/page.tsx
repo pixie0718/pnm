@@ -26,12 +26,12 @@ export default function CitiesPage() {
     <>
       {/* HERO */}
       <section className="hero-mesh grain relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-20 lg:pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 lg:pt-20 lg:pb-20">
           <div className="eyebrow mb-5">
             <span className="w-8 h-px bg-saffron-500" />
             All Cities
           </div>
-          <h1 className="display text-4xl md:text-6xl font-bold leading-[0.95] text-midnight-900 max-w-3xl">
+          <h1 className="display text-3xl sm:text-4xl md:text-6xl font-bold leading-[0.95] text-midnight-900 max-w-3xl">
             Movers in every corner of{" "}
             <span className="grad-saffron">India</span>
           </h1>
@@ -59,10 +59,10 @@ export default function CitiesPage() {
       </section>
 
       {/* CITY CARDS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
         {states.length > 1 ? (
           /* Group by state if multiple states exist */
-          <div className="space-y-14">
+          <div className="space-y-10 md:space-y-14">
             {states.map((state) => (
               <div key={state}>
                 <div className="eyebrow mb-5">
@@ -88,8 +88,8 @@ export default function CitiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="rounded-[40px] bg-midnight-900 text-white p-12 md:p-16 grain relative overflow-hidden text-center">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 md:pb-20">
+        <div className="rounded-[32px] md:rounded-[40px] bg-midnight-900 text-white p-8 md:p-16 grain relative overflow-hidden text-center">
           <div className="absolute inset-0 dark-mesh opacity-60" />
           <div className="relative">
             <div className="eyebrow !text-saffron-400 mb-4 justify-center">
@@ -140,22 +140,22 @@ function CityCard({ city }: { city: ReturnType<typeof getAllCities>[number] }) {
   return (
     <Link
       href={`/packers-and-movers-in-${city.slug}`}
-      className="group card p-5 hover:shadow-glow hover:-translate-y-1 transition-all"
+      className="group card p-3.5 sm:p-5 hover:shadow-glow hover:-translate-y-1 transition-all"
     >
-      <div className="text-3xl mb-3">{city.emoji}</div>
-      <div className="display text-lg font-bold text-midnight-900 leading-tight flex items-center justify-between">
-        {city.name}
+      <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{city.emoji}</div>
+      <div className="display text-sm sm:text-lg font-bold text-midnight-900 leading-tight flex items-start justify-between gap-1">
+        <span className="truncate">{city.name}</span>
         <ArrowUpRight
-          size={15}
-          className="text-saffron-500 opacity-0 group-hover:opacity-100 transition shrink-0"
+          size={13}
+          className="text-saffron-500 opacity-0 group-hover:opacity-100 transition shrink-0 mt-0.5"
         />
       </div>
-      <div className="text-xs text-midnight-500 mt-0.5">{city.state}</div>
-      <div className="mt-3 flex items-center gap-1 text-xs font-semibold text-midnight-600">
-        <BadgeIndianRupee size={12} className="text-saffron-500" />
-        From ₹{city.startingPrice.toLocaleString()}
+      <div className="text-[11px] sm:text-xs text-midnight-500 mt-0.5 truncate">{city.state}</div>
+      <div className="mt-2 sm:mt-3 flex items-center gap-1 text-[11px] sm:text-xs font-semibold text-midnight-600">
+        <BadgeIndianRupee size={11} className="text-saffron-500 shrink-0" />
+        <span>₹{city.startingPrice.toLocaleString()}+</span>
       </div>
-      <div className="text-xs text-midnight-400 mt-0.5">
+      <div className="text-[11px] sm:text-xs text-midnight-400 mt-0.5">
         {city.vendorCount.toLocaleString()}+ vendors
       </div>
     </Link>
