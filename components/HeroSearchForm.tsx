@@ -19,6 +19,87 @@ function Portal({ children }: { children: React.ReactNode }) {
 }
 
 /* ─────────────────────────────────────────────
+   Shared: position a panel relative to a trigger
+   Mobile (<640px): bottom sheet
+   Desktop: anchored below the trigger
+───────────────────────────────────────────── */
+function getPanelStyle(
+  btnEl: HTMLElement,
+  panelW: number,
+  panelH: number
+): CSSProperties {
+  // Mobile — bottom sheet
+  if (window.innerWidth < 640) {
+    return {
+      position: "fixed",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      maxHeight: "70vh",
+      zIndex: 99999,
+      borderRadius: "20px 20px 0 0",
+    };
+  }
+
+  // Desktop — anchored below button
+  const r = btnEl.getBoundingClientRect();
+  let left = r.left;
+  const top = r.bottom + 6;
+
+  if (left + panelW > window.innerWidth - 8) left = window.innerWidth - panelW - 8;
+  if (left < 8) left = 8;
+
+  return { position: "fixed", top, left, width: panelW, maxHeight: panelH, zIndex: 99999 };
+}
+
+/* ─────────────────────────────────────────────
+   Bottom-sheet wrapper (mobile only)
+   Adds a dark backdrop + drag handle pill
+───────────────────────────────────────────── */
+function SheetWrap({
+  isSheet,
+  panelRef,
+  panelStyle,
+  onBackdrop,
+  children,
+}: {
+  isSheet: boolean;
+  panelRef: React.RefObject<HTMLDivElement>;
+  panelStyle: CSSProperties;
+  onBackdrop: () => void;
+  children: React.ReactNode;
+}) {
+  if (!isSheet) {
+    return (
+      <div ref={panelRef} style={panelStyle} className="bg-white border border-midnight-100 rounded-2xl shadow-xl overflow-hidden">
+        {children}
+      </div>
+    );
+  }
+  return (
+    <>
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 bg-midnight-900/40 backdrop-blur-sm z-[99998]"
+        onPointerDown={onBackdrop}
+      />
+      {/* Sheet */}
+      <div
+        ref={panelRef}
+        style={panelStyle}
+        className="bg-white shadow-2xl overflow-hidden z-[99999]"
+      >
+        {/* Drag handle */}
+        <div className="flex justify-center pt-3 pb-1">
+          <div className="w-10 h-1 rounded-full bg-midnight-200" />
+        </div>
+        {children}
+      </div>
+    </>
+  );
+}
+
+/* ─────────────────────────────────────────────
    City Dropdown
 ───────────────────────────────────────────── */
 function CityDropdown({
@@ -37,6 +118,7 @@ function CityDropdown({
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const [isMobile, setIsMobile] = useState(false);
   const btnRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
@@ -46,38 +128,10 @@ function CityDropdown({
     .slice(0, 10);
 
   function openDropdown() {
+    const mobile = window.innerWidth < 640;
+    setIsMobile(mobile);
     if (btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect();
-      const panelWidth = Math.max(r.width, 200);
-      const panelHeight = 320; // approximate height
-      
-      // Calculate position to keep panel within viewport
-      let left = r.left;
-      let top = r.bottom + 6;
-      
-      // Ensure panel doesn't go off right edge
-      if (left + panelWidth > window.innerWidth) {
-        left = window.innerWidth - panelWidth - 16;
-      }
-      
-      // Ensure panel doesn't go off left edge
-      if (left < 8) {
-        left = 8;
-      }
-      
-      // If not enough space below, show above
-      if (top + panelHeight > window.innerHeight) {
-        top = r.top - panelHeight - 6;
-      }
-      
-      setPanelStyle({
-        position: "fixed",
-        top,
-        left,
-        width: panelWidth,
-        maxHeight: panelHeight,
-        zIndex: 99999,
-      });
+      setPanelStyle(getPanelStyle(btnRef.current, Math.max(btnRef.current.getBoundingClientRect().width, 200), 320));
     }
     setIsOpen(true);
     setSearch("");
@@ -88,40 +142,30 @@ function CityDropdown({
     setSearch("");
   }
 
-  // Close on outside click
+  // Close on outside pointer (mouse + touch)
   useEffect(() => {
     if (!isOpen) return;
-    function onDown(e: MouseEvent) {
+    function onPointer(e: PointerEvent) {
       const t = e.target as Node;
-      if (panelRef.current && panelRef.current.contains(t)) {
-        return; // Click inside panel - don't close
-      }
-      if (btnRef.current && btnRef.current.contains(t)) {
-        return; // Click on button - handled by onClick
-      }
+      if (panelRef.current?.contains(t) || btnRef.current?.contains(t)) return;
       closeDropdown();
     }
-    // Use setTimeout to avoid immediate trigger from the click that opened the dropdown
-    const timer = setTimeout(() => {
-      document.addEventListener("mousedown", onDown);
-    }, 0);
+    const timer = setTimeout(() => document.addEventListener("pointerdown", onPointer), 150);
+    // Desktop only: close when page scrolls (panel position becomes stale)
+    const onScroll = !isMobile ? () => closeDropdown() : null;
+    if (onScroll) {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+    }
     return () => {
       clearTimeout(timer);
-      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("pointerdown", onPointer);
+      if (onScroll) {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      }
     };
-  }, [isOpen]);
-
-  // Close on scroll / resize
-  useEffect(() => {
-    if (!isOpen) return;
-    const close = () => closeDropdown();
-    window.addEventListener("scroll", close, { passive: true });
-    window.addEventListener("resize", close);
-    return () => {
-      window.removeEventListener("scroll", close);
-      window.removeEventListener("resize", close);
-    };
-  }, [isOpen]);
+  }, [isOpen, isMobile]);
 
   return (
     <div className="relative w-full">
@@ -148,18 +192,13 @@ function CityDropdown({
 
       {isOpen && (
         <Portal>
-          <div
-            ref={panelRef}
-            style={panelStyle}
-            className="bg-white border border-midnight-100 rounded-2xl shadow-xl overflow-hidden"
-          >
+          <SheetWrap isSheet={isMobile} panelRef={panelRef} panelStyle={panelStyle} onBackdrop={closeDropdown}>
             <div className="px-4 py-3 border-b border-midnight-50 flex items-center gap-2">
               <Search size={14} className="text-midnight-400 shrink-0" />
               <input
                 className="w-full text-sm outline-none bg-transparent"
                 placeholder="Search city..."
                 value={search}
-                autoFocus
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter") e.preventDefault();
@@ -167,36 +206,27 @@ function CityDropdown({
                 }}
               />
             </div>
-            <div className="max-h-[240px] overflow-y-auto py-2">
+            <div className="max-h-[55vh] sm:max-h-[240px] overflow-y-auto py-2">
               {filtered.length > 0 ? (
                 filtered.map((c) => (
                   <button
                     key={c}
                     type="button"
-                    onMouseDown={(e) => e.preventDefault()}
-                    onClick={() => {
-                      onChange(c);
-                      closeDropdown();
-                    }}
-                    className={`w-full text-left px-5 py-2.5 text-sm hover:bg-cream-50 transition flex items-center justify-between ${
-                      value === c
-                        ? "text-saffron-600 font-bold bg-saffron-50/50"
-                        : "text-midnight-600"
+                    onPointerDown={(e) => e.preventDefault()}
+                    onClick={() => { onChange(c); closeDropdown(); }}
+                    className={`w-full text-left px-5 py-3 sm:py-2.5 text-sm hover:bg-cream-50 transition flex items-center justify-between ${
+                      value === c ? "text-saffron-600 font-bold bg-saffron-50/50" : "text-midnight-600"
                     }`}
                   >
                     {c}
-                    {value === c && (
-                      <div className="w-1 h-1 rounded-full bg-saffron-500" />
-                    )}
+                    {value === c && <div className="w-1.5 h-1.5 rounded-full bg-saffron-500" />}
                   </button>
                 ))
               ) : (
-                <div className="px-5 py-4 text-xs text-midnight-400 italic">
-                  No cities found
-                </div>
+                <div className="px-5 py-4 text-xs text-midnight-400 italic">No cities found</div>
               )}
             </div>
-          </div>
+          </SheetWrap>
         </Portal>
       )}
     </div>
@@ -217,78 +247,44 @@ function SizeDropdown({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const [isMobile, setIsMobile] = useState(false);
   const btnRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   function openDropdown() {
+    const mobile = window.innerWidth < 640;
+    setIsMobile(mobile);
     if (btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect();
-      const panelWidth = Math.max(r.width, 130);
-      const panelHeight = 280;
-      
-      let left = r.left;
-      let top = r.bottom + 6;
-      
-      if (left + panelWidth > window.innerWidth) {
-        left = window.innerWidth - panelWidth - 16;
-      }
-      
-      if (left < 8) {
-        left = 8;
-      }
-      
-      if (top + panelHeight > window.innerHeight) {
-        top = r.top - panelHeight - 6;
-      }
-      
-      setPanelStyle({
-        position: "fixed",
-        top,
-        left,
-        width: panelWidth,
-        maxHeight: panelHeight,
-        zIndex: 99999,
-      });
+      setPanelStyle(getPanelStyle(btnRef.current, Math.max(btnRef.current.getBoundingClientRect().width, 130), 280));
     }
     setIsOpen(true);
   }
 
-  function closeDropdown() {
-    setIsOpen(false);
-  }
+  function closeDropdown() { setIsOpen(false); }
 
   useEffect(() => {
     if (!isOpen) return;
-    function onDown(e: MouseEvent) {
+    function onPointer(e: PointerEvent) {
       const t = e.target as Node;
-      if (panelRef.current && panelRef.current.contains(t)) {
-        return; // Click inside panel - don't close
-      }
-      if (btnRef.current && btnRef.current.contains(t)) {
-        return; // Click on button - handled by onClick
-      }
+      if (panelRef.current?.contains(t) || btnRef.current?.contains(t)) return;
       closeDropdown();
     }
-    // Use setTimeout to avoid immediate trigger from the click that opened the dropdown
-    const timer = setTimeout(() => {
-      document.addEventListener("mousedown", onDown);
-    }, 0);
+    const timer = setTimeout(() => document.addEventListener("pointerdown", onPointer), 150);
+    // Desktop only: close when page scrolls (panel position becomes stale)
+    const onScroll = !isMobile ? () => closeDropdown() : null;
+    if (onScroll) {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+    }
     return () => {
       clearTimeout(timer);
-      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("pointerdown", onPointer);
+      if (onScroll) {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      }
     };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) return;
-    const close = () => closeDropdown();
-    window.addEventListener("scroll", close, { passive: true });
-    window.addEventListener("resize", close);
-    return () => {
-      window.removeEventListener("scroll", close);
-      window.removeEventListener("resize", close);
-    };
-  }, [isOpen]);
+  }, [isOpen, isMobile]);
 
   return (
     <div className="relative w-full">
@@ -313,30 +309,23 @@ function SizeDropdown({
 
       {isOpen && (
         <Portal>
-          <div
-            ref={panelRef}
-            style={panelStyle}
-            className="bg-white border border-midnight-100 rounded-2xl shadow-xl py-2"
-          >
-            {SIZES.map((s) => (
-              <button
-                key={s}
-                type="button"
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => {
-                  onChange(s);
-                  closeDropdown();
-                }}
-                className={`w-full text-left px-5 py-2.5 text-sm hover:bg-cream-50 transition ${
-                  value === s
-                    ? "text-saffron-600 font-bold bg-saffron-50"
-                    : "text-midnight-600"
-                }`}
-              >
-                {s}
-              </button>
-            ))}
-          </div>
+          <SheetWrap isSheet={isMobile} panelRef={panelRef} panelStyle={panelStyle} onBackdrop={closeDropdown}>
+            <div className="py-2">
+              {SIZES.map((s) => (
+                <button
+                  key={s}
+                  type="button"
+                  onPointerDown={(e) => e.preventDefault()}
+                  onClick={() => { onChange(s); closeDropdown(); }}
+                  className={`w-full text-left px-5 py-3 sm:py-2.5 text-sm hover:bg-cream-50 transition ${
+                    value === s ? "text-saffron-600 font-bold bg-saffron-50" : "text-midnight-600"
+                  }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          </SheetWrap>
         </Portal>
       )}
     </div>
@@ -363,6 +352,7 @@ function DateSelector({
 
   const [isOpen, setIsOpen] = useState(false);
   const [panelStyle, setPanelStyle] = useState<CSSProperties>({});
+  const [isMobile, setIsMobile] = useState(false);
   const [viewYear, setViewYear] = useState(
     () => selectedDate?.getFullYear() ?? today.getFullYear()
   );
@@ -373,77 +363,39 @@ function DateSelector({
   const panelRef = useRef<HTMLDivElement>(null);
 
   function openDropdown() {
+    const mobile = window.innerWidth < 640;
+    setIsMobile(mobile);
     if (btnRef.current) {
-      const r = btnRef.current.getBoundingClientRect();
-      const panelWidth = 268;
-      const panelHeight = 380;
-      
-      let left = r.left;
-      let top = r.bottom + 6;
-      
-      // Ensure panel doesn't go off right edge
-      if (left + panelWidth > window.innerWidth) {
-        left = window.innerWidth - panelWidth - 16;
-      }
-      
-      // Ensure panel doesn't go off left edge
-      if (left < 8) {
-        left = 8;
-      }
-      
-      // If not enough space below, show above
-      if (top + panelHeight > window.innerHeight) {
-        top = r.top - panelHeight - 6;
-      }
-      
-      setPanelStyle({
-        position: "fixed",
-        top,
-        left,
-        width: panelWidth,
-        maxHeight: panelHeight,
-        zIndex: 99999,
-      });
+      setPanelStyle(getPanelStyle(btnRef.current, 280, 380));
     }
     setIsOpen(true);
   }
 
-  function closeDropdown() {
-    setIsOpen(false);
-  }
+  function closeDropdown() { setIsOpen(false); }
 
   useEffect(() => {
     if (!isOpen) return;
-    function onDown(e: MouseEvent) {
+    function onPointer(e: PointerEvent) {
       const t = e.target as Node;
-      if (panelRef.current && panelRef.current.contains(t)) {
-        return; // Click inside panel - don't close
-      }
-      if (btnRef.current && btnRef.current.contains(t)) {
-        return; // Click on button - handled by onClick
-      }
+      if (panelRef.current?.contains(t) || btnRef.current?.contains(t)) return;
       closeDropdown();
     }
-    // Use setTimeout to avoid immediate trigger from the click that opened the dropdown
-    const timer = setTimeout(() => {
-      document.addEventListener("mousedown", onDown);
-    }, 0);
+    const timer = setTimeout(() => document.addEventListener("pointerdown", onPointer), 150);
+    // Desktop only: close when page scrolls (panel position becomes stale)
+    const onScroll = !isMobile ? () => closeDropdown() : null;
+    if (onScroll) {
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+    }
     return () => {
       clearTimeout(timer);
-      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("pointerdown", onPointer);
+      if (onScroll) {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      }
     };
-  }, [isOpen]);
-
-  useEffect(() => {
-    if (!isOpen) return;
-    const close = () => closeDropdown();
-    window.addEventListener("scroll", close, { passive: true });
-    window.addEventListener("resize", close);
-    return () => {
-      window.removeEventListener("scroll", close);
-      window.removeEventListener("resize", close);
-    };
-  }, [isOpen]);
+  }, [isOpen, isMobile]);
 
   const displayLabel = selectedDate
     ? selectedDate.toLocaleDateString("en-IN", {
@@ -504,16 +456,13 @@ function DateSelector({
 
       {isOpen && (
         <Portal>
-          <div
-            ref={panelRef}
-            style={panelStyle}
-            className="bg-white border border-midnight-100 rounded-2xl shadow-xl p-3"
-          >
+          <SheetWrap isSheet={isMobile} panelRef={panelRef} panelStyle={panelStyle} onBackdrop={closeDropdown}>
+            <div className="p-3">
             {/* Month nav */}
             <div className="flex items-center justify-between mb-2">
               <button
                 type="button"
-                onMouseDown={(e) => e.preventDefault()}
+                onPointerDown={(e) => e.preventDefault()}
                 onClick={prevMonth}
                 className="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-cream-100 transition text-midnight-500"
               >
@@ -524,7 +473,7 @@ function DateSelector({
               </span>
               <button
                 type="button"
-                onMouseDown={(e) => e.preventDefault()}
+                onPointerDown={(e) => e.preventDefault()}
                 onClick={nextMonth}
                 className="w-7 h-7 flex items-center justify-center rounded-lg hover:bg-cream-100 transition text-midnight-500"
               >
@@ -564,7 +513,7 @@ function DateSelector({
                     key={day}
                     type="button"
                     disabled={isPast}
-                    onMouseDown={(e) => e.preventDefault()}
+                    onPointerDown={(e) => e.preventDefault()}
                     onClick={() => selectDay(day)}
                     className={[
                       "text-center text-xs py-1.5 rounded-lg transition font-medium",
@@ -588,7 +537,7 @@ function DateSelector({
             <div className="mt-2 pt-2 border-t border-midnight-50">
               <button
                 type="button"
-                onMouseDown={(e) => e.preventDefault()}
+                onPointerDown={(e) => e.preventDefault()}
                 onClick={() => {
                   const y = today.getFullYear();
                   const m = String(today.getMonth() + 1).padStart(2, "0");
@@ -601,7 +550,8 @@ function DateSelector({
                 Today
               </button>
             </div>
-          </div>
+            </div>
+          </SheetWrap>
         </Portal>
       )}
     </div>
@@ -630,7 +580,7 @@ export default function HeroSearchForm({ cities }: Props) {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl relative z-50">
       <form
         onSubmit={onSubmit}
         className="mt-10 bg-white rounded-[32px] p-2 sm:p-3 border border-midnight-100 shadow-[0_30px_60px_-30px_rgba(10,14,39,0.25)] relative"

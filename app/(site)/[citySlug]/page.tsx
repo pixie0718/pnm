@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
   ShieldCheck, MapPin, Star, ArrowUpRight, BadgeIndianRupee, CheckCircle2,
+  Truck, Container, Car, Users,
 } from "lucide-react";
 import HeroSearchForm from "@/components/HeroSearchForm";
+import PricingTables from "@/components/PricingTables";
 import {
   getAllCities,
   getAllCitySlugs,
@@ -162,6 +164,91 @@ export default function CityPage({ params }: { params: { citySlug: string } }) {
           </div>
         </section>
       )}
+
+      {/* FLEET */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="eyebrow mb-4">
+          <span className="w-8 h-px bg-saffron-500"></span>
+          Our fleet in {city.name}
+        </div>
+        <h2 className="display text-3xl md:text-5xl font-bold text-midnight-900 leading-[0.95] mb-3">
+          Right vehicle for every move
+        </h2>
+        <p className="text-midnight-500 mb-8 text-lg max-w-2xl">
+          From a single-room studio to a full office relocation, we deploy the
+          exact vehicle size you need — no over-charging for unused space.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {[
+            {
+              Icon: Car,
+              label: "Mini Truck",
+              subtitle: "Tata Ace / Bolero Pickup",
+              capacity: "Up to 500 kg",
+              ideal: "Studio / 1 BHK",
+              rooms: "1–2 rooms",
+            },
+            {
+              Icon: Truck,
+              label: "Tempo",
+              subtitle: "407 / Eicher 10 ft",
+              capacity: "Up to 1,500 kg",
+              ideal: "1–2 BHK",
+              rooms: "2–3 rooms",
+            },
+            {
+              Icon: Truck,
+              label: "14-ft Truck",
+              subtitle: "Eicher / Tata LPT",
+              capacity: "Up to 3,500 kg",
+              ideal: "2–3 BHK",
+              rooms: "3–5 rooms",
+            },
+            {
+              Icon: Container,
+              label: "20-ft Container",
+              subtitle: "Full container load",
+              capacity: "Up to 7,000 kg",
+              ideal: "4+ BHK / Office",
+              rooms: "6+ rooms",
+            },
+          ].map(({ Icon, label, subtitle, capacity, ideal, rooms }) => (
+            <div
+              key={label}
+              className="card p-6 flex flex-col gap-4 hover:shadow-glow hover:-translate-y-1 transition-all"
+            >
+              <div className="w-12 h-12 rounded-2xl bg-saffron-50 flex items-center justify-center shrink-0">
+                <Icon size={24} className="text-saffron-500" />
+              </div>
+
+              <div>
+                <div className="display text-xl font-bold text-midnight-900">{label}</div>
+                <div className="text-sm text-midnight-400 mt-0.5">{subtitle}</div>
+              </div>
+
+              <div className="flex flex-col gap-1.5 text-sm text-midnight-600">
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-saffron-400 shrink-0" />
+                  {capacity}
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-saffron-400 shrink-0" />
+                  {rooms}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users size={13} className="text-saffron-400 shrink-0" />
+                  Best for {ideal}
+                </div>
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PRICING TABLES */}
+      <PricingTables cityName={city.name} />
 
       {/* POPULAR ROUTES */}
       {city.popularRoutes.length > 0 && (
