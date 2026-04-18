@@ -1,10 +1,10 @@
 {
-  "name": "ShiftIndia",
-  "tagline": "Pack it. Ship it. Relax.",
-  "url": "https://shiftindia.in",
-  "phone": "18001234567",
-  "phoneDisplay": "1800-123-4567",
-  "email": "hello@shiftindia.in",
+  "name": "राधे Packers and Movers",
+  "tagline": "Your Trusted Move",
+  "url": "https://radhepackers.in",
+  "phone": "${PHONE}",
+  "phoneDisplay": "${PHONE_DISPLAY}",
+  "email": "${EMAIL}",
   "social": {
     "twitter": "https://twitter.com/shiftindia",
     "instagram": "https://instagram.com/shiftindia",
@@ -76,8 +76,11 @@
     ]
   },
   "cta": {
-    "eyebrow": "Need help deciding?",
-    "heading": "Talk to a real moving expert.",
-    "description": "Free 10-minute consultation. 7 days a week. Real humans who actually know what they're talking about."
+    "eyebrow": "Ready to move?",
+    "heading": "Let's get your home shifted safely",
+    "description": "Join 2.4 million happy families who moved with us. Compare prices and book your move in under 2 minutes."
+  },
+  "contact": {
+    "note": "Contact details are managed via environment variables. Update .env.local to change."
   }
 }

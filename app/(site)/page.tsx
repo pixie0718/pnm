@@ -115,8 +115,8 @@ export default function HomePage() {
 
             {/* RIGHT: Illustration */}
             <div className="relative h-[500px] lg:h-[600px] hidden lg:block">
-              <div className="absolute inset-0 rounded-[48px] bg-gradient-to-br from-midnight-900 via-midnight-800 to-midnight-900 overflow-hidden grain shadow-[0_40px_100px_-30px_rgba(255,107,53,0.5)]">
-                <div className="absolute inset-0 opacity-20 dot-grid" style={{ backgroundImage: "radial-gradient(rgba(255,107,53,0.3) 1.5px, transparent 1.5px)" }}></div>
+              <div className="absolute inset-0 rounded-[48px] bg-gradient-to-br from-midnight-900 via-midnight-800 to-midnight-900 overflow-hidden grain shadow-[0_40px_100px_-30px_rgba(20,184,166,0.5)]">
+                <div className="absolute inset-0 opacity-20 dot-grid" style={{ backgroundImage: "radial-gradient(rgba(20,184,166,0.3) 1.5px, transparent 1.5px)" }}></div>
 
                 <div className="absolute top-12 right-12 w-32 h-32 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-600 blur-2xl opacity-60"></div>
                 <div className="absolute top-16 right-16 w-24 h-24 rounded-full bg-gradient-to-br from-saffron-300 to-saffron-500"></div>
@@ -438,7 +438,7 @@ export default function HomePage() {
                 </Link>
               ))}
               <Link href="/booking"
-                className="px-3.5 py-1.5 rounded-full bg-saffron-500 text-white text-sm font-bold hover:bg-saffron-400 transition flex items-center gap-1">
+                className="px-3.5 py-1.5 rounded-full bg-saffron-500 text-white text-sm font-bold hover:bg-saffron-600 transition flex items-center gap-1">
                 +80 more <ArrowUpRight size={12} />
               </Link>
             </div>

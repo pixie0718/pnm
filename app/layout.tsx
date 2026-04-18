@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ShiftIndia — Move Anywhere in India, Fast, Safe & Transparent",
+  title: "राधे Packers and Movers — Your Trusted Move",
   description:
-    "India's most trusted packers & movers marketplace. Compare prices from verified vendors instantly. Live tracking, damage protection, lowest price guarantee.",
+    "India's most trusted packers & movers. Safe, reliable, and transparent moving services across India. Get instant quotes and live tracking.",
+  icons: {
+    icon: "/P & M.png",
+    apple: "/P & M.png",
+  },
 };
 
 export default function RootLayout({
@@ -14,6 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/P & M.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/P & M.png" />
+      </head>
       <body>{children}</body>
     </html>
   );

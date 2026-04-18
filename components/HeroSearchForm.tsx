@@ -629,7 +629,7 @@ export default function HeroSearchForm({ cities }: Props) {
           Secure Move
         </div>
         <div className="flex items-center gap-2.5">
-          <div className="w-1.5 h-1.5 rounded-full bg-saffron-500 shadow-[0_0_10px_rgba(255,107,53,0.5)]" />
+          <div className="w-1.5 h-1.5 rounded-full bg-saffron-500 shadow-[0_0_10px_rgba(20,184,166,0.5)]" />
           Verified Vendors
         </div>
         <div className="flex items-center gap-2.5">

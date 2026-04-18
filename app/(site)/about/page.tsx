@@ -3,6 +3,7 @@ import {
   Shield, Truck, Star, Users, MapPin, Zap,
   Heart, TrendingUp, CheckCircle, ArrowRight, Phone, Mail,
 } from "lucide-react";
+import { CONTACT } from "@/lib/config";
 
 export const metadata = {
   title: "About Us | ShiftIndia",
@@ -77,7 +78,7 @@ export default function AboutPage() {
             <Link href="/booking" className="btn btn-primary btn-lg">
               Get a Free Quote <ArrowRight size={18} />
             </Link>
-            <a href="tel:18001234567" className="btn bg-white/10 border border-white/20 text-white hover:bg-white/20 transition btn-lg">
+            <a href={`tel:${CONTACT.phone}`} className="btn bg-white/10 border border-white/20 text-white hover:bg-white/20 transition btn-lg">
               <Phone size={16} /> Talk to Us
             </a>
           </div>
@@ -191,11 +192,14 @@ export default function AboutPage() {
           <h2 className="display text-4xl font-bold text-white mb-4">Want to get in touch?</h2>
           <p className="text-midnight-300 mb-8">Whether you're a customer, vendor, investor, or journalist — we'd love to hear from you.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="mailto:hello@shiftindia.in" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-saffron-500 text-white font-bold hover:bg-saffron-400 transition">
-              <Mail size={16} /> hello@shiftindia.in
+            <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-saffron-500 text-white font-bold hover:bg-saffron-600 transition">
+              <Mail size={16} /> Contact Us
+            </Link>
+            <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-bold hover:bg-white/20 transition">
+              <Mail size={16} /> {CONTACT.email}
             </a>
-            <a href="tel:18001234567" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-bold hover:bg-white/20 transition">
-              <Phone size={16} /> 1800-123-4567
+            <a href={`tel:${CONTACT.phone}`} className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white font-bold hover:bg-white/20 transition">
+              <Phone size={16} /> {CONTACT.phoneDisplay}
             </a>
           </div>
         </div>

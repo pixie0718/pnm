@@ -5,10 +5,11 @@ import {
   Phone, MessageCircle, X, ArrowRight,
   Send, ChevronUp, Headphones,
 } from "lucide-react";
+import { CONTACT } from "@/lib/config";
 
-const PHONE      = "18001234567";
-const WHATSAPP   = "918001234567"; // 91 + number
-const PHONE_DISP = "1800-123-4567";
+const PHONE      = CONTACT.phone;
+const WHATSAPP   = CONTACT.whatsapp;
+const PHONE_DISP = CONTACT.phoneDisplay;
 
 /* ── Quick query form ── */
 function QueryPanel({ onClose }: { onClose: () => void }) {
@@ -23,7 +24,7 @@ function QueryPanel({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="w-72 bg-white rounded-2xl border border-midnight-100 overflow-hidden"
-      style={{ boxShadow: "0 24px 64px -12px rgba(10,14,39,0.22)" }}
+      style={{ boxShadow: "0 24px 64px -12px rgba(59,7,100,0.22)" }}
     >
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-midnight-900 text-white">
@@ -65,7 +66,7 @@ function QueryPanel({ onClose }: { onClose: () => void }) {
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder="Rahul Sharma"
-              className="w-full text-sm px-3 py-2 rounded-xl border border-midnight-100 text-midnight-900 placeholder-midnight-300 outline-none focus:border-saffron-300 focus:ring-2 focus:ring-saffron-100 transition"
+              className="w-full text-sm px-3 py-2 rounded-xl border border-midnight-100 text-midnight-900 placeholder-midnight-300 outline-none focus:border-saffron-400 focus:ring-2 focus:ring-saffron-200 transition"
             />
           </div>
           <div>
@@ -78,7 +79,7 @@ function QueryPanel({ onClose }: { onClose: () => void }) {
               value={form.phone}
               onChange={(e) => setForm({ ...form, phone: e.target.value })}
               placeholder="+91 98765 43210"
-              className="w-full text-sm px-3 py-2 rounded-xl border border-midnight-100 text-midnight-900 placeholder-midnight-300 outline-none focus:border-saffron-300 focus:ring-2 focus:ring-saffron-100 transition"
+              className="w-full text-sm px-3 py-2 rounded-xl border border-midnight-100 text-midnight-900 placeholder-midnight-300 outline-none focus:border-saffron-400 focus:ring-2 focus:ring-saffron-200 transition"
             />
           </div>
           <div>
@@ -90,12 +91,12 @@ function QueryPanel({ onClose }: { onClose: () => void }) {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
               placeholder="Moving from Mumbai to Delhi next month..."
-              className="w-full text-sm px-3 py-2 rounded-xl border border-midnight-100 text-midnight-900 placeholder-midnight-300 outline-none focus:border-saffron-300 focus:ring-2 focus:ring-saffron-100 transition resize-none"
+              className="w-full text-sm px-3 py-2 rounded-xl border border-midnight-100 text-midnight-900 placeholder-midnight-300 outline-none focus:border-saffron-400 focus:ring-2 focus:ring-saffron-200 transition resize-none"
             />
           </div>
           <button
             type="submit"
-            className="w-full flex items-center justify-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-white font-bold text-sm rounded-xl py-2.5 transition"
+            className="w-full flex items-center justify-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white font-bold text-sm rounded-xl py-2.5 transition"
           >
             <Send size={13} /> Send Message
           </button>
@@ -150,7 +151,7 @@ export default function FloatingActions() {
       key: "query",
       icon: <Send size={16} />,
       label: "Quick Query",
-      color: "bg-saffron-500 hover:bg-saffron-400 text-white",
+      color: "bg-saffron-500 hover:bg-saffron-600 text-white",
       onClick: () => setShowQuery((s) => !s),
     },
   ];
@@ -195,7 +196,7 @@ export default function FloatingActions() {
               ? "bg-midnight-900 text-white"
               : "bg-white text-midnight-900 border border-midnight-100"
           }`}
-          style={{ boxShadow: fabOpen ? "0 8px 30px -6px rgba(10,14,39,0.4)" : "0 8px 30px -6px rgba(10,14,39,0.18)" }}
+          style={{ boxShadow: fabOpen ? "0 8px 30px -6px rgba(59,7,100,0.4)" : "0 8px 30px -6px rgba(59,7,100,0.18)" }}
         >
           {/* pulse ring when closed */}
           {!fabOpen && (
@@ -214,8 +215,8 @@ export default function FloatingActions() {
       {/* RIGHT — Get Quote CTA (hidden on mobile: bottom tab bar already has it) */}
       <Link
         href="/booking"
-        className="hidden sm:flex pointer-events-auto group items-center gap-2.5 bg-saffron-500 hover:bg-saffron-400 text-white font-bold text-sm pl-4 pr-5 py-3 rounded-full transition-all duration-300 shadow-xl"
-        style={{ boxShadow: "0 8px 30px -6px rgba(255,107,53,0.5)" }}
+        className="hidden sm:flex pointer-events-auto group items-center gap-2.5 bg-saffron-500 hover:bg-saffron-600 text-white font-bold text-sm pl-4 pr-5 py-3 rounded-full transition-all duration-300 shadow-xl"
+        style={{ boxShadow: "0 8px 30px -6px rgba(20,184,166,0.5)" }}
       >
         <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center shrink-0">
           🚚

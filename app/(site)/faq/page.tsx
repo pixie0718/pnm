@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown, Search, Phone, Mail, MessageCircle, ArrowRight } from "lucide-react";
+import { CONTACT } from "@/lib/config";
 
 const categories = [
   {
@@ -42,7 +43,7 @@ const categories = [
       },
       {
         q: "What if a vendor behaves unprofessionally?",
-        a: "Contact us immediately on 1800-123-4567 or hello@shiftindia.in. We have a zero-tolerance policy for misconduct. The vendor will be suspended pending investigation, and we'll arrange an alternative at no extra cost.",
+        a: `Contact us immediately on ${CONTACT.phoneDisplay} or ${CONTACT.email}. We have a zero-tolerance policy for misconduct. The vendor will be suspended pending investigation, and we'll arrange an alternative at no extra cost.`,
       },
     ],
   },
@@ -207,7 +208,7 @@ export default function FAQPage() {
                 <div className="text-4xl mb-3">🤔</div>
                 <div className="font-bold text-midnight-900 mb-2">No results found</div>
                 <p className="text-sm text-midnight-500">Try different keywords, or contact our support team.</p>
-                <a href="tel:18001234567" className="btn btn-primary mt-5 inline-flex">
+                <a href={`tel:${CONTACT.phone}`} className="btn btn-primary mt-5 inline-flex">
                   <Phone size={14} /> Call Support
                 </a>
               </div>
@@ -263,10 +264,10 @@ export default function FAQPage() {
           <h2 className="display text-3xl font-bold text-midnight-900 mb-2">Still have questions?</h2>
           <p className="text-midnight-500 mb-8">Our team is available Mon–Sat, 9AM–8PM.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:18001234567" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-midnight-900 text-white font-bold text-sm hover:bg-midnight-700 transition">
-              <Phone size={15} /> 1800-123-4567 (Toll Free)
+            <a href={`tel:${CONTACT.phone}`} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-midnight-900 text-white font-bold text-sm hover:bg-midnight-700 transition">
+              <Phone size={15} /> {CONTACT.phoneDisplay} (Toll Free)
             </a>
-            <a href="mailto:hello@shiftindia.in" className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 text-midnight-700 font-bold text-sm hover:bg-slate-100 transition">
+            <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 text-midnight-700 font-bold text-sm hover:bg-slate-100 transition">
               <Mail size={15} /> hello@shiftindia.in
             </a>
           </div>

@@ -106,7 +106,7 @@ export default function CitiesPage() {
             </p>
             <Link
               href="/booking"
-              className="group inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-400 text-midnight-900 font-bold rounded-full px-8 py-3.5 transition"
+              className="group inline-flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-midnight-900 font-bold rounded-full px-8 py-3.5 transition"
             >
               Get Free Quotes
               <ArrowUpRight

@@ -8,58 +8,58 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep midnight — premium, trust
+        // Deep purple — premium, trust (from logo truck)
         midnight: {
-          50: "#f5f6fa",
-          100: "#e8eaf3",
-          200: "#c4c9de",
-          300: "#9ea5c3",
-          500: "#4a5383",
-          700: "#1a1f47",
-          800: "#0f1330",
-          900: "#0a0e27",
-          950: "#060818",
+          50: "#f5f3ff",
+          100: "#ede9fe",
+          200: "#ddd6fe",
+          300: "#c4b5fd",
+          500: "#7c3aed",
+          700: "#5b21b6",
+          800: "#4c1d95",
+          900: "#3b0764",
+          950: "#2e0547",
         },
-        // Saffron — energy, trucks, India
+        // Teal — energy, movement (from logo gradient)
         saffron: {
-          50: "#fff4ed",
-          100: "#ffe4d2",
-          200: "#ffc4a3",
-          300: "#ff9c6a",
-          400: "#ff7a3d",
-          500: "#ff6b35",
-          600: "#f04e15",
-          700: "#c73a0f",
-          800: "#9e3014",
-          900: "#7f2a14",
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          200: "#99f6e4",
+          300: "#5eead4",
+          400: "#2dd4bf",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          800: "#115e59",
+          900: "#134e4a",
         },
-        // Cream — warmth
+        // Cream — warmth, background
         cream: {
-          50: "#fffbf5",
-          100: "#fef7ed",
-          200: "#fdeed5",
-          300: "#fbe1b4",
+          50: "#fafafa",
+          100: "#f5f5f5",
+          200: "#e5e5e5",
+          300: "#d4d4d4",
         },
-        // Mint — success, fresh
+        // Green — success, peacock feather
         mint: {
-          400: "#34e3b5",
-          500: "#00d9a3",
-          600: "#00b386",
+          400: "#4ade80",
+          500: "#22c55e",
+          600: "#16a34a",
         },
         // Legacy aliases for other pages (keep them working)
         brand: {
-          50: "#fff4ed",
-          100: "#ffe4d2",
-          500: "#ff6b35",
-          600: "#f04e15",
-          700: "#c73a0f",
-          900: "#0a0e27",
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          900: "#3b0764",
         },
         ink: {
-          900: "#0a0e27",
-          700: "#1a1f47",
-          500: "#4a5383",
-          300: "#9ea5c3",
+          900: "#3b0764",
+          700: "#5b21b6",
+          500: "#7c3aed",
+          300: "#c4b5fd",
         },
       },
       fontFamily: {
@@ -67,11 +67,11 @@ const config: Config = {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 10px 30px -12px rgba(10, 14, 39, 0.12)",
-        glow: "0 20px 60px -20px rgba(255, 107, 53, 0.5)",
-        "glow-mint": "0 20px 60px -20px rgba(0, 217, 163, 0.45)",
-        brutal: "6px 6px 0 0 rgba(10,14,39,1)",
-        "brutal-saffron": "6px 6px 0 0 rgba(255,107,53,1)",
+        soft: "0 10px 30px -12px rgba(59, 7, 100, 0.12)",
+        glow: "0 20px 60px -20px rgba(20, 184, 166, 0.5)",
+        "glow-mint": "0 20px 60px -20px rgba(34, 197, 94, 0.45)",
+        brutal: "6px 6px 0 0 rgba(59,7,100,1)",
+        "brutal-saffron": "6px 6px 0 0 rgba(20,184,166,1)",
       },
       animation: {
         marquee: "marquee 30s linear infinite",
@@ -118,12 +118,12 @@ const config: Config = {
       addUtilities({
         ".scrollbar-thin": {
           "scrollbar-width": "thin",
-          "scrollbar-color": "#c4c9de transparent",
+          "scrollbar-color": "#ddd6fe transparent",
         },
         ".scrollbar-thin::-webkit-scrollbar": { width: "4px" },
         ".scrollbar-thin::-webkit-scrollbar-track": { background: "transparent" },
         ".scrollbar-thin::-webkit-scrollbar-thumb": {
-          background: "#c4c9de",
+          background: "#ddd6fe",
           "border-radius": "99px",
         },
       });

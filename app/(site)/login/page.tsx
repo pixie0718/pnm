@@ -2,7 +2,8 @@
 import { useState, FormEvent, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Lock, Phone, Loader2, Truck, ArrowRight, UserCircle } from "lucide-react";
+import Image from "next/image";
+import { Lock, Phone, Loader2, ArrowRight, UserCircle } from "lucide-react";
 
 function LoginInner() {
   const router = useRouter();
@@ -41,10 +42,7 @@ function LoginInner() {
       <div className="relative w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 font-bold mb-6">
-            <span className="w-10 h-10 rounded-full bg-midnight-900 text-saffron-500 grid place-items-center">
-              <Truck size={18} />
-            </span>
-            <span className="display text-midnight-900 text-xl">ShiftIndia</span>
+            <Image src="/logopnm_bg.png" alt="राधे Packers and Movers" width={200} height={40} className="h-10 w-auto" />
           </Link>
           <div className="eyebrow justify-center mb-3">
             <span className="w-8 h-px bg-saffron-500"></span>

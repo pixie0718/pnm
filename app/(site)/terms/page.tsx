@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FileText, AlertCircle, Phone, Mail } from "lucide-react";
+import { CONTACT } from "@/lib/config";
 
 export const metadata = {
   title: "Terms & Conditions | ShiftIndia",
@@ -127,7 +128,7 @@ const sections = [
       `For questions about these Terms, please contact:`,
       `ShiftIndia Technologies Pvt. Ltd.`,
       `Email: legal@shiftindia.in`,
-      `Phone: 1800-123-4567 (Toll Free)`,
+      `Phone: ${CONTACT.phoneDisplay} (Toll Free)`,
       `Address: 5th Floor, One BKC, Bandra Kurla Complex, Mumbai 400051, Maharashtra, India.`,
     ],
   },
@@ -205,8 +206,8 @@ export default function TermsPage() {
                 <a href="mailto:legal@shiftindia.in" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-midnight-900 text-white text-xs font-bold hover:bg-midnight-700 transition">
                   <Mail size={13} /> legal@shiftindia.in
                 </a>
-                <a href="tel:18001234567" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-midnight-700 text-xs font-bold hover:bg-slate-100 transition">
-                  <Phone size={13} /> 1800-123-4567
+                <a href={`tel:${CONTACT.phone}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-midnight-700 text-xs font-bold hover:bg-slate-100 transition">
+                  <Phone size={13} /> {CONTACT.phoneDisplay}
                 </a>
               </div>
             </div>

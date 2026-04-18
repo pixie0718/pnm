@@ -5,8 +5,8 @@ import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Blog — ShiftIndia",
-  description: "Moving tips, guides, and insights from India's most trusted packers & movers marketplace.",
+  title: "Blog — राधे Packers and Movers",
+  description: "Moving tips, guides, and insights from India's most trusted packers & movers. Learn about safe and efficient relocation.",
 };
 
 export default async function BlogPage() {

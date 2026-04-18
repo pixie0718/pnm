@@ -2,7 +2,8 @@
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Lock, Phone, Mail, User, Loader2, Truck, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { Lock, Phone, Mail, User, Loader2, ArrowRight } from "lucide-react";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -41,18 +42,15 @@ export default function SignupPage() {
       <div className="relative w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 font-bold mb-6">
-            <span className="w-10 h-10 rounded-full bg-midnight-900 text-saffron-500 grid place-items-center">
-              <Truck size={18} />
-            </span>
-            <span className="display text-midnight-900 text-xl">ShiftIndia</span>
+            <Image src="/logopnm_bg.png" alt="राधे Packers and Movers" width={200} height={40} className="h-10 w-auto" />
           </Link>
           <div className="eyebrow justify-center mb-3">
             <span className="w-8 h-px bg-saffron-500"></span>
             Create account
             <span className="w-8 h-px bg-saffron-500"></span>
           </div>
-          <h1 className="display text-4xl font-bold text-midnight-900">
-            Join <span className="grad-saffron">ShiftIndia</span>
+          <h1 className="display text-2xl font-bold text-midnight-900">
+            Join <span className="grad-saffron">Radhe Packers and Movers</span>
           </h1>
           <p className="text-midnight-500 mt-2">
             Track your moves and manage bookings in one place

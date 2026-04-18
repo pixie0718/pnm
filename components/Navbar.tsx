@@ -1,16 +1,18 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import {
   Truck, ArrowUpRight, LogOut, LogIn,
-  Home, MapPin, Package, User,
+  Home, MapPin, Package, User, Phone,
 } from "lucide-react";
 
 const links = [
   { href: "/",         label: "Home",    icon: Home    },
   { href: "/cities",   label: "Cities",  icon: MapPin  },
   { href: "/booking",  label: "Quote",   icon: Truck   },
+  { href: "/contact",  label: "Contact", icon: Phone   },
   { href: "/tracking", label: "Track",   icon: Package },
   { href: "/account",  label: "Account", icon: User    },
 ];
@@ -51,15 +53,11 @@ export default function Navbar() {
       {/* ─── Top header (sticky) ─── */}
       <header className="sticky top-0 z-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-4">
-          <div className="flex items-center justify-between h-14 bg-white/80 backdrop-blur-xl border border-midnight-100 rounded-full px-3 pl-5 shadow-soft">
+          <div className="flex items-center justify-between h-20 bg-white/80 backdrop-blur-xl border border-midnight-100 rounded-3xl px-3 pl-5 shadow-soft">
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 font-bold">
-              <span className="relative w-8 h-8 rounded-full bg-midnight-900 text-saffron-500 grid place-items-center">
-                <Truck size={16} />
-                <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-saffron-500 animate-ping-slow" />
-              </span>
-              <span className="display text-midnight-900 text-lg">ShiftIndia</span>
+              <Image src="/logopnm_bg.png" alt="राधे Packers and Movers" width={350} height={50} className="h-20 w-auto" />
             </Link>
 
             {/* Desktop nav pills */}
@@ -160,7 +158,7 @@ export default function Navbar() {
                 <Link key={l.href} href={l.href} className="flex-1 flex flex-col items-center pb-2">
                   <span
                     className="w-12 h-12 rounded-2xl bg-saffron-500 text-white grid place-items-center -translate-y-3 border-[3px] border-white"
-                    style={{ boxShadow: "0 8px 24px -6px rgba(255,107,53,0.55)" }}
+                    style={{ boxShadow: "0 8px 24px -6px rgba(20,184,166,0.55)" }}
                   >
                     <Icon size={22} />
                   </span>

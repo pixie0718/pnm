@@ -12,7 +12,13 @@ const DATA_DIR = path.join(process.cwd(), "data");
 
 function readJson<T>(relPath: string): T {
   const full = path.join(DATA_DIR, relPath);
-  const raw = fs.readFileSync(full, "utf8");
+  let raw = fs.readFileSync(full, "utf8");
+
+  // Simple placeholder replacement ${VAR} -> process.env.VAR
+  raw = raw.replace(/\${(\w+)}/g, (_, key) => {
+    return process.env[key] || `\${${key}}`;
+  });
+
   return JSON.parse(raw) as T;
 }
 

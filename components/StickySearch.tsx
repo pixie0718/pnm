@@ -131,7 +131,7 @@ export default function StickySearch({ cities }: Props) {
             <div className="p-2 flex items-center shrink-0">
               <button
                 type="submit"
-                className="group flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white font-bold text-sm rounded-xl px-5 py-2.5 transition-all shadow-[0_4px_14px_-4px_rgba(255,107,53,0.55)] hover:shadow-[0_6px_20px_-4px_rgba(255,107,53,0.65)] hover:-translate-y-px active:translate-y-0"
+                className="group flex items-center gap-2 bg-saffron-500 hover:bg-saffron-600 text-white font-bold text-sm rounded-xl px-5 py-2.5 transition-all shadow-[0_4px_14px_-4px_rgba(20,184,166,0.55)] hover:shadow-[0_6px_20px_-4px_rgba(20,184,166,0.65)] hover:-translate-y-px active:translate-y-0"
               >
                 <Truck size={15} className="group-hover:translate-x-0.5 transition-transform" />
                 <span className="hidden sm:inline">Get Quotes</span>
