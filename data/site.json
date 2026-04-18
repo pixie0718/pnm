@@ -12,8 +12,8 @@
     "linkedin": "https://linkedin.com/company/shiftindia"
   },
   "seo": {
-    "defaultTitle": "ShiftIndia — Move Anywhere in India, Fast, Safe & Transparent",
-    "titleTemplate": "%s | ShiftIndia",
+    "defaultTitle": "Radhe Packers and Movers — Move Anywhere in India, Fast, Safe & Transparent",
+    "titleTemplate": "%s | Radhe Packers and Movers",
     "description": "India's most trusted packers & movers marketplace. Compare prices from 18,500+ verified vendors instantly. Live tracking, damage protection, lowest price guarantee.",
     "keywords": [
       "packers and movers",
@@ -26,19 +26,39 @@
     "ogImage": "/og-image.jpg"
   },
   "home": {
-    "title": "ShiftIndia — India's #1 Packers & Movers Marketplace",
+    "title": "Radhe Packers and Movers — India's #1 Packers & Movers Marketplace",
     "description": "Compare quotes from 18,500+ verified packers and movers across 120+ cities in India. Transparent pricing, live tracking, damage protection.",
-    "keywords": ["packers and movers", "india movers", "home shifting"]
+    "keywords": [
+      "packers and movers",
+      "india movers",
+      "home shifting"
+    ]
   },
   "hero": {
     "eyebrow": "India's #1 moving marketplace",
-    "headingLines": ["Pack it.", "Ship it.", "Relax."],
+    "headingLines": [
+      "Pack it.",
+      "Ship it.",
+      "Relax."
+    ],
     "subheading": "Compare 18,500+ verified packers & movers across India. Transparent pricing, live tracking, and zero drama.",
     "trustPills": [
-      { "icon": "shield", "label": "Verified Vendors" },
-      { "icon": "map", "label": "Live GPS Tracking" },
-      { "icon": "package", "label": "₹5L Damage Cover" },
-      { "icon": "rupee", "label": "Lowest Price Promise" }
+      {
+        "icon": "shield",
+        "label": "Verified Vendors"
+      },
+      {
+        "icon": "map",
+        "label": "Live GPS Tracking"
+      },
+      {
+        "icon": "package",
+        "label": "₹5L Damage Cover"
+      },
+      {
+        "icon": "rupee",
+        "label": "Lowest Price Promise"
+      }
     ]
   },
   "marquee": [
@@ -61,7 +81,10 @@
         "number": "01",
         "title": "Tell us where",
         "description": "Drop your pickup, destination, and house size. It takes about 20 seconds — we timed it.",
-        "chips": ["📍 Any city", "📅 Any date"]
+        "chips": [
+          "📍 Any city",
+          "📅 Any date"
+        ]
       },
       {
         "number": "02",
