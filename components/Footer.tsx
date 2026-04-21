@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">
         {/* Big display CTA line */}
         <div className="border-b border-midnight-700 pb-16 mb-16">
-          <h2 className="display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95]">
+          <h2 className="display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.95]">
             Ready to <span className="grad-saffron">move?</span>
           </h2>
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-10">
           <div className="col-span-2 sm:col-span-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-bold">
-              <Image src="/logopnm_bg.png" alt="राधे Packers and Movers" width={180} height={36} className="h-9 w-auto" />
+              <Image src="/white_logo.png" alt="राधे Packers and Movers" width={180} height={36} className="h-30 w-auto" />
             </Link>
             <p className="mt-5 text-sm text-midnight-300 max-w-xs leading-relaxed">
               India's most trusted packers & movers marketplace. 2.4M+ families moved. 120+ cities. One tap away.

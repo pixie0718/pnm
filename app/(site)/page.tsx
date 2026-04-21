@@ -58,16 +58,16 @@ export default function HomePage() {
       <section className="hero-mesh grain relative overflow-hidden">
         <div className="absolute top-20 right-0 w-[400px] h-[400px] dot-grid opacity-60 pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 lg:pt-20 lg:pb-36 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-6 lg:pt-8 lg:pb-10 relative">
           <div className="grid lg:grid-cols-[1.15fr_1fr] gap-12 items-center">
             {/* LEFT */}
             <div>
-              <div className="eyebrow mb-6">
+              <div className="eyebrow mb-3">
                 <span className="w-8 h-px bg-saffron-500"></span>
                 {site.hero.eyebrow}
               </div>
 
-              <h1 className="display text-[44px] sm:text-6xl lg:text-[84px] font-bold leading-[0.95] text-midnight-900">
+              <h1 className="display text-[40px] sm:text-5xl lg:text-[68px] font-bold leading-[1.05] text-midnight-900">
                 {site.hero.headingLines.map((line, i) => (
                   <span key={i}>
                     {i === site.hero.headingLines.length - 1 ? (
@@ -96,14 +96,14 @@ export default function HomePage() {
                 ))}
               </h1>
 
-              <p className="mt-8 text-lg md:text-xl text-midnight-500 max-w-xl leading-relaxed">
+              <p className="mt-3 text-sm md:text-base text-midnight-500 max-w-xl leading-relaxed">
                 {site.hero.subheading}
               </p>
 
               <HeroSearchForm cities={cityNames} />
               <div id="hero-search-end" aria-hidden="true"></div>
 
-              <div className="mt-8 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {site.hero.trustPills.map((t) => (
                   <span key={t.label} className="chip !py-2 !px-3.5">
                     <span className="text-saffron-500">{ICON_MAP[t.icon]}</span>
@@ -114,12 +114,12 @@ export default function HomePage() {
             </div>
 
             {/* RIGHT: Illustration */}
-            <div className="relative h-[500px] lg:h-[600px] hidden lg:block">
+            <div className="relative h-[320px] lg:h-[380px] hidden lg:block">
               <div className="absolute inset-0 rounded-[48px] bg-gradient-to-br from-midnight-900 via-midnight-800 to-midnight-900 overflow-hidden grain shadow-[0_40px_100px_-30px_rgba(20,184,166,0.5)]">
                 <div className="absolute inset-0 opacity-20 dot-grid" style={{ backgroundImage: "radial-gradient(rgba(20,184,166,0.3) 1.5px, transparent 1.5px)" }}></div>
 
-                <div className="absolute top-12 right-12 w-32 h-32 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-600 blur-2xl opacity-60"></div>
-                <div className="absolute top-16 right-16 w-24 h-24 rounded-full bg-gradient-to-br from-saffron-300 to-saffron-500"></div>
+                <div className="absolute top-6 right-8 w-20 h-20 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-600 blur-2xl opacity-60"></div>
+                <div className="absolute top-8 right-10 w-14 h-14 rounded-full bg-gradient-to-br from-saffron-300 to-saffron-500"></div>
 
                 <svg className="absolute inset-x-0 top-[45%] w-full h-40" viewBox="0 0 500 120" preserveAspectRatio="none">
                   <path d="M 20 90 Q 120 40, 240 70 T 480 40" stroke="#ff6b35" strokeWidth="3" fill="none" className="road-line" />
@@ -135,7 +135,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="absolute top-20 left-8 bg-white rounded-2xl p-3 shadow-lg animate-float tilt-l w-44">
+                <div className="absolute top-10 left-6 bg-white rounded-2xl p-2.5 shadow-lg animate-float tilt-l w-36">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg bg-mint-500/20 text-mint-600 grid place-items-center">
                       <Star size={16} fill="currentColor" />
@@ -147,7 +147,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-32 right-6 bg-white rounded-2xl p-3 shadow-lg animate-float-slow tilt-r w-48">
+                <div className="absolute bottom-16 right-4 bg-white rounded-2xl p-2.5 shadow-lg animate-float-slow tilt-r w-40">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg bg-saffron-500/20 text-saffron-600 grid place-items-center">
                       <Package size={16} />
@@ -159,7 +159,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="absolute top-36 right-10 bg-saffron-500 text-white rounded-full px-4 py-2 shadow-glow animate-float text-xs font-bold tilt-r">
+                <div className="absolute top-20 right-8 bg-saffron-500 text-white rounded-full px-3 py-1.5 shadow-glow animate-float text-xs font-bold tilt-r">
                   ⚡ Booked in 22s
                 </div>
 
@@ -192,12 +192,12 @@ export default function HomePage() {
       {/* ─────────────── MARQUEE ─────────────── */}
       <section className="bg-midnight-900 text-white py-6 overflow-hidden border-y border-midnight-700">
         <div className="marquee-track">
-          {[...Array(2)].map((_, k) => (
-            <div key={k} className="flex items-center gap-12 px-6">
+          {[...Array(4)].map((_, k) => (
+            <div key={k} className="flex items-center gap-10 px-6" aria-hidden={k > 0 ? "true" : undefined}>
               {site.marquee.map((t, i) => (
                 <span key={`${k}-${i}`} className="flex items-center gap-6 whitespace-nowrap">
-                  <span className="display text-2xl md:text-3xl font-bold text-white">{t}</span>
-                  <span className="w-2 h-2 rounded-full bg-saffron-500"></span>
+                  <span className="display text-xl md:text-2xl font-bold text-white">{t}</span>
+                  <span className="w-2 h-2 rounded-full bg-saffron-500 shrink-0"></span>
                 </span>
               ))}
             </div>

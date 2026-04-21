@@ -4,8 +4,40 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   MapPin, Package, Sparkles, Receipt, Check,
-  Plus, Minus, Camera, ShieldCheck, Zap, ArrowLeft, ArrowRight, Loader2, Truck, X,
+  Plus, Minus, Camera, ShieldCheck, Zap, ArrowLeft, ArrowRight, Loader2, Truck, X, Route, Pencil,
 } from "lucide-react";
+import { CityDropdown, SizeDropdown, DateSelector } from "@/components/RouteDropdowns";
+
+// Major Indian city coordinates for distance calculation
+const CITY_COORDS: Record<string, [number, number]> = {
+  "Mumbai": [19.076, 72.877], "Delhi": [28.704, 77.102], "Bangalore": [12.972, 77.594],
+  "Bengaluru": [12.972, 77.594], "Hyderabad": [17.385, 78.487], "Chennai": [13.083, 80.270],
+  "Kolkata": [22.573, 88.364], "Pune": [18.520, 73.856], "Ahmedabad": [23.023, 72.572],
+  "Jaipur": [26.912, 75.787], "Surat": [21.170, 72.831], "Lucknow": [26.847, 80.947],
+  "Kanpur": [26.449, 80.331], "Nagpur": [21.146, 79.089], "Indore": [22.719, 75.857],
+  "Bhopal": [23.259, 77.413], "Patna": [25.594, 85.137], "Vadodara": [22.308, 73.181],
+  "Ghaziabad": [28.669, 77.454], "Noida": [28.535, 77.391], "Chandigarh": [30.733, 76.779],
+  "Coimbatore": [11.017, 76.956], "Agra": [27.177, 78.008], "Kochi": [9.931, 76.267],
+  "Visakhapatnam": [17.687, 83.218], "Nashik": [19.997, 73.789], "Faridabad": [28.408, 77.313],
+  "Meerut": [28.980, 77.706], "Rajkot": [22.303, 70.802], "Varanasi": [25.317, 82.973],
+};
+
+function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLon / 2) ** 2;
+  return Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+}
+
+function getCityKey(city: string): string {
+  const normalized = city.trim();
+  return Object.keys(CITY_COORDS).find(
+    (k) => k.toLowerCase() === normalized.toLowerCase()
+  ) || normalized;
+}
 
 const steps = [
   { n: 1, label: "Address", icon: MapPin },
@@ -73,14 +105,75 @@ function BookingInner() {
   const [pickupAddress, setPickupAddress] = useState("");
   const [pickupFloor, setPickupFloor] = useState("2");
   const [pickupLift, setPickupLift] = useState("Yes");
+  const [pickupPincode, setPickupPincode] = useState("");
   const [dropAddress, setDropAddress] = useState("");
   const [dropFloor, setDropFloor] = useState("1");
   const [dropLift, setDropLift] = useState("Yes");
+  const [dropPincode, setDropPincode] = useState("");
+  const [locating, setLocating] = useState(false);
+  const [distance, setDistance] = useState<number | null>(null);
+
+  useEffect(() => {
+    const c1 = CITY_COORDS[getCityKey(pickupCity)];
+    const c2 = CITY_COORDS[getCityKey(dropCity)];
+    if (c1 && c2) setDistance(haversineKm(c1[0], c1[1], c2[0], c2[1]));
+  }, [pickupCity, dropCity]);
+
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        try {
+          const { latitude, longitude } = pos.coords;
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`,
+            { headers: { "Accept-Language": "en" } }
+          );
+          const data = await res.json();
+          const addr = data.address || {};
+          const parts = [
+            addr.house_number,
+            addr.road || addr.pedestrian,
+            addr.neighbourhood || addr.suburb,
+            addr.city_district,
+          ].filter(Boolean);
+          if (parts.length) setPickupAddress(parts.join(", "));
+          if (addr.postcode) setPickupPincode(addr.postcode.replace(/\s/g, "").slice(0, 6));
+        } catch {
+          // silently ignore — user can fill manually
+        } finally {
+          setLocating(false);
+        }
+      },
+      () => { setLocating(false); },
+      { timeout: 10000 }
+    );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
   const [confirming, setConfirming] = useState(false);
+
+  const [editingRoute, setEditingRoute] = useState(false);
+  const [editFrom, setEditFrom] = useState(pickupCity);
+  const [editTo, setEditTo] = useState(dropCity);
+  const [editSize, setEditSize] = useState(houseSize);
+  const [editDate, setEditDate] = useState(movingDate);
+
+  function applyRouteEdit() {
+    if (!editFrom.trim() || !editTo.trim()) return;
+    const params = new URLSearchParams({
+      pickupCity: editFrom,
+      dropCity: editTo,
+      houseSize: editSize,
+      ...(editDate ? { movingDate: editDate } : {}),
+    });
+    router.push(`/booking?${params.toString()}`);
+    setEditingRoute(false);
+  }
 
   const updateQty = (i: number, d: number) => {
     setItems(items.map((it, idx) => (idx === i ? { ...it, qty: Math.max(0, it.qty + d) } : it)));
@@ -237,8 +330,17 @@ function BookingInner() {
               <p className="text-midnight-500 mb-6">Where are we picking up and dropping off?</p>
 
               <div className="grid md:grid-cols-2 gap-6">
+                {/* ── PICKUP ── */}
                 <div className="space-y-4">
-                  <h3 className="font-bold text-midnight-900">📍 Pickup Address</h3>
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-bold text-midnight-900">📍 Pickup Address</h3>
+                    {locating && (
+                      <span className="flex items-center gap-1.5 text-xs text-midnight-400">
+                        <Loader2 size={11} className="animate-spin" /> Detecting location…
+                      </span>
+                    )}
+                  </div>
+
                   <div>
                     <label className="label">Full Address</label>
                     <textarea
@@ -247,6 +349,18 @@ function BookingInner() {
                       value={pickupAddress}
                       onChange={(e) => setPickupAddress(e.target.value)}
                       placeholder={`Eg. A-205, Sunrise Apartments, ${pickupCity}`}
+                    />
+                  </div>
+                  <div>
+                    <label className="label">Pincode</label>
+                    <input
+                      className="input"
+                      type="text"
+                      inputMode="numeric"
+                      maxLength={6}
+                      value={pickupPincode}
+                      onChange={(e) => setPickupPincode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                      placeholder="Eg. 380001"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-3">
@@ -269,6 +383,8 @@ function BookingInner() {
                     </div>
                   </div>
                 </div>
+
+                {/* ── DROP ── */}
                 <div className="space-y-4">
                   <h3 className="font-bold text-midnight-900">🎯 Drop Address</h3>
                   <div>
@@ -279,6 +395,18 @@ function BookingInner() {
                       value={dropAddress}
                       onChange={(e) => setDropAddress(e.target.value)}
                       placeholder={`Eg. Flat 1501, Sea View Heights, ${dropCity}`}
+                    />
+                  </div>
+                  <div>
+                    <label className="label">Pincode</label>
+                    <input
+                      className="input"
+                      type="text"
+                      inputMode="numeric"
+                      maxLength={6}
+                      value={dropPincode}
+                      onChange={(e) => setDropPincode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                      placeholder="Eg. 400001"
                     />
                   </div>
                   <div className="grid grid-cols-2 gap-3">
@@ -302,6 +430,23 @@ function BookingInner() {
                   </div>
                 </div>
               </div>
+
+              {/* ── DISTANCE BANNER ── */}
+              {distance !== null && (
+                <div className="mt-6 flex items-center gap-3 bg-midnight-900 text-white rounded-2xl px-5 py-4">
+                  <Route size={20} className="text-saffron-400 shrink-0" />
+                  <div className="flex-1">
+                    <div className="text-xs text-white/60 font-medium uppercase tracking-wider">Estimated Route Distance</div>
+                    <div className="text-xl font-bold">
+                      {pickupCity} → {dropCity}
+                      <span className="ml-3 text-saffron-400">{distance.toLocaleString()} km</span>
+                    </div>
+                  </div>
+                  <div className="text-xs text-white/50 text-right leading-tight">
+                    Road distance<br />may vary
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
@@ -513,6 +658,7 @@ function BookingInner() {
                   <div className="font-semibold text-midnight-900">{pickupCity}</div>
                   {pickupAddress && <div className="text-sm text-midnight-500">{pickupAddress}</div>}
                   <div className="text-xs text-midnight-500 mt-1">
+                    {pickupPincode && <span>PIN {pickupPincode} · </span>}
                     Floor {pickupFloor} · Lift {pickupLift}
                   </div>
                 </SummaryBlock>
@@ -521,9 +667,17 @@ function BookingInner() {
                   <div className="font-semibold text-midnight-900">{dropCity}</div>
                   {dropAddress && <div className="text-sm text-midnight-500">{dropAddress}</div>}
                   <div className="text-xs text-midnight-500 mt-1">
+                    {dropPincode && <span>PIN {dropPincode} · </span>}
                     Floor {dropFloor} · Lift {dropLift}
                   </div>
                 </SummaryBlock>
+
+                {distance !== null && (
+                  <div className="flex items-center gap-3 bg-midnight-50 border border-midnight-100 rounded-2xl px-4 py-3">
+                    <Route size={16} className="text-saffron-500 shrink-0" />
+                    <span className="text-sm text-midnight-700">Estimated distance: <strong>{distance.toLocaleString()} km</strong></span>
+                  </div>
+                )}
 
                 <SummaryBlock title="🏠 Move details">
                   <div className="text-sm text-midnight-700">
@@ -711,20 +865,68 @@ function BookingInner() {
             )}
             <Row label="Items" value={String(selectedItems.length)} />
             <Row label="Add-ons" value={String(selectedAddons.length)} />
+            {distance !== null && (
+              <Row label="Distance" value={`~${distance.toLocaleString()} km`} />
+            )}
           </div>
 
           <div className="border-t border-midnight-100 my-4"></div>
 
-          <div className="bg-cream-100 rounded-xl p-3 text-xs text-midnight-500 flex items-start gap-2">
-            <ShieldCheck size={14} className="text-mint-500 mt-0.5 shrink-0" />
-            <span>
-              100% free. You'll get quotes from multiple verified vendors — no obligation.
-            </span>
-          </div>
+          {/* ── INLINE ROUTE EDITOR ── */}
+          {editingRoute ? (
+            <div className="space-y-2">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold uppercase tracking-wider text-midnight-500">Edit Route</span>
+                <button type="button" onClick={() => setEditingRoute(false)} className="text-midnight-400 hover:text-midnight-700">
+                  <X size={14} />
+                </button>
+              </div>
 
-          <Link href="/" className="block text-center text-xs text-midnight-500 mt-4 hover:text-saffron-600">
-            ← Change route
-          </Link>
+              <CityDropdown
+                label="From"
+                accent="saffron"
+                value={editFrom}
+                onChange={setEditFrom}
+                cities={Object.keys(CITY_COORDS)}
+              />
+
+              <CityDropdown
+                label="To"
+                accent="mint"
+                value={editTo}
+                onChange={setEditTo}
+                cities={Object.keys(CITY_COORDS)}
+              />
+
+              <SizeDropdown value={editSize} onChange={setEditSize} />
+
+              <DateSelector value={editDate} onChange={setEditDate} />
+
+              <button
+                type="button"
+                onClick={applyRouteEdit}
+                disabled={!editFrom.trim() || !editTo.trim()}
+                className="btn btn-primary w-full text-sm disabled:opacity-50 mt-1"
+              >
+                <Check size={14} /> Apply Changes
+              </button>
+            </div>
+          ) : (
+            <>
+              <button
+                type="button"
+                onClick={() => { setEditFrom(pickupCity); setEditTo(dropCity); setEditSize(houseSize); setEditDate(movingDate); setEditingRoute(true); }}
+                className="flex items-center justify-center gap-1.5 w-full py-2 px-4 rounded-lg border border-saffron-400 text-saffron-600 text-sm font-semibold bg-saffron-50 hover:bg-saffron-100 hover:border-saffron-500 transition-colors"
+              >
+                <Pencil size={13} /> Change Route
+              </button>
+
+              <div className="bg-cream-100 rounded-xl p-3 mt-3 text-xs text-midnight-500 flex items-start gap-2">
+                <ShieldCheck size={14} className="text-mint-500 mt-0.5 shrink-0" />
+                <span>100% free. You'll get quotes from multiple verified vendors — no obligation.</span>
+              </div>
+            </>
+          )}
         </aside>
       </div>
     </div>
