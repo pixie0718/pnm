@@ -57,7 +57,8 @@ export default function Footer() {
             { label: "Contact Us", href: "/contact" },
             { label: "FAQ", href: "/faq" },
             { label: "Terms & Conditions", href: "/terms" },
-            { label: "Privacy Policy", href: "#" },
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Sitemap", href: "/sitemap.xml" },
           ]} />
         </div>
 

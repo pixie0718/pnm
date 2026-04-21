@@ -194,6 +194,30 @@ export default async function InquiryDetailPage({
             </div>
           </div>
 
+          {/* PACKING SERVICES CARD */}
+          {(inquiry.needLabour || inquiry.extraPacking || inquiry.onlyMoving) && (
+            <div className="card p-6">
+              <SectionHeading icon={<Package size={15}/>} title="Packing Services Requested" />
+              <div className="flex flex-wrap gap-3 mt-4">
+                {inquiry.needLabour && (
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-blue-50 border border-blue-200 rounded-xl text-blue-700 font-semibold text-sm">
+                    💪 Need Labour
+                  </div>
+                )}
+                {inquiry.extraPacking && (
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-amber-50 border border-amber-200 rounded-xl text-amber-700 font-semibold text-sm">
+                    📦 Need Extra Packing
+                  </div>
+                )}
+                {inquiry.onlyMoving && (
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-slate-100 border border-slate-200 rounded-xl text-slate-700 font-semibold text-sm">
+                    🚚 Only Moving (No Packing)
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* MOVE DETAILS CARD */}
           <div className="card p-6">
             <SectionHeading icon={<Truck size={15}/>} title="Move Details" />
@@ -315,6 +339,24 @@ export default async function InquiryDetailPage({
               <div className="flex items-center justify-between text-sm">
                 <span className="text-ink-500">Add-ons</span>
                 <span className="font-semibold text-ink-900">{notes.addons.length || "—"}</span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-ink-500">Labour</span>
+                <span className={`font-semibold text-sm ${inquiry.needLabour ? "text-blue-600" : "text-ink-300"}`}>
+                  {inquiry.needLabour ? "✓ Yes" : "No"}
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-ink-500">Extra Packing</span>
+                <span className={`font-semibold text-sm ${inquiry.extraPacking ? "text-amber-600" : "text-ink-300"}`}>
+                  {inquiry.extraPacking ? "✓ Yes" : "No"}
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-ink-500">Only Moving</span>
+                <span className={`font-semibold text-sm ${inquiry.onlyMoving ? "text-slate-700" : "text-ink-300"}`}>
+                  {inquiry.onlyMoving ? "✓ Yes" : "No"}
+                </span>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-ink-500">Quotes sent</span>

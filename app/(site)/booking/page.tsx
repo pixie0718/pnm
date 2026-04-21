@@ -97,6 +97,11 @@ function BookingInner() {
     };
   }, []);
   const [addons, setAddons] = useState({ insurance: true, premium: false, express: false });
+  const [packingServices, setPackingServices] = useState({
+    labour: false,
+    extraPacking: false,
+    onlyMoving: false,
+  });
 
   const [contactName, setContactName] = useState("");
   const [contactPhone, setContactPhone] = useState("");
@@ -215,6 +220,12 @@ function BookingInner() {
     addons.express && "Express Delivery",
   ].filter(Boolean) as string[];
 
+  const selectedPackingServices = [
+    packingServices.labour && "Need Labour",
+    packingServices.extraPacking && "Need Extra Packing",
+    packingServices.onlyMoving && "Only Moving",
+  ].filter(Boolean) as string[];
+
   async function submitInquiry(e: FormEvent) {
     e.preventDefault();
     if (!contactName.trim() || !contactPhone.trim()) {
@@ -256,6 +267,9 @@ function BookingInner() {
           pickupAddress: pickupAddress || undefined,
           dropAddress: dropAddress || undefined,
           notes,
+          needLabour: packingServices.labour,
+          extraPacking: packingServices.extraPacking,
+          onlyMoving: packingServices.onlyMoving,
         }),
       });
       const data = await res.json();
@@ -594,6 +608,67 @@ function BookingInner() {
               <h2 className="display text-2xl font-bold text-midnight-900 mb-1">Add-ons</h2>
               <p className="text-midnight-500 mb-6">Customize your move with optional extras.</p>
 
+              {/* ── Packing Services ── */}
+              <div className="mb-6">
+                <div className="text-xs font-bold uppercase tracking-wider text-midnight-500 mb-3">
+                  🚛 Packing Services
+                </div>
+                <div className="space-y-3">
+                  {([
+                    {
+                      k: "labour" as const,
+                      label: "Need Labour",
+                      desc: "Loading & unloading helpers included",
+                      emoji: "💪",
+                    },
+                    {
+                      k: "extraPacking" as const,
+                      label: "Need Extra Packing",
+                      desc: "Double/bubble wrap for extra protection",
+                      emoji: "📦",
+                    },
+                    {
+                      k: "onlyMoving" as const,
+                      label: "Only Moving",
+                      desc: "No packing needed — just transport",
+                      emoji: "🚚",
+                    },
+                  ] as const).map((p) => {
+                    const active = packingServices[p.k];
+                    return (
+                      <label
+                        key={p.k}
+                        className={`flex items-center justify-between border-2 rounded-2xl p-5 cursor-pointer transition ${
+                          active ? "border-saffron-500 bg-saffron-500/5" : "border-midnight-100"
+                        }`}
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-11 h-11 rounded-xl bg-white border border-midnight-100 grid place-items-center text-xl">
+                            {p.emoji}
+                          </div>
+                          <div>
+                            <div className="font-bold text-midnight-900">{p.label}</div>
+                            <div className="text-sm text-midnight-500">{p.desc}</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          checked={active}
+                          onChange={(e) =>
+                            setPackingServices({ ...packingServices, [p.k]: e.target.checked })
+                          }
+                          className="w-5 h-5 accent-saffron-500"
+                        />
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* ── Other Add-ons ── */}
+              <div className="text-xs font-bold uppercase tracking-wider text-midnight-500 mb-3">
+                ✨ Other Add-ons
+              </div>
               <div className="space-y-3">
                 {[
                   {
@@ -704,6 +779,18 @@ function BookingInner() {
                           className="chip !py-1 !px-2.5 !text-xs"
                         >
                           {i.name} × {i.qty}
+                        </span>
+                      ))}
+                    </div>
+                  </SummaryBlock>
+                )}
+
+                {selectedPackingServices.length > 0 && (
+                  <SummaryBlock title="🚛 Packing Services">
+                    <div className="flex flex-wrap gap-1.5">
+                      {selectedPackingServices.map((p) => (
+                        <span key={p} className="chip !py-1 !px-2.5 !text-xs">
+                          {p}
                         </span>
                       ))}
                     </div>
@@ -864,6 +951,9 @@ function BookingInner() {
               />
             )}
             <Row label="Items" value={String(selectedItems.length)} />
+            {selectedPackingServices.length > 0 && (
+              <Row label="Packing" value={selectedPackingServices.join(", ")} />
+            )}
             <Row label="Add-ons" value={String(selectedAddons.length)} />
             {distance !== null && (
               <Row label="Distance" value={`~${distance.toLocaleString()} km`} />

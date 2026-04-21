@@ -200,12 +200,21 @@ export default async function AdminInquiriesPage({
                           {inq.dropCity}
                         </span>
                       </div>
-                      <div className="text-xs text-ink-400 mt-0.5 flex items-center gap-1">
+                      <div className="text-xs text-ink-400 mt-0.5 flex items-center gap-1 flex-wrap">
                         <Home size={10} /> {inq.houseSize}
                         {inq.quotes.length > 0 && (
                           <span className="ml-2 px-1.5 py-0.5 bg-emerald-50 text-emerald-700 rounded font-semibold">
                             {inq.quotes.length} quote{inq.quotes.length > 1 ? "s" : ""}
                           </span>
+                        )}
+                        {inq.needLabour && (
+                          <span className="px-1.5 py-0.5 bg-blue-50 text-blue-600 rounded font-semibold">💪 Labour</span>
+                        )}
+                        {inq.extraPacking && (
+                          <span className="px-1.5 py-0.5 bg-amber-50 text-amber-600 rounded font-semibold">📦 Extra Pack</span>
+                        )}
+                        {inq.onlyMoving && (
+                          <span className="px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded font-semibold">🚚 Only Moving</span>
                         )}
                       </div>
                     </td>

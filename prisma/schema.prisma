@@ -40,6 +40,9 @@ model Inquiry {
   houseSize     String    @map("house_size") @db.VarChar(20)
   movingDate    DateTime? @map("moving_date") @db.Date
   notes         String?   @db.Text
+  needLabour    Boolean   @default(false) @map("need_labour")
+  extraPacking  Boolean   @default(false) @map("extra_packing")
+  onlyMoving    Boolean   @default(false) @map("only_moving")
   source        String?   @default("website") @db.VarChar(60)
   status        InquiryStatus @default(new)
 
