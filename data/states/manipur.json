@@ -1,0 +1,25 @@
+{
+  "slug": "manipur",
+  "name": "Manipur",
+  "emoji": "💃",
+  "vendorCount": 373,
+  "cityCount": 1,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Manipur — 373+ Verified Vendors | ShiftIndia",
+    "description": "Compare 373+ verified packers and movers in Manipur. Imphal and across the state. Instant quotes starting ₹5,000. KYC-verified.",
+    "keywords": ["packers and movers manipur", "movers manipur", "home shifting imphal", "packers movers imphal", "relocation manipur"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Manipur",
+    "subtitle": "Imphal and across the Jewelled Land — 373+ verified movers in Manipur."
+  },
+  "intro": "Manipur, known as the Jewelled Land of India, has Imphal as its capital and one of Northeast India's most culturally rich urban centres. ShiftIndia connects you with 373+ verified movers in Imphal, serving the state's government and residential relocation needs.\n\nFrom Imphal's polo-ground vicinity government housing to the new residential areas along the National Highway, our KYC-verified vendors understand Manipur's unique logistics and hill-to-valley move challenges.",
+  "whyUs": "Manipur's dependency on the NH-37 (Imphal-Jiribam) and NH-2 (Imphal-Moreh) highways for all supplies means route planning is critical. Our vendors monitor road conditions, carry ₹5 lakh damage coverage and GPS tracking, and plan long-haul moves through Guwahati efficiently.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Manipur?", "a": "Local moves within Imphal start at ₹5,000. Imphal to Guwahati inter-state moves (700 km via NH routes) typically cost ₹13,000–₹22,000 including packing." },
+    { "q": "Which cities in Manipur does ShiftIndia cover?", "a": "We cover Imphal city. For other Manipur district towns, we coordinate through our Northeast network." },
+    { "q": "Can you handle moves from Manipur to mainland India?", "a": "Yes. All inter-state moves from Imphal are coordinated through our Guwahati hub to any Indian city, with GPS tracking and transit insurance." },
+    { "q": "Do you handle moves during Manipur's insurgency-related road closures?", "a": "Yes. We monitor NH conditions and have contingency routing. Customers are notified of delays and given flexible rescheduling at no charge." }
+  ]
+}

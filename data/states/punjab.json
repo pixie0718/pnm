@@ -1,0 +1,25 @@
+{
+  "slug": "punjab",
+  "name": "Punjab",
+  "emoji": "🌾",
+  "vendorCount": 4302,
+  "cityCount": 13,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Punjab — 4,302+ Verified Vendors | ShiftIndia",
+    "description": "Compare 4,302+ verified packers and movers across 13 cities in Punjab. Ludhiana, Amritsar, Patiala, Jalandhar & more. Instant quotes starting ₹3,500. KYC-verified.",
+    "keywords": ["packers and movers punjab", "movers punjab", "home shifting ludhiana", "packers movers amritsar", "packers movers jalandhar", "relocation punjab"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Punjab",
+    "subtitle": "Ludhiana to Amritsar, Patiala to Jalandhar — 4,302+ verified movers across 13 cities in Punjab."
+  },
+  "intro": "Punjab's thriving agricultural economy, industrial hub in Ludhiana and the Golden Temple city of Amritsar make it a busy relocation market in North India. ShiftIndia connects you with 4,302+ verified movers across Ludhiana, Amritsar, Patiala, Jalandhar, Gurdaspur, Bathinda, Hoshiarpur, Kapurthala, Faridkot and 4 more cities.\n\nFrom Ludhiana's hosiery and cycle industry relocations to Amritsar's heritage city moves and Patiala's royal neighbourhoods, our KYC-verified vendors know Punjab's wide roads, kachi abaadis and modern residential societies.",
+  "whyUs": "Punjab's festival season (Gurpurabs, Diwali, Lohri) and agricultural harvest months see peak relocation demand. Our Punjab vendors book well in advance, work efficiently within tight residential society rules, and carry ₹5 lakh damage coverage with GPS tracking on every move.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Punjab?", "a": "Local 1 BHK moves within Punjab cities start at ₹3,500. Ludhiana to Amritsar inter-city 2 BHK moves typically cost ₹7,000–₹12,000 including standard packing." },
+    { "q": "Which cities in Punjab does ShiftIndia cover?", "a": "We cover 13 cities: Ludhiana, Amritsar, Patiala, Jalandhar, Gurdaspur, Bathinda, Hoshiarpur, Kapurthala, Faridkot, Firozpur, Batala and more." },
+    { "q": "Do you handle moves from Punjab to Delhi NCR or Haryana?", "a": "Yes. Ludhiana–Delhi, Amritsar–Delhi and Punjab–Chandigarh are among our busiest routes. All include GPS tracking and transit insurance." },
+    { "q": "Can you move NRI household goods to Punjab from abroad?", "a": "Yes. We assist with customs documentation and final-mile delivery for NRI household goods arriving at Amritsar international airport or Delhi port of entry." }
+  ]
+}

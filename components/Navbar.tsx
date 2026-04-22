@@ -5,16 +5,16 @@ import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import {
   Truck, ArrowUpRight, LogOut, LogIn,
-  Home, MapPin, Package, User, Phone,
+  Home, MapPin, Map, User, Phone,
 } from "lucide-react";
 
 const links = [
-  { href: "/",         label: "Home",    icon: Home    },
-  { href: "/cities",   label: "Cities",  icon: MapPin  },
-  { href: "/booking",  label: "Quote",   icon: Truck   },
-  { href: "/contact",  label: "Contact", icon: Phone   },
-  { href: "/tracking", label: "Track",   icon: Package },
-  { href: "/account",  label: "Account", icon: User    },
+  { href: "/",        label: "Home",    icon: Home,   mobileHide: false },
+  { href: "/cities",  label: "Cities",  icon: MapPin, mobileHide: false },
+  { href: "/states",  label: "States",  icon: Map,    mobileHide: true  },
+  { href: "/booking", label: "Quote",   icon: Truck,  mobileHide: false },
+  { href: "/contact", label: "Contact", icon: Phone,  mobileHide: false },
+  { href: "/account", label: "Account", icon: User,   mobileHide: false },
 ];
 
 type Customer = { id: number; name: string; phone: string; email: string | null };
@@ -148,7 +148,7 @@ export default function Navbar() {
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         <div className="flex items-end">
-          {links.map((l) => {
+          {links.filter((l) => !l.mobileHide).map((l) => {
             const Icon   = l.icon;
             const isQuote  = l.href === "/booking";
             const isActive = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);

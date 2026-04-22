@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 md:gap-10">
           <div className="col-span-2 sm:col-span-3 md:col-span-2">
             <Link href="/" className="flex items-center gap-2 font-bold">
               <Image src="/white_logo.png" alt="राधे Packers and Movers" width={180} height={36} className="h-30 w-auto" />
@@ -41,11 +41,16 @@ export default function Footer() {
             </div>
           </div>
 
+          <FooterCol title="Explore" links={[
+            { label: "All Cities", href: "/cities" },
+            { label: "All States", href: "/states" },
+            { label: "Blog", href: "/blog" },
+            { label: "About Us", href: "/about" },
+          ]} />
           <FooterCol title="Company" links={[
             { label: "About Us", href: "/about" },
             { label: "Careers", href: "#" },
             { label: "Press", href: "#" },
-            { label: "Blog", href: "/blog" },
           ]} />
           <FooterCol title="Services" links={[
             { label: "Home Shifting", href: "/booking" },

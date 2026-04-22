@@ -1,0 +1,25 @@
+{
+  "slug": "meghalaya",
+  "name": "Meghalaya",
+  "emoji": "☁️",
+  "vendorCount": 769,
+  "cityCount": 2,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Meghalaya — 769+ Verified Vendors | ShiftIndia",
+    "description": "Compare 769+ verified packers and movers in Meghalaya. Shillong, Cherrapunji & across the state. Instant quotes starting ₹5,000. KYC-verified.",
+    "keywords": ["packers and movers meghalaya", "movers meghalaya", "home shifting shillong", "packers movers shillong", "relocation meghalaya"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Meghalaya",
+    "subtitle": "Shillong to Cherrapunji and across the Abode of Clouds — 769+ verified movers in Meghalaya."
+  },
+  "intro": "Meghalaya — the Abode of Clouds — is one of India's most scenic states, with Shillong serving as the Northeast's cultural and educational hub. ShiftIndia connects you with 769+ verified movers across Shillong and Cherrapunji, covering the full state through our Northeast network.\n\nFrom Shillong's British-era bungalows and new apartment complexes to the rainforest terrain of Cherrapunji, our KYC-verified vendors understand Meghalaya's heavy rainfall, hill roads and the logistics of the Northeast.",
+  "whyUs": "Meghalaya is among the world's wettest regions, requiring waterproof packing as an absolute necessity, not an option. Our vendors use heavy-duty moisture-proof materials, monitor IMD rainfall alerts, and carry ₹5 lakh damage coverage with GPS tracking on all moves.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Meghalaya?", "a": "Local moves within Shillong start at ₹5,000. Shillong to Guwahati (100 km) inter-state moves typically cost ₹9,000–₹15,000 including full packing." },
+    { "q": "Which cities in Meghalaya does ShiftIndia cover?", "a": "We directly cover Shillong and Cherrapunji. For other districts and towns, we coordinate through our Northeast network." },
+    { "q": "Is waterproof packing standard in Meghalaya moves?", "a": "Yes. Given Meghalaya's exceptional rainfall (Cherrapunji holds world rainfall records), all our moves use waterproof shrink wrap and moisture-barrier materials as standard." },
+    { "q": "Can you handle moves from Meghalaya to Assam or mainland India?", "a": "Yes. Shillong–Guwahati and onward to all major Indian cities is a standard route, with GPS tracking and transit insurance throughout." }
+  ]
+}

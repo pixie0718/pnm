@@ -1,0 +1,25 @@
+{
+  "slug": "jharkhand",
+  "name": "Jharkhand",
+  "emoji": "⛏️",
+  "vendorCount": 3283,
+  "cityCount": 11,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Jharkhand — 3,283+ Verified Vendors | ShiftIndia",
+    "description": "Compare 3,283+ verified packers and movers across 11 cities in Jharkhand. Ranchi, Jamshedpur, Dhanbad, Bokaro & more. Instant quotes starting ₹3,500. KYC-verified.",
+    "keywords": ["packers and movers jharkhand", "movers jharkhand", "home shifting ranchi", "packers movers jamshedpur", "packers movers dhanbad", "relocation jharkhand"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Jharkhand",
+    "subtitle": "Ranchi to Jamshedpur, Dhanbad to Bokaro — 3,283+ verified movers across 11 cities in Jharkhand."
+  },
+  "intro": "Jharkhand's mineral-rich terrain, major steel and coal industry towns, and tribal forest regions make it a unique relocation market in eastern India. ShiftIndia connects you with 3,283+ verified movers across Ranchi, Jamshedpur, Dhanbad, Bokaro, Hazaribag, Giridih, Deoghar, Dumka, Chaibasa and 2 more cities.\n\nFrom Ranchi's government and IT hub to Jamshedpur's Tata Steel township, Dhanbad's coal belt and Bokaro's steel city, our KYC-verified vendors understand Jharkhand's industrial and residential relocation needs.",
+  "whyUs": "Jharkhand's hilly terrain, forest roads and the complex logistics of steel-township societies like Tatanagar demand experienced movers. Our vendors carry ₹5 lakh damage coverage, use heavy-duty equipment for industrial-area moves, and provide GPS tracking on all routes.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Jharkhand?", "a": "Local 1 BHK moves within Jharkhand cities start at ₹3,500. Ranchi to Jamshedpur 2 BHK moves typically cost ₹7,000–₹12,000 including packing." },
+    { "q": "Which cities in Jharkhand does ShiftIndia cover?", "a": "We cover 11 cities: Ranchi, Jamshedpur, Dhanbad, Bokaro, Hazaribag, Giridih, Deoghar, Dumka, Chaibasa, Lohardaga and more." },
+    { "q": "Can you handle moves within Tata Steel township in Jamshedpur?", "a": "Yes. Our Jamshedpur vendors have experience with Tatanagar colony housing society rules, vehicle access permits and the specific building types within the township." },
+    { "q": "Do you handle moves from Jharkhand to other eastern states?", "a": "Yes. Ranchi–Patna, Jamshedpur–Kolkata and Ranchi–Bhubaneswar are common routes with full GPS tracking and transit insurance." }
+  ]
+}

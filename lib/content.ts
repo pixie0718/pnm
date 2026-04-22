@@ -102,6 +102,24 @@ export type City = {
   faqs: Faq[];
 };
 
+export type State = {
+  slug: string;
+  name: string;
+  emoji: string;
+  vendorCount: number;
+  cityCount: number;
+  startingPrice: number;
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+  };
+  hero: { title: string; subtitle: string };
+  intro: string;
+  whyUs: string;
+  faqs: Faq[];
+};
+
 // ─── Cached loaders ──────────────────────────
 let _site: SiteContent | null = null;
 let _reviews: Review[] | null = null;
@@ -109,6 +127,7 @@ let _stats: Stats | null = null;
 let _services: Service[] | null = null;
 let _faqs: Faq[] | null = null;
 let _cities: City[] | null = null;
+let _states: State[] | null = null;
 
 export function getSite(): SiteContent {
   if (!_site) _site = readJson<SiteContent>("site.json");
@@ -151,4 +170,56 @@ export function getAllCitySlugs(): string[] {
 
 export function getCityBySlug(slug: string): City | null {
   return getAllCities().find((c) => c.slug === slug) ?? null;
+}
+
+export function getAllStates(): State[] {
+  if (_states) return _states;
+  const dir = path.join(DATA_DIR, "states");
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
+  _states = files
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")) as State)
+    .sort((a, b) => b.vendorCount - a.vendorCount);
+  return _states;
+}
+
+export function getAllStateSlugs(): string[] {
+  return getAllStates().map((s) => s.slug);
+}
+
+export function getStateBySlug(slug: string): State | null {
+  return getAllStates().find((s) => s.slug === slug) ?? null;
+}
+
+export function getCitiesForState(stateName: string): City[] {
+  return getAllCities().filter((c) => c.state === stateName);
+}
+
+export type CityRoute = { from: City; to: City };
+
+let _routes: CityRoute[] | null = null;
+
+export function getAllRoutes(): CityRoute[] {
+  if (_routes) return _routes;
+  const cities = getAllCities();
+  const byName = new Map(cities.map((c) => [c.name.toLowerCase(), c]));
+  const seen = new Set<string>();
+  _routes = [];
+  for (const city of cities) {
+    for (const routeName of city.popularRoutes) {
+      const toCity = byName.get(routeName.toLowerCase());
+      if (!toCity) continue;
+      const key = `${city.slug}__${toCity.slug}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      _routes.push({ from: city, to: toCity });
+    }
+  }
+  return _routes;
+}
+
+export function getRouteBySlug(from: string, to: string): CityRoute | null {
+  const fromCity = getAllCities().find((c) => c.slug === from) ?? null;
+  const toCity = getAllCities().find((c) => c.slug === to) ?? null;
+  if (!fromCity || !toCity) return null;
+  return { from: fromCity, to: toCity };
 }

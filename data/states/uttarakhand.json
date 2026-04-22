@@ -1,0 +1,25 @@
+{
+  "slug": "uttarakhand",
+  "name": "Uttarakhand",
+  "emoji": "⛰️",
+  "vendorCount": 2580,
+  "cityCount": 7,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Uttarakhand — 2,580+ Verified Vendors | ShiftIndia",
+    "description": "Compare 2,580+ verified packers and movers across 7 cities in Uttarakhand. Dehradun, Haridwar, Rishikesh, Nainital & more. Instant quotes starting ₹4,000. KYC-verified.",
+    "keywords": ["packers and movers uttarakhand", "movers uttarakhand", "home shifting dehradun", "packers movers haridwar", "packers movers rishikesh", "relocation uttarakhand"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Uttarakhand",
+    "subtitle": "Dehradun to Haridwar, Rishikesh to Nainital — 2,580+ verified movers across 7 cities in Uttarakhand."
+  },
+  "intro": "Uttarakhand — the land of the Himalayas — combines India's premier pilgrimage routes, hill-station retreats and a growing IT hub in Dehradun. ShiftIndia connects you with 2,580+ verified movers across Dehradun, Haridwar, Rishikesh, Nainital, Pithoragarh, Almora and Mussoorie.\n\nFrom Dehradun's Rajpur Road residential colonies to the narrow mountain roads leading to Nainital and the riverside towns of Haridwar and Rishikesh, our KYC-verified vendors are equipped for Uttarakhand's challenging terrain and seasonal pilgrimage rush.",
+  "whyUs": "Uttarakhand's steep hill roads, narrow lane access in hill stations and the Char Dham yatra season require movers with small-vehicle capability and mountain driving expertise. Our vendors carry full ₹5 lakh damage coverage, use strapping for hilly transport, and provide GPS tracking.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Uttarakhand?", "a": "Local 1 BHK moves within Uttarakhand cities start at ₹4,000. Dehradun to Haridwar moves typically cost ₹5,000–₹9,000. Hill-station moves (e.g., to Nainital) may cost 20–30% more due to terrain." },
+    { "q": "Which cities in Uttarakhand does ShiftIndia cover?", "a": "We cover 7 cities: Dehradun, Haridwar, Rishikesh, Nainital, Pithoragarh, Almora and Mussoorie." },
+    { "q": "Do you handle moves on Uttarakhand's mountain roads?", "a": "Yes. Our vendors use appropriately sized vehicles (Tempo, Mini Truck) for hill routes and avoid overloading that could be unsafe on mountain roads." },
+    { "q": "Can you move during the Char Dham pilgrimage season?", "a": "Yes, but we recommend booking 2–3 weeks in advance during April–June and September–October as roads to Haridwar and Rishikesh see heavy pilgrimage traffic." }
+  ]
+}

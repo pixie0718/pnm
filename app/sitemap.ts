@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { MetadataRoute } from "next";
-import { getAllCitySlugs, getSite } from "@/lib/content";
+import { getAllCitySlugs, getAllStateSlugs, getAllRoutes, getSite } from "@/lib/content";
 import { prisma } from "@/lib/prisma";
 
 // ─── Pages that must never appear in the sitemap ─────────────────────────────
@@ -11,6 +11,7 @@ const EXCLUDE_SEGMENTS = new Set([
   "signup",
   "account",   // user-private pages
   "admin",     // admin dashboard
+  "tracking",  // tracking page
 ]);
 
 // ─── Priority rules by route prefix ──────────────────────────────────────────
@@ -87,6 +88,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // 2b. State landing pages — /packers-and-movers-in-[state-slug]
+  const stateEntries: MetadataRoute.Sitemap = getAllStateSlugs().map((slug) => ({
+    url: `${base}/packers-and-movers-in-${slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
+
   // 3. Published blog posts — from database
   const posts = await prisma.blogPost.findMany({
     where: { status: "published" },
@@ -101,5 +110,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...cityEntries, ...blogEntries];
+  // 2c. Route pages — /packers-and-movers-from-[from]-to-[to]
+  const routeEntries: MetadataRoute.Sitemap = getAllRoutes().map(({ from, to }) => ({
+    url: `${base}/packers-and-movers-from-${from.slug}-to-${to.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.65,
+  }));
+
+  return [...staticEntries, ...stateEntries, ...cityEntries, ...routeEntries, ...blogEntries];
 }

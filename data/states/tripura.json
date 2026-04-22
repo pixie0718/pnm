@@ -1,0 +1,25 @@
+{
+  "slug": "tripura",
+  "name": "Tripura",
+  "emoji": "🌿",
+  "vendorCount": 222,
+  "cityCount": 1,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Tripura — 222+ Verified Vendors | ShiftIndia",
+    "description": "Compare 222+ verified packers and movers in Tripura. Agartala and across the state. Instant quotes starting ₹5,000. KYC-verified.",
+    "keywords": ["packers and movers tripura", "movers tripura", "home shifting agartala", "packers movers agartala", "relocation tripura"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Tripura",
+    "subtitle": "Agartala and across Tripura — 222+ verified movers in the Northeast's bamboo state."
+  },
+  "intro": "Tripura, surrounded on three sides by Bangladesh, is an emerging state with Agartala as one of Northeast India's most dynamic capitals. ShiftIndia connects you with 222+ verified movers in Agartala, the state's main city and commercial hub.\n\nFrom Agartala's new residential colonies and government quarters to inter-state moves via the narrow Northeast corridor, our KYC-verified vendors understand Tripura's unique geography and logistics.",
+  "whyUs": "Tripura's narrow connectivity corridor through Assam and the long distances to mainland India require careful logistics planning. Our vendors carry ₹5 lakh damage coverage, GPS tracking and have experience with the Northeast's long-haul move requirements.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Tripura?", "a": "Local moves within Agartala start at ₹5,000. Agartala to Guwahati inter-state moves (550 km) typically cost ₹12,000–₹20,000 including packing." },
+    { "q": "Which cities in Tripura does ShiftIndia cover?", "a": "We cover Agartala and can coordinate moves to other Tripura district towns through our Northeast network." },
+    { "q": "Can you handle inter-state moves from Tripura to mainland India?", "a": "Yes. Via Guwahati hub, we connect Tripura to all major Indian cities with GPS tracking and transit insurance throughout." },
+    { "q": "Do you handle moves through the Sabroom–Bangladesh corridor?", "a": "Currently our service covers land routes via Assam. For Bangladesh transit goods, special customs documentation is required which we can advise on." }
+  ]
+}

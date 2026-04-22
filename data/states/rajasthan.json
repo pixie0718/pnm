@@ -1,0 +1,25 @@
+{
+  "slug": "rajasthan",
+  "name": "Rajasthan",
+  "emoji": "🏰",
+  "vendorCount": 8005,
+  "cityCount": 25,
+  "startingPrice": 3000,
+  "seo": {
+    "title": "Packers & Movers in Rajasthan — 8,005+ Verified Vendors | ShiftIndia",
+    "description": "Compare 8,005+ verified packers and movers across 25 cities in Rajasthan. Jaipur, Jodhpur, Udaipur, Ajmer & more. Instant quotes starting ₹3,000. KYC-verified.",
+    "keywords": ["packers and movers rajasthan", "movers rajasthan", "home shifting rajasthan", "packers movers jaipur", "packers movers jodhpur", "relocation rajasthan"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Rajasthan",
+    "subtitle": "Jaipur to Jodhpur, Udaipur to Ajmer — 8,005+ verified movers across 25 cities in Rajasthan."
+  },
+  "intro": "Rajasthan's vast desert geography, fast-growing industrial hubs and heritage cities create unique relocation challenges. ShiftIndia connects you with 8,005+ verified movers across Jaipur, Jodhpur, Udaipur, Ajmer, Kota, Bikaner, Alwar, Bhilwara and 17 more cities.\n\nWhether you're moving to Jaipur's Malviya Nagar IT hub or relocating from a heritage haveli in the old city, our KYC-verified vendors know Rajasthan's wide roads, summer heat challenges and the nuances of moving across the Thar desert corridor.",
+  "whyUs": "Rajasthan's extreme summer heat, long inter-city distances and heritage property considerations call for specialist movers. Our vendors use heat-resistant packing, schedule early morning moves in summer months, and carry ₹5 lakh damage coverage for antiques, artwork and high-value household goods.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Rajasthan?", "a": "Local moves within Rajasthan cities start at ₹3,000. A 2 BHK inter-city move (e.g., Jaipur to Jodhpur) typically costs ₹7,000–₹13,000 depending on distance and packing." },
+    { "q": "Which cities in Rajasthan does ShiftIndia cover?", "a": "We cover 25 cities including Jaipur, Jodhpur, Udaipur, Ajmer, Kota, Bikaner, Alwar, Barmer, Bhilwara, Chittaurgarh, Pali, Tonk, Ganganagar and more." },
+    { "q": "Can you handle moves during Rajasthan's extreme summer?", "a": "Yes. We schedule moves for early morning (before 8 AM) during peak summer, use UV-resistant shrink wrap and recommend insulated boxes for electronics and temperature-sensitive items." },
+    { "q": "Do you move between Rajasthan and Delhi NCR or Gujarat?", "a": "Yes. Jaipur–Delhi and Jodhpur–Ahmedabad are among our busiest inter-state routes. We offer door-to-door service with GPS tracking and full insurance on all these corridors." }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "maharashtra",
+  "name": "Maharashtra",
+  "emoji": "🌆",
+  "vendorCount": 12352,
+  "cityCount": 29,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Maharashtra — 12,352+ Verified Vendors | ShiftIndia",
+    "description": "Compare 12,352+ verified packers and movers across 29 cities in Maharashtra. Mumbai, Pune, Nagpur, Thane & more. Instant quotes starting ₹3,500. KYC-verified.",
+    "keywords": ["packers and movers maharashtra", "movers maharashtra", "home shifting maharashtra", "packers movers mumbai", "packers movers pune", "relocation maharashtra"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Maharashtra",
+    "subtitle": "Mumbai to Pune, Nagpur to Nashik — 12,352+ verified movers across 29 cities in Maharashtra."
+  },
+  "intro": "Maharashtra is India's economic powerhouse and one of the most active relocation markets in the country. ShiftIndia partners with 12,352+ verified packers and movers across Mumbai, Pune, Nagpur, Thane, Nashik, Aurangabad, Kolhapur and 22 more cities.\n\nFrom high-rise apartment moves in Mumbai's Bandra and Powai to industrial relocations in Pune's Hinjewadi IT corridor, our vendors have deep local expertise across Maharashtra's diverse geography — coast, Deccan plateau and Vidarbha region.",
+  "whyUs": "Mumbai's traffic, Pune's IT hubs and Nagpur's central-India logistics position demand movers with real local knowledge. Our Maharashtra vendors plan around peak hours on the Mumbai-Pune Expressway, handle lift restrictions in CHS societies, and offer ₹5 lakh damage protection with GPS tracking and pay-after-delivery.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Maharashtra?", "a": "Local 1 BHK moves start at ₹3,500. Mumbai to Pune inter-city 2 BHK moves typically cost ₹10,000–₹18,000 including packing. Exact quotes depend on distance, floor, and inventory." },
+    { "q": "Which cities in Maharashtra does ShiftIndia cover?", "a": "We cover all 29 major cities: Mumbai, Pune, Nagpur, Thane, Nashik, Aurangabad, Kolhapur, Solapur, Amravati, Akola, Jalgaon, Latur, Chandrapur and more." },
+    { "q": "Can you handle society-level move restrictions in Mumbai?", "a": "Yes. Our vendors coordinate lift usage windows, building entry timings and parking with society management before every move to ensure compliance and no delays." },
+    { "q": "Do you offer office relocation services in Maharashtra?", "a": "Yes. We specialise in commercial relocations across Maharashtra's major IT and industrial hubs — Pune's Hinjewadi, Mumbai's BKC, Nagpur's Mihan and more — with minimal business downtime." }
+  ]
+}

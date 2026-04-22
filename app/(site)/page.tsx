@@ -4,8 +4,8 @@ import {
   ShieldCheck, MapPin, PackageCheck, BadgeIndianRupee, Star, ArrowUpRight,
   Phone, Sparkles, Truck, Package, Heart, CircleDot,
 } from "lucide-react";
-import StickySearch from "@/components/StickySearch";
 import HeroSearchForm from "@/components/HeroSearchForm";
+import StickySearch from "@/components/StickySearch";
 import {
   getSite,
   getReviews,
@@ -437,11 +437,25 @@ export default function HomePage() {
                   {city}
                 </Link>
               ))}
-              <Link href="/booking"
+              <Link href="/cities"
                 className="px-3.5 py-1.5 rounded-full bg-saffron-500 text-white text-sm font-bold hover:bg-saffron-600 transition flex items-center gap-1">
                 +80 more <ArrowUpRight size={12} />
               </Link>
             </div>
+          </div>
+
+          {/* Browse by State */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-3xl border border-white/10 bg-white/5 px-6 py-5">
+            <div>
+              <p className="text-white font-bold">Browse by State</p>
+              <p className="text-midnight-400 text-sm mt-0.5">Gujarat, Maharashtra, Karnataka &amp; 29 more states</p>
+            </div>
+            <Link
+              href="/states"
+              className="shrink-0 inline-flex items-center gap-2 bg-white/10 hover:bg-saffron-500 border border-white/20 hover:border-saffron-500 text-white font-bold text-sm rounded-full px-5 py-2.5 transition"
+            >
+              View All States <ArrowUpRight size={14} />
+            </Link>
           </div>
         </div>
       </section>

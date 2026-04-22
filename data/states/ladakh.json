@@ -1,0 +1,25 @@
+{
+  "slug": "ladakh",
+  "name": "Ladakh",
+  "emoji": "🏜️",
+  "vendorCount": 382,
+  "cityCount": 2,
+  "startingPrice": 6000,
+  "seo": {
+    "title": "Packers & Movers in Ladakh — 382+ Verified Vendors | ShiftIndia",
+    "description": "Compare 382+ verified packers and movers in Ladakh. Leh, Kargil & across the Union Territory. Instant quotes starting ₹6,000. KYC-verified.",
+    "keywords": ["packers and movers ladakh", "movers ladakh", "home shifting leh", "packers movers leh kargil", "relocation ladakh"]
+  },
+  "hero": {
+    "title": "Packers & Movers in Ladakh",
+    "subtitle": "Leh to Kargil across the high-altitude desert — 382+ verified movers in Ladakh."
+  },
+  "intro": "Ladakh, India's highest-altitude Union Territory, is a unique and demanding relocation destination combining remote military townships, Buddhist monasteries and a growing tourism economy. ShiftIndia connects you with 382+ verified movers across Leh and Kargil.\n\nFrom Leh's government housing near the army cantonment to Kargil's district headquarters, our verified vendors understand Ladakh's extreme altitude logistics, the short operational window between monsoon and winter closures, and the long mountain supply routes.",
+  "whyUs": "Ladakh's high altitude (Leh at 3,500m), extreme cold, the Manali–Leh and Srinagar–Leh highway closures in winter, and oxygen deprivation for workers all demand a very specialised approach to moving. Our vendors plan operationally for altitude and carry ₹5 lakh damage coverage.",
+  "faqs": [
+    { "q": "How much do packers and movers cost in Ladakh?", "a": "Moves within Leh start at ₹6,000. Leh to Kargil (234 km) typically costs ₹14,000–₹22,000. Inter-state moves to Srinagar or Manali cost significantly more due to route difficulty." },
+    { "q": "Which cities in Ladakh does ShiftIndia cover?", "a": "We cover Leh and Kargil. For remote areas and military-adjacent zones, additional permissions and lead time are required." },
+    { "q": "When can you do moves in Ladakh?", "a": "The ideal moving window is May–September when both the Manali–Leh and Srinagar–Leh highways are fully open. We advise against scheduling high-altitude moves October–April." },
+    { "q": "Can you handle moves into Ladakh from Manali or Srinagar?", "a": "Yes. We coordinate moves from Manali via NH-3 and from Srinagar via NH-1 (Srinagar–Leh Highway), typically taking 1–2 days of travel time." }
+  ]
+}
