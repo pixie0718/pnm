@@ -1,0 +1,45 @@
+{
+  "slug": "calicut",
+  "name": "Calicut",
+  "state": "Kerala",
+  "emoji": "🌊",
+  "gradient": "from-blue-500 to-cyan-700",
+  "vendorCount": 720,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Calicut — 720+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 720+ verified packers and movers in Calicut. Instant quotes starting ₹4,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers calicut",
+      "movers calicut",
+      "home shifting calicut",
+      "packers movers kerala"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Calicut",
+    "subtitle": "Kochi, Thrissur and beyond — 720+ verified packers and movers across Calicut."
+  },
+  "intro": "Calicut (Kozhikode) is a historic port city and the commercial capital of northern Kerala, known for its vibrant trade and growing residential developments. Radhe packers and movers connects you with 720+ KYC-verified packers and movers covering every locality across Calicut.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Calicut's coastal roads and dense urban neighbourhoods require vendors who know the city well. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Calicut. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Kochi",
+    "Thrissur",
+    "Bangalore",
+    "Manjeri"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Calicut?",
+      "a": "1 BHK from ₹4,500. 2 BHK typically ₹7,000 – ₹13,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Calicut?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Calicut and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."
+    }
+  ]
+}

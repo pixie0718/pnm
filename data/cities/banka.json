@@ -1,0 +1,31 @@
+{
+  "slug": "banka",
+  "name": "Banka",
+  "state": "Bihar",
+  "emoji": "🌾",
+  "gradient": "from-lime-500 to-lime-700",
+  "vendorCount": 150,
+  "startingPrice": 2500,
+  "seo": {
+    "title": "Packers & Movers in Banka — 150+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 150+ verified packers and movers in Banka. Instant quotes starting ₹2,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers banka",
+      "movers banka",
+      "home shifting banka",
+      "packers movers bihar"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Banka",
+    "subtitle": "Bhagalpur, Patna and beyond — 150+ verified packers and movers across Banka."
+  },
+  "intro": "Banka is a district in Bihar bordering Jharkhand, known for its agricultural landscape and steady urban growth. Improved road links to Bhagalpur and Patna have made it more accessible for residential and commercial relocations. Radhe packers and movers connects you with 150+ KYC-verified packers and movers covering every locality across Banka.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Banka's border location between Bihar and Jharkhand means movers need cross-state experience and reliable vehicle networks. Our verified partners handle every move efficiently — whether it's a local shift or a long-distance relocation from Banka. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Bhagalpur", "Patna", "Jamui", "Munger"],
+  "faqs": [
+    {"q": "What does a local move cost in Banka?", "a": "1 BHK from ₹2,500. 2 BHK typically ₹4,000 – ₹7,500 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Banka?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Banka and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

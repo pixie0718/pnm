@@ -5,10 +5,22 @@ import { getAllStates, getSite } from "@/lib/content";
 import StatesGrid from "./StatesGrid";
 
 export const metadata: Metadata = {
-  title: "Packers & Movers in All States | Radhe packers and movers",
+  title: "Packers & Movers in All States",
   description:
     "Find verified packers and movers in every state and Union Territory across India. Compare quotes, check ratings, and book trusted movers in your state.",
   alternates: { canonical: "https://radhepackersandmovers.com/states" },
+  openGraph: {
+    title: "Packers & Movers in All States | Radhe Packers and Movers",
+    description: "Find verified packers and movers in every state across India. Compare quotes and book trusted movers in your state.",
+    url: "https://radhepackersandmovers.com/states",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packers & Movers in All States | Radhe Packers and Movers",
+    description: "Find verified packers and movers in every state and Union Territory across India.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function StatesPage() {

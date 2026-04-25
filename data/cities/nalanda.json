@@ -1,0 +1,31 @@
+{
+  "slug": "nalanda",
+  "name": "Nalanda",
+  "state": "Bihar",
+  "emoji": "📚",
+  "gradient": "from-orange-400 to-orange-600",
+  "vendorCount": 180,
+  "startingPrice": 2500,
+  "seo": {
+    "title": "Packers & Movers in Nalanda — 180+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 180+ verified packers and movers in Nalanda. Instant quotes starting ₹2,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers nalanda",
+      "movers nalanda",
+      "home shifting nalanda",
+      "packers movers bihar"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Nalanda",
+    "subtitle": "Patna, Gaya and beyond — 180+ verified packers and movers across Nalanda."
+  },
+  "intro": "Nalanda is a celebrated district in Bihar, home to the ancient Nalanda University ruins and a UNESCO World Heritage Site. Its growing township and tourism-driven economy have created a steady demand for reliable relocation services. Radhe packers and movers connects you with 180+ KYC-verified packers and movers covering every locality across Nalanda.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Nalanda's heritage zones and expanding residential areas require movers with precise local knowledge. Our verified partners handle every move with care — whether it's a local shift in Bihar Sharif or a long-distance relocation from Nalanda. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Patna", "Gaya", "Rajgir", "Bihar Sharif"],
+  "faqs": [
+    {"q": "What does a local move cost in Nalanda?", "a": "1 BHK from ₹2,500. 2 BHK typically ₹4,000 – ₹8,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Nalanda?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Nalanda and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

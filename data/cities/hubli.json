@@ -1,0 +1,45 @@
+{
+  "slug": "hubli",
+  "name": "Hubli",
+  "state": "Karnataka",
+  "emoji": "🏙️",
+  "gradient": "from-orange-500 to-orange-700",
+  "vendorCount": 860,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Hubli — 860+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 860+ verified packers and movers in Hubli. Instant quotes starting ₹3,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers hubli",
+      "movers hubli",
+      "home shifting hubli",
+      "packers movers karnataka"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Hubli",
+    "subtitle": "Bangalore, Belagavi and beyond — 860+ verified packers and movers across Hubli."
+  },
+  "intro": "Hubli is one of Karnataka's fastest-growing commercial hubs and a twin city with Dharwad, hosting major industries and a bustling residential sector. Radhe packers and movers connects you with 860+ KYC-verified packers and movers covering every locality across Hubli.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Hubli's busy commercial corridors and diverse neighbourhoods require vendors who know the city inside out. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Hubli. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Bangalore",
+    "Belagavi",
+    "Davangere",
+    "Mumbai"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Hubli?",
+      "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹11,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Hubli?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Hubli and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."
+    }
+  ]
+}

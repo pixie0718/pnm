@@ -2,9 +2,25 @@ import { Shield, Mail, Phone } from "lucide-react";
 import { CONTACT, SITE } from "@/lib/config";
 
 export const metadata = {
-  title: "Privacy Policy | Radhe Packers and Movers",
+  title: "Privacy Policy",
   description:
     "Read Radhe Packers and Movers' Privacy Policy — how we collect, use, and protect your personal information.",
+  alternates: {
+    canonical: "https://radhepackersandmovers.com/privacy-policy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Radhe Packers and Movers",
+    description:
+      "Read Radhe Packers and Movers' Privacy Policy — how we collect, use, and protect your personal information.",
+    url: "https://radhepackersandmovers.com/privacy-policy",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Radhe Packers and Movers",
+    description: "How Radhe Packers and Movers collects, uses, and protects your personal information.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 const lastUpdated = "1 April 2025";

@@ -1,0 +1,31 @@
+{
+  "slug": "gondia",
+  "name": "Gondia",
+  "state": "Maharashtra",
+  "emoji": "🌿",
+  "gradient": "from-green-400 to-green-600",
+  "vendorCount": 180,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Gondia — 180+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 180+ verified packers and movers in Gondia. Instant quotes starting ₹3,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers gondia",
+      "movers gondia",
+      "home shifting gondia",
+      "packers movers maharashtra"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Gondia",
+    "subtitle": "Nagpur, Bhandara and beyond — 180+ verified packers and movers across Gondia."
+  },
+  "intro": "Gondia is an important railway junction town in eastern Maharashtra, bordering Madhya Pradesh and Chhattisgarh. Known as the 'Rice Bowl of Maharashtra', it has a steady residential base and cross-state relocation demand. Radhe packers and movers connects you with 180+ KYC-verified packers and movers covering every locality across Gondia.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Gondia's position at the tri-state junction of Maharashtra, Madhya Pradesh, and Chhattisgarh makes cross-state moves common here. Our verified partners handle every route with expertise — whether it's a local shift or a long-distance relocation from Gondia. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Nagpur", "Bhandara", "Raipur", "Chhindwara"],
+  "faqs": [
+    {"q": "What does a local move cost in Gondia?", "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹10,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Gondia?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Gondia and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

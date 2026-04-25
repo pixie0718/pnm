@@ -1,0 +1,31 @@
+{
+  "slug": "mount-abu",
+  "name": "Mount Abu",
+  "state": "Rajasthan",
+  "emoji": "🌄",
+  "gradient": "from-pink-400 to-rose-500",
+  "vendorCount": 180,
+  "startingPrice": 5000,
+  "seo": {
+    "title": "Packers & Movers in Mount Abu — 180+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 180+ verified packers and movers in Mount Abu. Instant quotes starting ₹5,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers mount abu",
+      "movers mount abu",
+      "home shifting mount abu",
+      "packers movers rajasthan"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Mount Abu",
+    "subtitle": "Udaipur, Ahmedabad and beyond — 180+ verified packers and movers across Mount Abu."
+  },
+  "intro": "Mount Abu is Rajasthan's only hill station, perched in the Aravalli Range and home to the famous Dilwara Jain Temples. With a permanent resident population, school and hotel staff, and seasonal workers, there is consistent relocation demand in this unique mountain town. Radhe packers and movers connects you with 180+ KYC-verified packers and movers covering every locality across Mount Abu.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Mount Abu's steep hill roads, hairpin bends, and narrow mountain lanes require movers who are specifically experienced in hill logistics. Our verified partners ensure safe and timely relocations — whether it's a local shift or a long-distance relocation from Mount Abu. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Udaipur", "Ahmedabad", "Surat", "Jodhpur"],
+  "faqs": [
+    {"q": "What does a local move cost in Mount Abu?", "a": "1 BHK from ₹5,000. 2 BHK typically ₹8,000 – ₹15,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Mount Abu?", "a": "Yes — our vendor network covers all residential colonies, hotels, societies, and commercial zones across Mount Abu and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

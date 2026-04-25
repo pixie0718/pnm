@@ -1,0 +1,45 @@
+{
+  "slug": "vapi",
+  "name": "Vapi",
+  "state": "Gujarat",
+  "emoji": "🏭",
+  "gradient": "from-teal-500 to-green-700",
+  "vendorCount": 420,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Vapi — 420+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 420+ verified packers and movers in Vapi. Instant quotes starting ₹4,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers vapi",
+      "movers vapi",
+      "home shifting vapi",
+      "packers movers gujarat"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Vapi",
+    "subtitle": "Surat, Daman and beyond — 420+ verified packers and movers across Vapi."
+  },
+  "intro": "Vapi is one of Gujarat's largest industrial towns, strategically located near the Maharashtra border on the Mumbai–Ahmedabad corridor, with a major GIDC industrial estate and a growing residential community. Radhe packers and movers connects you with 420+ KYC-verified packers and movers covering every locality across Vapi.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Vapi's industrial estates and transient corporate workforce demand vendors who offer fast, reliable, and transparent service. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Vapi. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Surat",
+    "Daman",
+    "Mumbai",
+    "Bharuch"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Vapi?",
+      "a": "1 BHK from ₹4,000. 2 BHK typically ₹6,000 – ₹12,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Vapi?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Vapi and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "panaji",
+  "name": "Panaji",
+  "state": "Goa",
+  "emoji": "🏖️",
+  "gradient": "from-sky-400 to-sky-600",
+  "vendorCount": 380,
+  "startingPrice": 6000,
+  "seo": {
+    "title": "Packers & Movers in Panaji — 380+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 380+ verified packers and movers in Panaji. Instant quotes starting ₹6,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers panaji",
+      "movers panaji",
+      "home shifting panaji",
+      "packers movers goa"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Panaji",
+    "subtitle": "Mumbai, Pune and beyond — 380+ verified packers and movers across Panaji."
+  },
+  "intro": "Panaji is the capital of Goa — a compact, vibrant city known for its colonial architecture, riverside promenades, and cosmopolitan lifestyle. With a mix of expats, working professionals, and long-term residents, Panaji sees consistent demand for quality relocation services. Radhe packers and movers connects you with 380+ KYC-verified packers and movers covering every locality across Panaji.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Panaji's narrow lanes, apartment complexes, and waterfront buildings require movers with precise local knowledge. Our verified partners are experienced in navigating every locality in Goa's capital — whether it's a local shift or a long-distance relocation from Panaji. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Mumbai", "Pune", "Belagavi", "Margao"],
+  "faqs": [
+    {"q": "What does a local move cost in Panaji?", "a": "1 BHK from ₹6,000. 2 BHK typically ₹9,000 – ₹16,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Panaji?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Panaji and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

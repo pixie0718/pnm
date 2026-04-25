@@ -1,0 +1,45 @@
+{
+  "slug": "noida",
+  "name": "Noida",
+  "state": "Uttar Pradesh",
+  "emoji": "🏢",
+  "gradient": "from-violet-500 to-purple-700",
+  "vendorCount": 3200,
+  "startingPrice": 4500,
+  "seo": {
+    "title": "Packers & Movers in Noida — 3200+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 3200+ verified packers and movers in Noida. Instant quotes starting ₹4,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers noida",
+      "movers noida",
+      "home shifting noida",
+      "packers movers uttar pradesh"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Noida",
+    "subtitle": "Delhi, Ghaziabad and beyond — 3200+ verified packers and movers across Noida."
+  },
+  "intro": "Noida is one of India's premier planned cities and a major IT and corporate hub in the National Capital Region, with a massive and constantly growing residential base. Radhe packers and movers connects you with 3,200+ KYC-verified packers and movers covering every sector and locality across Noida.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Noida's high-rise apartments, gated societies, and sector-by-sector layout require vendors who can handle complex building logistics. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Noida. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Delhi",
+    "Ghaziabad",
+    "Agra",
+    "Mathura"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Noida?",
+      "a": "1 BHK from ₹4,500. 2 BHK typically ₹7,000 – ₹14,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Noida?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Noida and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."
+    }
+  ]
+}

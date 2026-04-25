@@ -3,8 +3,23 @@ import { FileText, AlertCircle, Phone, Mail } from "lucide-react";
 import { CONTACT } from "@/lib/config";
 
 export const metadata = {
-  title: "Terms & Conditions | Radhe packers and movers",
-  description: "Read Radhe packers and movers's Terms & Conditions — governing your use of the platform, bookings, payments, damage protection, and more.",
+  title: "Terms & Conditions",
+  description: "Read Radhe Packers and Movers' Terms & Conditions — governing your use of the platform, bookings, payments, damage protection, and more.",
+  alternates: {
+    canonical: "https://radhepackersandmovers.com/terms",
+  },
+  openGraph: {
+    title: "Terms & Conditions | Radhe Packers and Movers",
+    description: "Read Radhe Packers and Movers' Terms & Conditions — governing your use of the platform, bookings, payments, and damage protection.",
+    url: "https://radhepackersandmovers.com/terms",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions | Radhe Packers and Movers",
+    description: "Read Radhe Packers and Movers' Terms & Conditions for platform use, bookings, payments, and damage protection.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 const lastUpdated = "1 April 2025";

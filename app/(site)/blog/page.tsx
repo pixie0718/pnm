@@ -2,11 +2,26 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export const metadata = {
-  title: "Blog — राधे Packers and Movers",
+  title: "Moving Tips & Guides",
   description: "Moving tips, guides, and insights from India's most trusted packers & movers. Learn about safe and efficient relocation.",
+  alternates: {
+    canonical: "https://radhepackersandmovers.com/blog",
+  },
+  openGraph: {
+    title: "Moving Tips & Guides | Radhe Packers and Movers",
+    description: "Moving tips, guides, and insights from India's most trusted packers & movers. Learn about safe and efficient relocation.",
+    url: "https://radhepackersandmovers.com/blog",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Moving Tips & Guides | Radhe Packers and Movers",
+    description: "Moving tips, guides, and insights from India's most trusted packers & movers.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default async function BlogPage() {

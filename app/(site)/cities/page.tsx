@@ -5,10 +5,22 @@ import { getAllCities, getSite } from "@/lib/content";
 import CitiesGrid from "./CitiesGrid";
 
 export const metadata: Metadata = {
-  title: "Packers & Movers in All Cities | Radhe packers and movers",
+  title: "Packers & Movers in All Cities",
   description:
     "Find verified packers and movers in all major cities across India. Compare quotes, check ratings, and book trusted movers near you.",
   alternates: { canonical: "https://radhepackersandmovers.com/cities" },
+  openGraph: {
+    title: "Packers & Movers in All Cities | Radhe Packers and Movers",
+    description: "Find verified packers and movers in all major cities across India. Compare quotes and book trusted movers near you.",
+    url: "https://radhepackersandmovers.com/cities",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Packers & Movers in All Cities | Radhe Packers and Movers",
+    description: "Find verified packers and movers in all major cities across India.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function CitiesPage() {

@@ -25,6 +25,17 @@ import {
 const PREFIX    = "packers-and-movers-in-";
 const RT_PREFIX = "packers-and-movers-from-";
 
+function trimDesc(desc: string): string {
+  if (desc.length <= 160) return desc;
+  const sentences = desc.match(/[^.!?]*[.!?]+/g) ?? [];
+  let result = "";
+  for (const s of sentences) {
+    if (result.length + s.length <= 160) result += s;
+    else break;
+  }
+  return result.trim() || desc.slice(0, 157) + "…";
+}
+
 export function generateStaticParams() {
   return [
     ...getAllCitySlugs().map((slug) => ({ citySlug: `${PREFIX}${slug}` })),
@@ -63,8 +74,8 @@ export function generateMetadata({
     if (route) {
       const { from, to } = route;
       const price = Math.max(from.startingPrice, to.startingPrice);
-      const title = `Packers & Movers from ${from.name} to ${to.name} — From ₹${price.toLocaleString()} | ${site.name}`;
-      const description = `Trusted packers and movers from ${from.name} to ${to.name}. ${from.vendorCount + to.vendorCount}+ verified vendors, instant quotes starting ₹${price.toLocaleString()}, GPS tracking & ₹5L damage cover.`;
+      const title = `${from.name}–${to.name} Packers & Movers | From ₹${price.toLocaleString()}`;
+      const description = trimDesc(`Trusted packers and movers from ${from.name} to ${to.name}. ${from.vendorCount + to.vendorCount}+ verified vendors, instant quotes starting ₹${price.toLocaleString()}, GPS tracking & ₹5L damage cover.`);
       const canonical = `${site.url}/${RT_PREFIX}${from.slug}-to-${to.slug}`;
       return {
         title, description,
@@ -81,22 +92,25 @@ export function generateMetadata({
 
   const city = getCityBySlug(slug);
   if (city) {
+    const pageTitle = city.seo.title.replace(/\s*\|.*$/, '').trim();
+    const ogImage = city.seo.ogImage || site.seo.ogImage;
+    const cityDesc = trimDesc(city.seo.description);
     return {
-      title: city.seo.title,
-      description: city.seo.description,
+      title: pageTitle,
+      description: cityDesc,
       keywords: city.seo.keywords,
       openGraph: {
         title: city.seo.title,
-        description: city.seo.description,
+        description: cityDesc,
         type: "website",
         url: `${site.url}/${PREFIX}${city.slug}`,
-        images: city.seo.ogImage ? [{ url: city.seo.ogImage }] : undefined,
+        images: [{ url: ogImage }],
       },
       twitter: {
         card: "summary_large_image",
         title: city.seo.title,
-        description: city.seo.description,
-        images: city.seo.ogImage ? [city.seo.ogImage] : undefined,
+        description: cityDesc,
+        images: [ogImage],
       },
       alternates: { canonical: `${site.url}/${PREFIX}${city.slug}` },
     };
@@ -104,12 +118,14 @@ export function generateMetadata({
 
   const state = getStateBySlug(slug);
   if (state) {
+    const pageTitle = state.seo.title.replace(/\s*\|.*$/, '').trim();
+    const stateDesc = trimDesc(state.seo.description);
     return {
-      title: state.seo.title,
-      description: state.seo.description,
+      title: pageTitle,
+      description: stateDesc,
       keywords: state.seo.keywords,
-      openGraph: { title: state.seo.title, description: state.seo.description, type: "website", url: `${site.url}/${PREFIX}${state.slug}`, images: [{ url: site.seo.ogImage }] },
-      twitter: { card: "summary_large_image", title: state.seo.title, description: state.seo.description, images: [site.seo.ogImage] },
+      openGraph: { title: state.seo.title, description: stateDesc, type: "website", url: `${site.url}/${PREFIX}${state.slug}`, images: [{ url: site.seo.ogImage }] },
+      twitter: { card: "summary_large_image", title: state.seo.title, description: stateDesc, images: [site.seo.ogImage] },
       alternates: { canonical: `${site.url}/${PREFIX}${state.slug}` },
     };
   }
@@ -143,7 +159,10 @@ export default function CityOrStatePage({ params }: { params: { citySlug: string
 
 function CityPage({ city }: { city: City }) {
   const site = getSite();
-  const cityNames = getAllCities().map((c) => c.name);
+  const allCities = getAllCities();
+  const cityNames = allCities.map((c) => c.name);
+  const cityByName = new Map(allCities.map((c) => [c.name.toLowerCase(), c]));
+  const routeSet = new Set(getAllRoutes().map((r) => `${r.from.slug}__${r.to.slug}`));
 
   return (
     <>
@@ -251,24 +270,32 @@ function CityPage({ city }: { city: City }) {
             Where are you moving?
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {city.popularRoutes.map((to) => (
-              <Link
-                key={to}
-                href={`/${PREFIX}${to.toLowerCase()}`}
-                className="group card p-5 hover:shadow-glow hover:-translate-y-1 transition-all"
-              >
-                <div className="text-xs text-midnight-500 font-bold uppercase tracking-wider">
-                  {city.name} →
-                </div>
-                <div className="display text-xl font-bold text-midnight-900 mt-1 flex items-center justify-between">
-                  {to}
-                  <ArrowUpRight
-                    size={16}
-                    className="text-saffron-500 opacity-0 group-hover:opacity-100 transition"
-                  />
-                </div>
-              </Link>
-            ))}
+            {city.popularRoutes.flatMap((to) => {
+              const toCity = cityByName.get(to.toLowerCase());
+              if (!toCity) return [];
+              const hasRoute = routeSet.has(`${city.slug}__${toCity.slug}`);
+              const href = hasRoute
+                ? `/${RT_PREFIX}${city.slug}-to-${toCity.slug}`
+                : `/${PREFIX}${toCity.slug}`;
+              return [(
+                <Link
+                  key={to}
+                  href={href}
+                  className="group card p-5 hover:shadow-glow hover:-translate-y-1 transition-all"
+                >
+                  <div className="text-xs text-midnight-500 font-bold uppercase tracking-wider">
+                    {city.name} →
+                  </div>
+                  <div className="display text-xl font-bold text-midnight-900 mt-1 flex items-center justify-between">
+                    {toCity.name}
+                    <ArrowUpRight
+                      size={16}
+                      className="text-saffron-500 opacity-0 group-hover:opacity-100 transition"
+                    />
+                  </div>
+                </Link>
+              )];
+            })}
           </div>
         </section>
       )}

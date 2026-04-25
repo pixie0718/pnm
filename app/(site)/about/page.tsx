@@ -6,8 +6,23 @@ import {
 import { CONTACT } from "@/lib/config";
 
 export const metadata = {
-  title: "About Us | Radhe packers and movers",
-  description: "India's most trusted packers & movers marketplace. Learn our story, mission, and the team behind Radhe packers and movers.",
+  title: "About Us",
+  description: "India's most trusted packers & movers marketplace. Learn our story, mission, and the team behind Radhe Packers and Movers.",
+  alternates: {
+    canonical: "https://radhepackersandmovers.com/about",
+  },
+  openGraph: {
+    title: "About Us | Radhe Packers and Movers",
+    description: "India's most trusted packers & movers marketplace. Learn our story, mission, and the team behind Radhe Packers and Movers.",
+    url: "https://radhepackersandmovers.com/about",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Radhe Packers and Movers",
+    description: "India's most trusted packers & movers marketplace. Learn our story, mission, and the team behind Radhe Packers and Movers.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 const stats = [

@@ -1,0 +1,31 @@
+{
+  "slug": "manali",
+  "name": "Manali",
+  "state": "Himachal Pradesh",
+  "emoji": "🏔️",
+  "gradient": "from-indigo-400 to-indigo-600",
+  "vendorCount": 250,
+  "startingPrice": 7000,
+  "seo": {
+    "title": "Packers & Movers in Manali — 250+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 250+ verified packers and movers in Manali. Instant quotes starting ₹7,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers manali",
+      "movers manali",
+      "home shifting manali",
+      "packers movers himachal pradesh"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Manali",
+    "subtitle": "Chandigarh, Delhi and beyond — 250+ verified packers and movers across Manali."
+  },
+  "intro": "Manali is a premier hill station in Himachal Pradesh set in the Beas River valley, popular among tourists and a growing base for permanent residents, hoteliers, and seasonal workers. Relocating to or from Manali demands movers experienced in mountain terrain and seasonal road conditions. Radhe packers and movers connects you with 250+ KYC-verified packers and movers covering every locality across Manali.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Manali's mountainous roads, sharp bends, and seasonal snowfall make it essential to choose movers who are genuinely experienced in hill logistics. Our verified partners plan every move with safety and precision — whether it's a local shift or a long-distance relocation from Manali. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Chandigarh", "Delhi", "Shimla", "Kullu"],
+  "faqs": [
+    {"q": "What does a local move cost in Manali?", "a": "1 BHK from ₹7,000. 2 BHK typically ₹11,000 – ₹20,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Manali?", "a": "Yes — our vendor network covers all residential colonies, hotels, societies, and commercial zones across Manali and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

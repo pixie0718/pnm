@@ -5,20 +5,28 @@ import { Calendar, User, ArrowLeft, BookOpen } from "lucide-react";
 import { parseHeadings, injectHeadingIds } from "@/lib/toc";
 import TocSidebar from "@/components/blog/TocSidebar";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const post = await prisma.blogPost.findUnique({ where: { slug: params.slug } });
   if (!post) return {};
+  const canonical = post.canonicalUrl || `https://radhepackersandmovers.com/blog/${post.slug}`;
   return {
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
     keywords: post.metaKeywords,
-    alternates: post.canonicalUrl ? { canonical: post.canonicalUrl } : undefined,
+    alternates: { canonical },
     openGraph: {
       title: post.metaTitle || post.title,
       description: post.metaDescription || post.excerpt,
+      url: canonical,
       images: post.ogImage ? [post.ogImage] : post.coverImage ? [post.coverImage] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.metaTitle || post.title,
+      description: post.metaDescription || post.excerpt,
+      images: post.ogImage ? [post.ogImage] : post.coverImage ? [post.coverImage] : undefined,
     },
   };
 }

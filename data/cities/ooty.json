@@ -1,0 +1,45 @@
+{
+  "slug": "ooty",
+  "name": "Ooty",
+  "state": "Tamil Nadu",
+  "emoji": "🏔️",
+  "gradient": "from-emerald-500 to-teal-700",
+  "vendorCount": 360,
+  "startingPrice": 5500,
+  "seo": {
+    "title": "Packers & Movers in Ooty — 360+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 360+ verified packers and movers in Ooty. Instant quotes starting ₹5,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers ooty",
+      "movers ooty",
+      "home shifting ooty",
+      "packers movers tamil nadu"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Ooty",
+    "subtitle": "Coimbatore, Mysuru and beyond — 360+ verified packers and movers across Ooty."
+  },
+  "intro": "Ooty, the Queen of Hill Stations in Tamil Nadu, attracts residents and retirees alike with its scenic landscapes and cool climate. Radhe packers and movers connects you with 360+ KYC-verified packers and movers covering every locality across Ooty.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Ooty's winding hill roads and ghat sections require vendors with specialised experience in mountain relocations. Our verified partners plan every move for efficiency — whether it's a local 1 BHK shift or a long-distance relocation from Ooty. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": [
+    "Coimbatore",
+    "Mysuru",
+    "Chennai",
+    "Madurai"
+  ],
+  "faqs": [
+    {
+      "q": "What does a local move cost in Ooty?",
+      "a": "1 BHK from ₹5,500. 2 BHK typically ₹8,500 – ₹15,000 depending on distance, floor, and packing."
+    },
+    {
+      "q": "Do you cover all areas in Ooty?",
+      "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Ooty and its outskirts."
+    },
+    {
+      "q": "Is insurance included with every booking?",
+      "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."
+    }
+  ]
+}

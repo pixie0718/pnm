@@ -1,0 +1,31 @@
+{
+  "slug": "chikkaballapur",
+  "name": "Chikkaballapur",
+  "state": "Karnataka",
+  "emoji": "🏔️",
+  "gradient": "from-green-400 to-green-600",
+  "vendorCount": 220,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Chikkaballapur — 220+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 220+ verified packers and movers in Chikkaballapur. Instant quotes starting ₹3,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers chikkaballapur",
+      "movers chikkaballapur",
+      "home shifting chikkaballapur",
+      "packers movers karnataka"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Chikkaballapur",
+    "subtitle": "Bangalore, Kolar and beyond — 220+ verified packers and movers across Chikkaballapur."
+  },
+  "intro": "Chikkaballapur is a fast-growing town in Karnataka, situated close to Bangalore and known for its silk farms, horticulture, and expanding residential zones. Radhe packers and movers connects you with 220+ KYC-verified packers and movers covering every locality across Chikkaballapur.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Chikkaballapur's proximity to Bangalore makes it a popular destination for relocations in both directions. Our verified partners know every route and neighbourhood well — whether it's a local shift or a move to a major city. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Bangalore", "Kolar", "Mysuru", "Tumakuru"],
+  "faqs": [
+    {"q": "What does a local move cost in Chikkaballapur?", "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹10,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Chikkaballapur?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Chikkaballapur and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "bathinda",
+  "name": "Bathinda",
+  "state": "Punjab",
+  "emoji": "🌾",
+  "gradient": "from-amber-500 to-amber-700",
+  "vendorCount": 520,
+  "startingPrice": 4000,
+  "seo": {
+    "title": "Packers & Movers in Bathinda — 520+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 520+ verified packers and movers in Bathinda. Instant quotes starting ₹4,000. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers bathinda",
+      "movers bathinda",
+      "home shifting bathinda",
+      "packers movers punjab"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Bathinda",
+    "subtitle": "Chandigarh, Ludhiana and beyond — 520+ verified packers and movers across Bathinda."
+  },
+  "intro": "Bathinda is one of Punjab's most important cities, known as the financial capital of the Malwa region with a thriving textile, thermal power, and petrochemical industry base. Its large residential population and strong highway connectivity make it a top relocation market in Punjab. Radhe packers and movers connects you with 520+ KYC-verified packers and movers covering every locality across Bathinda.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Bathinda's wide urban spread and active industrial zones require movers who understand every sector and suburb. Our verified partners bring speed and precision to every booking — whether it's a local 1 BHK shift or a long-distance relocation from Bathinda. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Chandigarh", "Ludhiana", "Amritsar", "Delhi"],
+  "faqs": [
+    {"q": "What does a local move cost in Bathinda?", "a": "1 BHK from ₹4,000. 2 BHK typically ₹6,500 – ₹12,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Bathinda?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Bathinda and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}

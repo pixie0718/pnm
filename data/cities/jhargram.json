@@ -1,0 +1,31 @@
+{
+  "slug": "jhargram",
+  "name": "Jhargram",
+  "state": "West Bengal",
+  "emoji": "🌳",
+  "gradient": "from-green-500 to-green-700",
+  "vendorCount": 180,
+  "startingPrice": 3500,
+  "seo": {
+    "title": "Packers & Movers in Jhargram — 180+ Verified Vendors | Radhe packers and movers",
+    "description": "Compare 180+ verified packers and movers in Jhargram. Instant quotes starting ₹3,500. Live GPS tracking, ₹5L damage protection. Trusted vendors, transparent pricing.",
+    "keywords": [
+      "packers and movers jhargram",
+      "movers jhargram",
+      "home shifting jhargram",
+      "packers movers west bengal"
+    ]
+  },
+  "hero": {
+    "title": "Packers & Movers in Jhargram",
+    "subtitle": "Kolkata, Kharagpur and beyond — 180+ verified packers and movers across Jhargram."
+  },
+  "intro": "Jhargram is a newly formed district headquarters in West Bengal, carved out of the Paschim Medinipur district. Known for its forest landscape and growing urban amenities, it is seeing steady residential development and relocation activity. Radhe packers and movers connects you with 180+ KYC-verified packers and movers covering every locality across Jhargram.\n\nGet instant quotes, compare vendors side by side, and book in minutes — with transparent pricing and zero hidden charges.",
+  "whyUs": "Jhargram's forested outskirts and newer residential colonies require movers with local expertise and reliable transport networks. Our verified partners manage every move with care — whether it's a local shift or a long-distance relocation from Jhargram. ₹5 lakh damage protection, live GPS tracking, and pay-after-delivery on every booking.",
+  "popularRoutes": ["Kolkata", "Kharagpur", "Midnapore", "Purulia"],
+  "faqs": [
+    {"q": "What does a local move cost in Jhargram?", "a": "1 BHK from ₹3,500. 2 BHK typically ₹5,500 – ₹10,000 depending on distance, floor, and packing."},
+    {"q": "Do you cover all areas in Jhargram?", "a": "Yes — our vendor network covers all residential colonies, societies, and commercial zones across Jhargram and its outskirts."},
+    {"q": "Is insurance included with every booking?", "a": "Yes. ₹5 lakh damage protection is included automatically with every Radhe packers and movers booking at no extra charge."}
+  ]
+}
