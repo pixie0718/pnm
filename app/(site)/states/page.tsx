@@ -5,10 +5,10 @@ import { getAllStates, getSite } from "@/lib/content";
 import StatesGrid from "./StatesGrid";
 
 export const metadata: Metadata = {
-  title: "Packers & Movers in All States | ShiftIndia",
+  title: "Packers & Movers in All States | Radhe packers and movers",
   description:
     "Find verified packers and movers in every state and Union Territory across India. Compare quotes, check ratings, and book trusted movers in your state.",
-  alternates: { canonical: "https://shiftindia.in/states" },
+  alternates: { canonical: "https://radhepackersandmovers.com/states" },
 };
 
 export default function StatesPage() {

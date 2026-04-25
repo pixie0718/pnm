@@ -5,10 +5,10 @@ import { getAllCities, getSite } from "@/lib/content";
 import CitiesGrid from "./CitiesGrid";
 
 export const metadata: Metadata = {
-  title: "Packers & Movers in All Cities | ShiftIndia",
+  title: "Packers & Movers in All Cities | Radhe packers and movers",
   description:
     "Find verified packers and movers in all major cities across India. Compare quotes, check ratings, and book trusted movers near you.",
-  alternates: { canonical: "https://shiftindia.in/cities" },
+  alternates: { canonical: "https://radhepackersandmovers.com/cities" },
 };
 
 export default function CitiesPage() {

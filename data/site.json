@@ -6,10 +6,10 @@
   "phoneDisplay": "${PHONE_DISPLAY}",
   "email": "${EMAIL}",
   "social": {
-    "twitter": "https://twitter.com/shiftindia",
-    "instagram": "https://instagram.com/shiftindia",
-    "facebook": "https://facebook.com/shiftindia",
-    "linkedin": "https://linkedin.com/company/shiftindia"
+    "twitter": "#",
+    "instagram": "#",
+    "facebook": "#",
+    "linkedin": "#"
   },
   "seo": {
     "defaultTitle": "Radhe Packers and Movers — Move Anywhere in India, Fast, Safe & Transparent",

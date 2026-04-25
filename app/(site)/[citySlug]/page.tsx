@@ -212,7 +212,7 @@ function CityPage({ city }: { city: City }) {
             <div className="relative max-w-3xl">
               <div className="eyebrow !text-saffron-400 mb-4">
                 <span className="w-8 h-px bg-saffron-500"></span>
-                Why ShiftIndia in {city.name}?
+                Why Radhe packers and movers in {city.name}?
               </div>
               <h2 className="display text-3xl md:text-5xl font-bold mb-6">
                 Move smarter, not <span className="grad-saffron">harder</span>
@@ -407,7 +407,7 @@ function StatePage({ state }: { state: State }) {
             <div className="relative max-w-3xl">
               <div className="eyebrow !text-saffron-400 mb-4">
                 <span className="w-8 h-px bg-saffron-500"></span>
-                Why ShiftIndia in {state.name}?
+                Why Radhe packers and movers in {state.name}?
               </div>
               <h2 className="display text-3xl md:text-5xl font-bold mb-6">
                 Move smarter, not <span className="grad-saffron">harder</span>
@@ -626,7 +626,7 @@ function RoutePage({ route }: { route: CityRoute }) {
         </h2>
         <p className="text-lg text-midnight-700 leading-relaxed">
           Moving from {from.name} to {to.name} is one of our well-established intercity routes.
-          ShiftIndia connects you with {from.vendorCount + to.vendorCount}+ verified vendors who
+          Radhe packers and movers connects you with {from.vendorCount + to.vendorCount}+ verified vendors who
           regularly operate between {from.state} and {to.state}.
         </p>
         <p className="text-lg text-midnight-700 leading-relaxed mt-4">
@@ -658,7 +658,7 @@ function RoutePage({ route }: { route: CityRoute }) {
           <div className="relative max-w-3xl">
             <div className="eyebrow !text-saffron-400 mb-4">
               <span className="w-8 h-px bg-saffron-500" />
-              Why ShiftIndia for {from.name}–{to.name}?
+              Why Radhe packers and movers for {from.name}–{to.name}?
             </div>
             <h2 className="display text-3xl md:text-5xl font-bold mb-6">
               Move smarter, not <span className="grad-saffron">harder</span>

@@ -9,11 +9,11 @@ const categories = [
     label: "Getting Started",
     faqs: [
       {
-        q: "How does ShiftIndia work?",
+        q: "How does Radhe packers and movers work?",
         a: "Tell us your pickup city, drop city, house size, and moving date. Our platform instantly generates quotes from verified vendors near you. Compare prices, check inclusions, and confirm your booking — all in under 2 minutes. Track your move live and pay only after delivery.",
       },
       {
-        q: "Is ShiftIndia free to use?",
+        q: "Is Radhe packers and movers free to use?",
         a: "100% free for customers. There's no platform fee, no registration charge, and no obligation to book after getting quotes. You pay only the vendor's quoted price — nothing more.",
       },
       {
@@ -39,7 +39,7 @@ const categories = [
       },
       {
         q: "Can I choose a specific vendor?",
-        a: "You can browse vendor profiles, read reviews, and compare inclusions before choosing. If you have a preferred vendor already on ShiftIndia, you can also search them directly.",
+        a: "You can browse vendor profiles, read reviews, and compare inclusions before choosing. If you have a preferred vendor already on Radhe packers and movers, you can also search them directly.",
       },
       {
         q: "What if a vendor behaves unprofessionally?",
@@ -60,15 +60,15 @@ const categories = [
       },
       {
         q: "Do I have to pay an advance?",
-        a: "Advance is never mandatory on ShiftIndia. Some vendors request a small booking amount (usually 10–30%) to confirm the date. The balance is always paid after delivery.",
+        a: "Advance is never mandatory on Radhe packers and movers. Some vendors request a small booking amount (usually 10–30%) to confirm the date. The balance is always paid after delivery.",
       },
       {
         q: "How do I pay?",
-        a: "UPI, credit/debit card, net banking, or cash — your choice. Payment is always between you and the vendor, with ShiftIndia's escrow protection ensuring your money is safe.",
+        a: "UPI, credit/debit card, net banking, or cash — your choice. Payment is always between you and the vendor, with Radhe packers and movers's escrow protection ensuring your money is safe.",
       },
       {
         q: "What is escrow protection?",
-        a: "When you pay through ShiftIndia's escrow, your money is held securely and released to the vendor only after you confirm successful delivery. If there's a dispute, we mediate and release funds only when resolved.",
+        a: "When you pay through Radhe packers and movers's escrow, your money is held securely and released to the vendor only after you confirm successful delivery. If there's a dispute, we mediate and release funds only when resolved.",
       },
     ],
   },
@@ -181,7 +181,7 @@ export default function FAQPage() {
           <h1 className="display text-5xl font-bold text-white mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-midnight-300 mb-8">Everything you need to know about moving with ShiftIndia.</p>
+          <p className="text-midnight-300 mb-8">Everything you need to know about moving with Radhe packers and movers.</p>
 
           {/* SEARCH */}
           <div className="relative max-w-lg mx-auto">
@@ -268,7 +268,7 @@ export default function FAQPage() {
               <Phone size={15} /> {CONTACT.phoneDisplay} (Toll Free)
             </a>
             <a href={`mailto:${CONTACT.email}`} className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-200 text-midnight-700 font-bold text-sm hover:bg-slate-100 transition">
-              <Mail size={15} /> hello@shiftindia.in
+              <Mail size={15} /> hopeshruu@gmail.com
             </a>
           </div>
         </div>

@@ -3,8 +3,8 @@ import { FileText, AlertCircle, Phone, Mail } from "lucide-react";
 import { CONTACT } from "@/lib/config";
 
 export const metadata = {
-  title: "Terms & Conditions | ShiftIndia",
-  description: "Read ShiftIndia's Terms & Conditions — governing your use of the platform, bookings, payments, damage protection, and more.",
+  title: "Terms & Conditions | Radhe packers and movers",
+  description: "Read Radhe packers and movers's Terms & Conditions — governing your use of the platform, bookings, payments, damage protection, and more.",
 };
 
 const lastUpdated = "1 April 2025";
@@ -14,8 +14,8 @@ const sections = [
     id: "definitions",
     title: "1. Definitions",
     content: [
-      `"ShiftIndia" refers to ShiftIndia Technologies Pvt. Ltd., a company incorporated under the Companies Act, 2013, with its registered office in Mumbai, India.`,
-      `"Platform" refers to the ShiftIndia website (shiftindia.in), mobile application, and any related services.`,
+      `"Radhe packers and movers" refers to Radhe packers and movers Technologies Pvt. Ltd., a company incorporated under the Companies Act, 2013, with its registered office in Mumbai, India.`,
+      `"Platform" refers to the Radhe packers and movers website (radhepackersandmovers.com), mobile application, and any related services.`,
       `"Customer" means any individual or entity that uses the Platform to obtain relocation services.`,
       `"Vendor" means a packers & movers business registered and verified on the Platform.`,
       `"Booking" means a confirmed engagement between a Customer and a Vendor through the Platform.`,
@@ -28,17 +28,17 @@ const sections = [
     content: [
       `By accessing or using the Platform, you agree to be bound by these Terms & Conditions ("Terms"), our Privacy Policy, and any additional guidelines posted on the Platform.`,
       `If you do not agree with any part of these Terms, you must not use the Platform.`,
-      `ShiftIndia reserves the right to modify these Terms at any time. Continued use of the Platform after changes constitutes acceptance of the revised Terms. We will notify registered users of material changes via email.`,
+      `Radhe packers and movers reserves the right to modify these Terms at any time. Continued use of the Platform after changes constitutes acceptance of the revised Terms. We will notify registered users of material changes via email.`,
     ],
   },
   {
     id: "platform-role",
-    title: "3. Role of ShiftIndia",
+    title: "3. Role of Radhe packers and movers",
     content: [
-      `ShiftIndia operates as a marketplace that connects Customers with independent, third-party Vendors. We are not a moving company and do not directly provide relocation services.`,
-      `ShiftIndia is not a party to the service agreement between Customer and Vendor. The Vendor is solely responsible for the actual delivery of moving services.`,
-      `ShiftIndia's obligations are limited to: (a) facilitating the matching of Customers with Vendors; (b) administering the quote and booking process; (c) administering the damage protection program; and (d) mediating disputes where applicable.`,
-      `ShiftIndia verifies Vendors at the time of onboarding but cannot guarantee that Vendors will meet expectations in every engagement. Customer reviews and ratings are the best ongoing indicator of Vendor quality.`,
+      `Radhe packers and movers operates as a marketplace that connects Customers with independent, third-party Vendors. We are not a moving company and do not directly provide relocation services.`,
+      `Radhe packers and movers is not a party to the service agreement between Customer and Vendor. The Vendor is solely responsible for the actual delivery of moving services.`,
+      `Radhe packers and movers's obligations are limited to: (a) facilitating the matching of Customers with Vendors; (b) administering the quote and booking process; (c) administering the damage protection program; and (d) mediating disputes where applicable.`,
+      `Radhe packers and movers verifies Vendors at the time of onboarding but cannot guarantee that Vendors will meet expectations in every engagement. Customer reviews and ratings are the best ongoing indicator of Vendor quality.`,
     ],
   },
   {
@@ -46,9 +46,9 @@ const sections = [
     title: "4. Bookings & Payments",
     content: [
       `A Booking is confirmed only when the Customer accepts a Vendor's quote on the Platform and the Vendor confirms availability.`,
-      `All prices quoted are inclusive of GST unless explicitly stated otherwise. ShiftIndia charges no platform fee to Customers.`,
-      `Advance payments, if requested by the Vendor, are processed through ShiftIndia's escrow mechanism. Advance amounts are released to the Vendor only after the Customer confirms successful delivery or after the resolution of any dispute.`,
-      `The balance payment is due upon delivery at the Customer's destination. ShiftIndia accepts UPI, credit/debit cards, net banking, and cash (at Customer's discretion).`,
+      `All prices quoted are inclusive of GST unless explicitly stated otherwise. Radhe packers and movers charges no platform fee to Customers.`,
+      `Advance payments, if requested by the Vendor, are processed through Radhe packers and movers's escrow mechanism. Advance amounts are released to the Vendor only after the Customer confirms successful delivery or after the resolution of any dispute.`,
+      `The balance payment is due upon delivery at the Customer's destination. Radhe packers and movers accepts UPI, credit/debit cards, net banking, and cash (at Customer's discretion).`,
       `In the event of any billing dispute, the Customer must raise a complaint within 48 hours of delivery. Disputes raised after 48 hours may not be eligible for escrow protection.`,
     ],
   },
@@ -73,7 +73,7 @@ const sections = [
       `The Damage Protection Program covers physical damage to household goods occurring during loading, transit, and unloading by the Vendor.`,
       `The following are excluded from damage protection: (a) items packed by the Customer themselves; (b) pre-existing damage; (c) items declared as fragile but not given special handling instructions; (d) electronics and appliances with pre-existing faults; (e) jewellery, cash, documents, and items of extraordinary value unless specially declared.`,
       `To raise a claim: (a) photograph the damaged item(s) before further unpacking; (b) submit a claim through your Account within 24 hours of delivery; (c) our claims team will acknowledge within 4 working hours.`,
-      `Valid claims are processed within 72 working hours. ShiftIndia's decision on damage claims is final, subject to applicable law.`,
+      `Valid claims are processed within 72 working hours. Radhe packers and movers's decision on damage claims is final, subject to applicable law.`,
     ],
   },
   {
@@ -90,24 +90,24 @@ const sections = [
       `• Artworks, antiques, or collectibles valued over ₹1,00,000.`,
       `• Jewellery, gold, or items of significant monetary value.`,
       `• Sensitive documents, passports, or legal instruments.`,
-      `ShiftIndia and the Vendor disclaim all liability for any prohibited items transported without declaration.`,
+      `Radhe packers and movers and the Vendor disclaim all liability for any prohibited items transported without declaration.`,
     ],
   },
   {
     id: "liability",
     title: "8. Limitation of Liability",
     content: [
-      `ShiftIndia's total aggregate liability to any Customer for any claim arising out of or related to these Terms or the Platform shall not exceed the greater of: (a) the total amount paid by the Customer for the specific Booking giving rise to the claim; or (b) ₹10,000.`,
-      `ShiftIndia shall not be liable for: (a) indirect, incidental, or consequential damages; (b) loss of data or business; (c) Vendor's failure to perform; (d) force majeure events including floods, strikes, government orders, or road closures.`,
-      `Nothing in these Terms limits ShiftIndia's liability for death or personal injury caused by its own negligence, or for fraud or fraudulent misrepresentation.`,
+      `Radhe packers and movers's total aggregate liability to any Customer for any claim arising out of or related to these Terms or the Platform shall not exceed the greater of: (a) the total amount paid by the Customer for the specific Booking giving rise to the claim; or (b) ₹10,000.`,
+      `Radhe packers and movers shall not be liable for: (a) indirect, incidental, or consequential damages; (b) loss of data or business; (c) Vendor's failure to perform; (d) force majeure events including floods, strikes, government orders, or road closures.`,
+      `Nothing in these Terms limits Radhe packers and movers's liability for death or personal injury caused by its own negligence, or for fraud or fraudulent misrepresentation.`,
     ],
   },
   {
     id: "dispute",
     title: "9. Dispute Resolution",
     content: [
-      `In the event of a dispute between a Customer and a Vendor, the parties agree to first attempt resolution through ShiftIndia's mediation process.`,
-      `To initiate mediation, contact ShiftIndia at hello@shiftindia.in within 7 days of the dispute arising. ShiftIndia will respond within 2 business days.`,
+      `In the event of a dispute between a Customer and a Vendor, the parties agree to first attempt resolution through Radhe packers and movers's mediation process.`,
+      `To initiate mediation, contact Radhe packers and movers at hopeshruu@gmail.com within 7 days of the dispute arising. Radhe packers and movers will respond within 2 business days.`,
       `If mediation fails, disputes shall be subject to the exclusive jurisdiction of courts in Mumbai, Maharashtra, India.`,
       `These Terms are governed by the laws of the Republic of India, including the Consumer Protection Act, 2019, and the Information Technology Act, 2000.`,
     ],
@@ -118,7 +118,7 @@ const sections = [
     content: [
       `Your use of the Platform is governed by our Privacy Policy, which is incorporated by reference into these Terms.`,
       `By using the Platform, you consent to the collection and use of your information as described in the Privacy Policy.`,
-      `ShiftIndia will never sell your personal information to third parties. Vendor contact details are shared only as necessary to facilitate your confirmed Booking.`,
+      `Radhe packers and movers will never sell your personal information to third parties. Vendor contact details are shared only as necessary to facilitate your confirmed Booking.`,
     ],
   },
   {
@@ -126,8 +126,8 @@ const sections = [
     title: "11. Contact Us",
     content: [
       `For questions about these Terms, please contact:`,
-      `ShiftIndia Technologies Pvt. Ltd.`,
-      `Email: legal@shiftindia.in`,
+      `Radhe packers and movers Technologies Pvt. Ltd.`,
+      `Email: hopeshruu@gmail.com`,
       `Phone: ${CONTACT.phoneDisplay} (Toll Free)`,
       `Address: 5th Floor, One BKC, Bandra Kurla Complex, Mumbai 400051, Maharashtra, India.`,
     ],
@@ -151,7 +151,7 @@ export default function TermsPage() {
           </p>
           <div className="mt-6 p-4 bg-saffron-500/20 border border-saffron-500/30 rounded-xl text-sm text-saffron-300 flex items-start gap-3">
             <AlertCircle size={16} className="mt-0.5 shrink-0" />
-            Please read these terms carefully before using ShiftIndia. By using our platform, you agree to these terms.
+            Please read these terms carefully before using Radhe packers and movers. By using our platform, you agree to these terms.
           </div>
         </div>
       </section>
@@ -203,8 +203,8 @@ export default function TermsPage() {
               <div className="font-bold text-midnight-900 mb-2">Have questions about these terms?</div>
               <p className="mb-4">Our legal team is happy to clarify anything. Reach us at:</p>
               <div className="flex flex-wrap gap-3">
-                <a href="mailto:legal@shiftindia.in" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-midnight-900 text-white text-xs font-bold hover:bg-midnight-700 transition">
-                  <Mail size={13} /> legal@shiftindia.in
+                <a href="mailto:hopeshruu@gmail.com" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-midnight-900 text-white text-xs font-bold hover:bg-midnight-700 transition">
+                  <Mail size={13} /> hopeshruu@gmail.com
                 </a>
                 <a href={`tel:${CONTACT.phone}`} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-midnight-700 text-xs font-bold hover:bg-slate-100 transition">
                   <Phone size={13} /> {CONTACT.phoneDisplay}

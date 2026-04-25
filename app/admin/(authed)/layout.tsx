@@ -20,7 +20,7 @@ export default async function AuthedAdminLayout({
           <div className="flex items-center gap-6">
             <Link href="/admin" className="flex items-center gap-2 text-sm font-bold">
               <ShieldCheck size={16} className="text-saffron-500" />
-              <span className="display">ShiftIndia Admin</span>
+              <span className="display">Radhe packers and movers Admin</span>
             </Link>
             <nav className="hidden sm:flex items-center gap-1">
               <AdminLink href="/admin" label="Overview" icon={<LayoutDashboard size={14} />} />

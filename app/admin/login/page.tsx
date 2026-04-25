@@ -76,7 +76,7 @@ function LoginInner() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@shiftindia.in"
+                placeholder="hopeshruu@gmail.com"
                 className="input !pl-11"
               />
             </div>

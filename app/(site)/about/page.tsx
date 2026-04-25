@@ -6,8 +6,8 @@ import {
 import { CONTACT } from "@/lib/config";
 
 export const metadata = {
-  title: "About Us | ShiftIndia",
-  description: "India's most trusted packers & movers marketplace. Learn our story, mission, and the team behind ShiftIndia.",
+  title: "About Us | Radhe packers and movers",
+  description: "India's most trusted packers & movers marketplace. Learn our story, mission, and the team behind Radhe packers and movers.",
 };
 
 const stats = [
@@ -21,7 +21,7 @@ const values = [
   {
     icon: Shield,
     title: "Trust First",
-    desc: "Every vendor on ShiftIndia is KYC-verified, document-checked, and quality-audited before listing. We remove anyone who underperforms.",
+    desc: "Every vendor on Radhe packers and movers is KYC-verified, document-checked, and quality-audited before listing. We remove anyone who underperforms.",
   },
   {
     icon: Zap,
@@ -42,7 +42,7 @@ const values = [
 
 const timeline = [
   { year: "2019", title: "The bad move that started it all", desc: "Founders Rahul & Priya had a nightmare relocation — overcharged, goods damaged, no recourse. They decided to fix it." },
-  { year: "2020", title: "ShiftIndia founded", desc: "Launched in Mumbai with 12 vetted vendors. 200 moves in the first month. 4.8 star average from day one." },
+  { year: "2020", title: "Radhe packers and movers founded", desc: "Launched in Mumbai with 12 vetted vendors. 200 moves in the first month. 4.8 star average from day one." },
   { year: "2021", title: "Expanded to 10 cities", desc: "Series A funding. Built the live tracking system. Launched damage protection in partnership with ICICI Lombard." },
   { year: "2022", title: "50 cities. 5 lakh moves.", desc: "Crossed 5 lakh completed moves. Launched vendor dashboard and the customer app." },
   { year: "2023", title: "Going nationwide", desc: "120+ cities. 18,500 vendors. Launched instant quoting engine powered by our own pricing model." },
@@ -50,7 +50,7 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Rahul Mehta", role: "Co-founder & CEO", initials: "RM", gradient: "from-saffron-500 to-saffron-600", bio: "Ex-Swiggy. Moved 6 times in 4 years. Built ShiftIndia so no one else has to suffer." },
+  { name: "Rahul Mehta", role: "Co-founder & CEO", initials: "RM", gradient: "from-saffron-500 to-saffron-600", bio: "Ex-Swiggy. Moved 6 times in 4 years. Built Radhe packers and movers so no one else has to suffer." },
   { name: "Priya Singh", role: "Co-founder & COO", initials: "PS", gradient: "from-midnight-700 to-midnight-900", bio: "Ex-OYO supply chain. Manages 18,500 vendors with a 97% satisfaction rate." },
   { name: "Arjun Nair", role: "CTO", initials: "AN", gradient: "from-mint-500 to-teal-600", bio: "Ex-Flipkart engineering. Built the live tracking system and instant quoting engine." },
   { name: "Sneha Kapoor", role: "Head of Trust & Safety", initials: "SK", gradient: "from-violet-600 to-fuchsia-500", bio: "Ex-NPCI. Designed the vendor KYC process and damage protection framework." },
@@ -72,7 +72,7 @@ export default function AboutPage() {
             <span className="grad-saffron">So we fixed it.</span>
           </h1>
           <p className="text-lg md:text-xl text-midnight-300 max-w-2xl leading-relaxed">
-            ShiftIndia is India's most trusted packers & movers marketplace — built by people who got burned by the industry and decided enough was enough.
+            Radhe packers and movers is India's most trusted packers & movers marketplace — built by people who got burned by the industry and decided enough was enough.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/booking" className="btn btn-primary btn-lg">

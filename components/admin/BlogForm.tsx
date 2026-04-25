@@ -41,7 +41,7 @@ function CharCount({ value, max }: { value: string; max: number }) {
 function SerpPreview({ title, description, slug }: { title: string; description: string; slug: string }) {
   const displayTitle = title || "Your blog post title";
   const displayDesc = description || "Your meta description will appear here. Write a compelling summary to improve click-through rates from search results.";
-  const displayUrl = `shiftindia.in › blog › ${slug || "your-post-slug"}`;
+  const displayUrl = `radhepackersandmovers.com › blog › ${slug || "your-post-slug"}`;
 
   return (
     <div className="rounded-2xl border border-midnight-100 bg-white p-5">
@@ -360,7 +360,7 @@ export default function BlogForm({ initial }: { initial?: Partial<Post> }) {
                   type="url"
                   value={form.canonicalUrl}
                   onChange={(e) => set("canonicalUrl", e.target.value)}
-                  placeholder="https://shiftindia.in/blog/original-post"
+                  placeholder="https://radhepackersandmovers.com/blog/original-post"
                   className={inputCls}
                 />
               </div>
